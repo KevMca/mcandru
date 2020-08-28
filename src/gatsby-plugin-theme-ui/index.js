@@ -9,7 +9,7 @@ const theme = merge(tailwind, {
     secondary: `#5f6c80`,
     toggleIcon: tailwind.colors.gray[8],
     heading: tailwind.colors.black,
-    title: `#ff0000`,
+    title: `#DD1E04`,
     divide: tailwind.colors.gray[4],
     modes: {
       dark: {

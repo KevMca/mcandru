@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx, Styled } from "theme-ui"
-import { BrowserRouter, Route, NavLink } from "react-router-dom"
 import { Link } from "gatsby"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import replaceSlashes from "../utils/replaceSlashes"
