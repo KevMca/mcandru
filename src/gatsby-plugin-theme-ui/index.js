@@ -10,6 +10,7 @@ const theme = merge(tailwind, {
     toggleIcon: tailwind.colors.gray[8],
     heading: tailwind.colors.black,
     title: `#DD1E04`,
+    line: `#CBD5E0`,
     divide: tailwind.colors.gray[4],
     modes: {
       dark: {
@@ -66,10 +67,12 @@ const theme = merge(tailwind, {
     h1: {
       variant: `text.heading`,
       fontSize: [5, 6, 7],
+      color: `title`,
       mt: 4,
     },
     h2: {
       variant: `text.heading`,
+      color: `title`,
       fontSize: [4, 5, 6],
       mt: 4,
     },

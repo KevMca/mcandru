@@ -13,9 +13,9 @@ const ProfileHeader = (props) => {
                 paddingLeft: "25px", 
                 paddingRight: "25px" 
         }}>
-            <h1 sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `title` }}>
+            <h2 sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `title` }}>
                 {props.title}
-            </h1>
+            </h2>
         </div>
         {props.children}
     </div>
