@@ -5,7 +5,7 @@ const ProfilePicture = (props) => {
 
   return (
     <img 
-        src={require(`../../static/${props.name}`)}
+        src={require(`../../content/pages/${props.slug}/${props.name}`)}
         sx={{ width: 150, height: 150, borderRadius: 150/ 2}}
     />
   )

@@ -7,7 +7,7 @@ const ProfileHeader = (props) => {
 
   return (
     <div style={{display: "flex", flexDirection: "row"}}>
-        <ProfilePicture name={`${props.name}`} />
+        <ProfilePicture name={`${props.name}`} slug={`${props.title.toLowerCase()}`} />
         <div sx={{ display: "flex", 
                 alignItems: "center", 
                 paddingLeft: "25px", 
