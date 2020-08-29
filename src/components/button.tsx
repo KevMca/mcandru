@@ -8,6 +8,7 @@ const Button = (props) => {
           alignItems: "center", 
           paddingLeft: "10px", 
           paddingRight: "10px",
+          paddingTop: "0px",
           button: {
             fontSize:"15px", 
             textAlign: "center",
@@ -23,7 +24,7 @@ const Button = (props) => {
             outline: "0"
           }
     }}>
-      <a href={props.url}>
+      <a href={props.url} sx={{ height: "25px", padding: 0, margin: 0 }}>
         <button style={{ 
           backgroundColor: `${props.color}`,
         }}>
