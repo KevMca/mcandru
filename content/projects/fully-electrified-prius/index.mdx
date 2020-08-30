@@ -8,6 +8,7 @@ authors:
 ---
 import ProjectHeader from "../../../src/components/project-header"
 import Button from "../../../src/components/button"
+import Timeline from "../../../src/components/timeline"
 
 <ProjectHeader name="prius-car-icons-vector.png" title="Fully Electrified Prius" status="in progress">
     <Button color="#242424" url="https://github.com/mmcatcd"> GitHub </Button>
@@ -38,17 +39,21 @@ import Button from "../../../src/components/button"
 </Text>
 
 ---
-
 </div>
 
-<div style={{ display: `flex` }}>
-<div style={{ width: `175px` }}>
-    <Timeline pos="start" status="complete"/>
-</div>
-<div>
-    
-</div>
-</div>
+<br />
+<Timeline title="Title" status="Completed" date="19.8.2020" type="normal">
+    Some sample description about what the shtory is like Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+</Timeline>
+<Timeline title="In progress at the moment" status="In progress" type="normal">
+    Some sample description about what the shtory is like 
+</Timeline>
+<Timeline title="Not begun" status="Not started" type="normal">
+    Some sample description about what the shtory is like Lorem ipsum dolor sit amet,
+</Timeline>
+<Timeline title="Not begun, but last thing" status="Not started" type="end">
+    Some sample description about what the shtory is like Lorem ipsum dolor sit amet, consectetur 
+</Timeline>
 
 <br />
 
