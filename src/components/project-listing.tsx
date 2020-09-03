@@ -18,15 +18,15 @@ type ListingProps = {
   showAuthors?: boolean
 }
 
-const Listing = ({ projects, className = ``, showAuthors = true }: ListingProps) => (
+const ProjectListing = ({ projects, className = ``, showAuthors = true }: ListingProps) => (
   <section sx={{ mb: [5, 6, 7] }} className={className}>
     {projects.map((project) => (
-      <div>
-        <hr sx={{ borderTop: 10, borderColor: `line`, backgroundColor: `line`}}/>
+      <div key={`d_` + project.slug}>
+        <hr key={`horiz_` + project.slug} sx={{ borderTop: 10, borderColor: `line`, backgroundColor: `line`}}/>
         <ProjectListItem key={project.slug} project={project} showAuthors={showAuthors} />
       </div>
     ))}
   </section>
 )
 
-export default Listing
+export default ProjectListing

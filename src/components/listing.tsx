@@ -17,13 +17,43 @@ type ListingProps = {
   }[]
   className?: string
   showTags?: boolean
+  filter?: string
 }
 
-const Listing = ({ posts, className = ``, showTags = true }: ListingProps) => (
+function doesTagExist(tags, filter) {
+  for(var tag in tags) {    
+    var obj = tags[tag];
+    for(var prop in obj) {
+      var str = obj[prop];
+      // Check if filter exists
+      if(str === filter)
+        return true
+    }
+  }
+
+  return false
+}
+
+function FilterPost(props) {
+  if(props.filter !== null) {
+    console.log(props.post.slug)
+    if(doesTagExist(props.post.tags, props.filter)){
+      return <BlogListItem post={props.post} showTags={props.showTags} />
+    }
+    else {
+      return null
+    }
+  }
+  else {
+    return <BlogListItem post={props.post} showTags={props.showTags} />
+  }
+}
+
+const Listing = ({ posts, className = ``, showTags = true, filter = null }: ListingProps) => (
   <section sx={{ mb: [5, 6, 7] }} className={className}>
     {posts.map((post) => (
-      <BlogListItem key={post.slug} post={post} showTags={showTags} />
-    ))}
+      <FilterPost key={post.slug} post={post} showTags={showTags} filter={filter} />
+  ))}
   </section>
 )
 
