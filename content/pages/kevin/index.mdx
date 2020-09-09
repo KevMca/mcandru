@@ -4,6 +4,7 @@ slug: "/kevin"
 ---
 import ProfileHeader from "../../../src/components/profile-header"
 import Button from "../../../src/components/button"
+import AuthorProjects from "../../../src/components/author-projects"
 
 <ProfileHeader name="kevin.jpeg" title="Kevin">
     <Button color="#242424" url="https://github.com/kevmca"> GitHub </Button>
@@ -20,3 +21,10 @@ import Button from "../../../src/components/button"
   Algorithm engineering co-op student with Analog Devices. BT Young Scientist 
   technology award winner. Side projects are great craic all together.
 </Text>
+
+<br /><br /><br /><br />
+<Text sx={{ fontWeight: `medium`, fontSize: [3, 4], color: `heading` }}>
+    My Projects
+</Text>
+
+<AuthorProjects filter={`Kevin`}/>
