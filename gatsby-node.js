@@ -1,3 +1,4 @@
+const kebabCase = require(`lodash.kebabcase`)
 const projectsPath = `content/projects`;
 
 exports.createSchemaCustomization = ({ actions }) => {
@@ -30,7 +31,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 };
 
 exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }) => {
-  const { createNode, createNodeField } = actions;
+  const { createNode, createParentChildLink } = actions;
 
   // Make sure that it's an MDX node
   if (node.internal.type !== `Mdx`) {
@@ -86,6 +87,15 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
   const projectTemplate = require.resolve(`./src/components/project.tsx`);
+  const projectsTemplate = require.resolve(`./src/components/projects.tsx`);
+
+  createPage({
+    path: `/projects`.replace(/\/\/+/g, `/`),
+    component: projectsTemplate,
+    context: {
+      slug: `/projects`,
+    }
+  });
 
   const result = await graphql(`
     query {
@@ -102,7 +112,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   if (projects.length > 0) {
     projects.forEach((project) => {
       createPage({
-        path: `/${basePath}/${project.slug}`.replace(/\/\/+/g, `/`),
+        path: `/${project.slug}`.replace(/\/\/+/g, `/`),
         component: projectTemplate,
         context: {
           slug: project.slug,

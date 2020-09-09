@@ -4,22 +4,10 @@ import { Flex } from "@theme-ui/components"
 import Layout from "./layout"
 import ProjectListing from "./project-listing"
 import SEO from "./seo"
+import { graphql } from "gatsby"
 
-type ProjectProps = {
-  projects: {
-    title: string
-    slug: string
-    status: string
-    excerpt: string
-    body: string
-    authors?: {
-      name: string
-      slug: string
-    }[]
-  }[]
-}
-
-const Projects = ({ projects }: ProjectProps) => {
+export default function Projects(projectsQuery: any) {
+  const projects = projectsQuery.data.allProject.nodes;
 
   return (
     <Layout>
@@ -32,4 +20,20 @@ const Projects = ({ projects }: ProjectProps) => {
   )
 }
 
-export default Projects
+export const query = graphql`
+  query {
+    allProject {
+      nodes {
+        title
+        slug
+        status
+        excerpt
+        body
+        authors {
+          name
+          slug
+        }
+      }
+    }
+  }
+`
