@@ -4,6 +4,8 @@ require(`dotenv`).config({
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
+const projectsPath = `content/projects`;
+
 module.exports = {
   siteMetadata: {
     siteTitle: 'mcand.ru',
@@ -14,6 +16,7 @@ module.exports = {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
+        mdx: false,
         navigation: [
           {
             title: `Home`,
@@ -76,5 +79,13 @@ module.exports = {
         openAnalyzer: false,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: projectsPath,
+      }
+    },
+    `gatsby-plugin-mdx`,
   ].filter(Boolean),
 }
