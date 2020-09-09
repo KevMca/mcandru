@@ -36,7 +36,6 @@ function doesTagExist(tags, filter) {
 
 function FilterPost(props) {
   if(props.filter !== null) {
-    console.log(props.post.slug)
     if(doesTagExist(props.post.tags, props.filter)){
       return <BlogListItem post={props.post} showTags={props.showTags} />
     }

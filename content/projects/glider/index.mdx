@@ -5,12 +5,74 @@ status: "in progress"
 authors:
     - Kevin
 ---
+import ProjectHeader from "../../../src/components/project-header"
+import Button from "../../../src/components/button"
+import Timeline from "../../../src/components/timeline"
+import ProjectPosts from "../../../src/components/project-posts"
 
-# About
+<ProjectHeader name="paper-plane.jpg" title="Glider" status="in progress">
+    <Button color="#242424" url="https://github.com/kevmca/apus"> GitHub </Button>
+</ ProjectHeader>
+<br />
+
+<div style={{ marginLeft: `175px` }}>
+<Text sx={{ fontWeight: `medium`, fontSize: [3, 4], color: `heading` }}>
+    About
+</Text>
+
 ---
 
-# Timeline
+<Text sx={{ fontWeight: `normal`, fontSize: [1, 2], color: `heading` }}>
+    Nature is class. Birds are also class. If you have ever seen a bird gliding in the wind, 
+    that is exactly what this project is trying to emulate. The world record flight time for 
+    a two-seat glider is over 70 hours set in 1961 in Hawaii. This record has not been between 
+    because it is seen as being a pointless and dangerous challenge. Alpine swifts can fly 
+    for 6 months at a time without landing in fact. 
+</ Text>
+<br />
+<Text sx={{ fontWeight: `normal`, fontSize: [1, 2], color: `heading` }}>
+    So it is not too crazy to imagine building an autonomous glider that can remain airborne 
+    for large periods of time. To do this, a stable control system and suite of algorithms is 
+    required.
+</ Text>
+
+</div>
+<br />
+
+<div style={{ marginLeft: `175px` }}>
+<Text sx={{ fontWeight: `medium`, fontSize: [3, 4], color: `heading` }}>
+    Timeline
+</Text>
+
+---
+</div>
+
+<br />
+<Timeline title="Title" status="Completed" date="19.8.2020" type="normal">
+    Some sample description about what the shtory is like Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+</Timeline>
+
+<Timeline title="In progress at the moment" status="In progress" type="normal">
+    Some sample description about what the shtory is like 
+</Timeline>
+
+<Timeline title="Not begun" status="Not started" type="normal">
+    Some sample description about what the shtory is like Lorem ipsum dolor sit amet,
+</Timeline>
+
+<Timeline title="Not begun, but last thing" status="Not started" type="end">
+    Some sample description about what the shtory is like Lorem ipsum dolor sit amet, consectetur 
+</Timeline>
+
+<br />
+
+<div style={{ marginLeft: `175px` }}>
+<Text sx={{ fontWeight: `medium`, fontSize: [3, 4], color: `heading` }}>
+    Updates
+</Text>
+
 ---
 
-# Updates
----
+<ProjectPosts filter="Prius"/>
+
+</div>
