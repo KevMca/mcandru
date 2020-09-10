@@ -5,8 +5,8 @@ const ProjectPicture = (props) => {
 
   return (
     <img 
-        src={require(`../../content/projects/${props.slug}/${props.name}`)}
-        sx={{ width: 150, height: 150, borderRadius: 150/ 2, border: "1px solid grey"}}
+        src={props.src}
+        sx={{ width: 150, objectFit: "cover", height: 150, borderRadius: 150/ 2, border: "1px solid grey"}}
     />
   )
 }

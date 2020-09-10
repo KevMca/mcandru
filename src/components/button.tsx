@@ -24,7 +24,7 @@ const Button = (props) => {
             outline: "0"
           }
     }}>
-      <a href={props.url} sx={{ height: "25px", padding: 0, margin: 0 }}>
+      <a href={props.url} target={props.target} sx={{ height: "25px", padding: 0, margin: 0 }}>
         <button style={{ 
           backgroundColor: `${props.color}`,
         }}>
