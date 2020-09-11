@@ -62,7 +62,7 @@ const Timeline = (props) => {
         </h1>
         {/* Date or progress */}
         <p sx={{ fontStyle: `italic`, fontWeight: `normal`, fontSize: [1, 2], color: `light`, margin: `10px 0 0 0` }}> 
-          ... {props.status} {props.date && (props.date)}
+          {props.status} {props.date && (props.date)}
         </p>
         {/* Description */}
         <p sx={{ fontWeight: `normal`, fontSize: [1, 2], color: `light`, margin: `5px 0 0 0` }}> 
