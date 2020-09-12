@@ -86,8 +86,8 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
-  const projectTemplate = require.resolve(`./src/components/project.tsx`);
-  const projectsTemplate = require.resolve(`./src/components/projects.tsx`);
+  const projectTemplate = require.resolve(`./src/components/projectTemplate.tsx`);
+  const projectsTemplate = require.resolve(`./src/components/projectsTemplate.tsx`);
 
   createPage({
     path: `/projects`.replace(/\/\/+/g, `/`),

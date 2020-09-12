@@ -1,35 +1,27 @@
 /** @jsx jsx */
-import { jsx, Heading } from "theme-ui"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import Layout from "./layout"
-import SEO from "./seo"
-import { graphql } from "gatsby"
+import React from "react";
+import ProjectHeader from "./project-header";
+import Button from "./button";
+import { jsx } from "theme-ui";
 
-export default function Project (projectQuery: any) {
-  const project = projectQuery.data.project;
+const Project = (props) => {
+  const buttonItems = props.buttons.map((button) => 
+    <Button color={button.color} key={button.toString()} url={button.url}>{button.text}</Button>
+  );
 
   return (
-    <Layout>
-      <SEO title={project.title} description={project.excerpt} />
-      <section sx={{ my: 5 }}>
-        <MDXRenderer>{project.body}</MDXRenderer>
-      </section>
-    </Layout>
-  )
+    <div>
+      <ProjectHeader image={props.headerImage} title="Audi TT Restoration" status="in progress">
+        {buttonItems}
+      </ProjectHeader>
+      <div sx={{
+        margin: "20px 0px 0px 175px",
+        '@media screen and (max-width: 800px)': {
+          margin: "20px 0px",
+        },
+      }}>{props.children}</div>
+    </div>
+  );
 }
 
-export const query = graphql`
-  query($slug: String!) {
-    project(slug: { eq: $slug }) {
-      title
-      slug
-      status
-      excerpt
-      body
-      authors {
-        name
-        slug
-      }
-    }
-  }
-`
+export default Project

@@ -5,22 +5,30 @@ status: "in progress"
 authors:
     - Michael
 ---
-import ProjectHeader from "../../../src/components/project-header"
-import Button from "../../../src/components/button"
-import Timeline from "../../../src/components/timeline"
-import ProjectPosts from "../../../src/components/project-posts"
-import AudiImage from "./audi-tt-2003.gif"
 
-<ProjectHeader image={AudiImage} title="Audi TT Restoration" status="in progress">
-  <Button color="#242424" url="https://github.com/mmcatcd"> GitHub </Button>
-</ ProjectHeader>
-<br />
+import Button from "../../../src/components/button";
+import TimelineItem from "../../../src/components/timeline-item";
+import Timeline from "../../../src/components/timeline";
+import ProjectPosts from "../../../src/components/project-posts";
+import AudiImage from "./audi-tt-2003.gif";
+import Project from "../../../src/components/project";
 
-<div style={{ marginLeft: `175px` }}>
-<Text sx={{ fontWeight: `medium`, fontSize: [3, 4], color: `heading` }}>
-  About
-</Text>
 
+<Project
+  headerImage={AudiImage}
+  title="Audi TT Restoration"
+  status="in progress"
+  buttons={[
+    {
+      text: "GitHub",
+      url: "https://github.com/mmcatcd",
+      color: "#242424",
+    },
+  ]}
+  postsFilter="tt"
+>
+
+### About
 ---
 
 Last year I bought a 2002 Audi TT, 225bhp with 151,000 miles for €400. Naturally, it needed some work.
@@ -31,67 +39,54 @@ need to do some restoration work.
 I thought a Volkwagen Golf derived, "People's Car" would be an easy introduction to car restoration. 
 Boy was I wrong.
 
-</div>
-<br />
-
-<div style={{ marginLeft: `175px` }}>
-<Text sx={{ fontWeight: `medium`, fontSize: [3, 4], color: `heading` }}>
-  Timeline
-</Text>
-
----
-</div>
-
-<br />
-<Timeline title="Front Axle Disassembly" status="Completed" date="11.04.2020" type="normal">
-  The steering rack failed and as a result the subframe needed to be dropped to remove and replace it.
-  An assessment was made of the condition of the front axle assembly in the process of doing this. 
-  I decided that the subframe, control arms, steering rack and anti-roll bar would require work and were all removed.
-</Timeline>
-<Timeline title="Exhaust System Disassembly" status="Completed" date="18.04.2020" type="normal">
-  A hole in the exhaust system was causing a loud tractor-like blowing sound. I removed the exhaust
-  system and found that the flexible hose on the downpipe had rusted through.
-</Timeline>
-<Timeline title="Engine Removal" status="Completed" date="18.07.2020" type="normal">
-  Rust damage on the exhaust side of the engine made removing the turbo impossible without engine
-  removal. After the engine was removed, the rust damage was assessed and I determined that a new turbo
-  would be required.
-</Timeline>
-<Timeline title="Turbo Removal" status="Completed" date="27.07.2020" type="normal">
-  Rust damage made removing the turbo difficult but it did come undone. The turbo had significant shaft
-  play and worn oil seals which resulted in oil leaking to the intake. It definitely needed replacing.
-</Timeline>
-<Timeline title="Subframe and Control Arm Restoration" status="Completed" date="09.09.2020" type="normal">
-  Surface rust was removed and the surfaces were lightly sanded. Several coats of "Hammered Black" hammerite
-  were applied to provide a tough protective layer.
-</Timeline>
-<Timeline title="Turbo Replacement" status="In progress" type="normal">
-  A rebuilt OEM Borg-Warner turbo has been purchased and will be fitted once it arrives.
-</Timeline>
-<Timeline title="Cylinder Head Cover Gasket" status="In progress" type="normal">
-  The cylinder head cover gasket was seeping and is in need of replacement. It is also a good excuse to
-  have a look at the condition of the cams, cam chain and lifters.
-</Timeline>
-<Timeline title="Engine Reinstallation" status="Not started" type="normal">
-  After the turbo and cylinder head cover gasket have been replaced, the engine can be refitted.
-</Timeline>
-<Timeline title="Exhaust Reassembly" status="Not started" type="normal">
-  The new exhaust downpipe can be fitted when the engine is reinstalled.
-</Timeline>
-<Timeline title="Front Axle Reassembly" status="Not started" type="end">
-  The subframe, new steering rack and control arms can be reinstalled once the exhaust is back in
-  place.
-</Timeline>
-
-<br />
-
-<div style={{ marginLeft: `175px` }}>
-<Text sx={{ fontWeight: `medium`, fontSize: [3, 4], color: `heading` }}>
-  Updates
-</Text>
-
+### Timeline
 ---
 
-<ProjectPosts filter="tt"/>
+  <Timeline>
+    <TimelineItem title="Front Axle Disassembly" status="Completed" date="11.04.2020" type="normal">
+      The steering rack failed and as a result the subframe needed to be dropped to remove and replace it.
+      An assessment was made of the condition of the front axle assembly in the process of doing this. 
+      I decided that the subframe, control arms, steering rack and anti-roll bar would require work and were all removed.
+    </TimelineItem>
+    <TimelineItem title="Exhaust System Disassembly" status="Completed" date="18.04.2020" type="normal">
+      A hole in the exhaust system was causing a loud tractor-like blowing sound. I removed the exhaust
+      system and found that the flexible hose on the downpipe had rusted through.
+    </TimelineItem>
+    <TimelineItem title="Engine Removal" status="Completed" date="18.07.2020" type="normal">
+      Rust damage on the exhaust side of the engine made removing the turbo impossible without engine
+      removal. After the engine was removed, the rust damage was assessed and I determined that a new turbo
+      would be required.
+    </TimelineItem>
+    <TimelineItem title="Turbo Removal" status="Completed" date="27.07.2020" type="normal">
+      Rust damage made removing the turbo difficult but it did come undone. The turbo had significant shaft
+      play and worn oil seals which resulted in oil leaking to the intake. It definitely needed replacing.
+    </TimelineItem>
+    <TimelineItem title="Subframe and Control Arm Restoration" status="Completed" date="09.09.2020" type="normal">
+      Surface rust was removed and the surfaces were lightly sanded. Several coats of "Hammered Black" hammerite
+      were applied to provide a tough protective layer.
+    </TimelineItem>
+    <TimelineItem title="Turbo Replacement" status="In progress" type="normal">
+      A rebuilt OEM Borg-Warner turbo has been purchased and will be fitted once it arrives.
+    </TimelineItem>
+    <TimelineItem title="Cylinder Head Cover Gasket" status="In progress" type="normal">
+      The cylinder head cover gasket was seeping and is in need of replacement. It is also a good excuse to
+      have a look at the condition of the cams, cam chain and lifters.
+    </TimelineItem>
+    <TimelineItem title="Engine Reinstallation" status="Not started" type="normal">
+      After the turbo and cylinder head cover gasket have been replaced, the engine can be refitted.
+    </TimelineItem>
+    <TimelineItem title="Exhaust Reassembly" status="Not started" type="normal">
+      The new exhaust downpipe can be fitted when the engine is reinstalled.
+    </TimelineItem>
+    <TimelineItem title="Front Axle Reassembly" status="Not started" type="end">
+      The subframe, new steering rack and control arms can be reinstalled once the exhaust is back in
+      place.
+    </TimelineItem>
+  </Timeline>
 
-</div>
+  ### Updates
+  ---
+
+  <ProjectPosts filter={props.postsFilter} />
+
+</Project>

@@ -15,7 +15,7 @@ const ProfileHeader = (props) => {
       },
     }}>
       <div sx={{ display: "flex", flexDirection: "row" }}>
-        <ProfilePicture name={`${props.name}`} slug={`${props.title.toLowerCase()}`} />
+        <ProfilePicture src={props.image} />
       </div>
       <div sx={{ display: "flex", 
               alignItems: "center", 
