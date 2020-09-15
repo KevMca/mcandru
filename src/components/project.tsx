@@ -11,7 +11,7 @@ const Project = (props) => {
 
   return (
     <div>
-      <ProjectHeader image={props.headerImage} title="Audi TT Restoration" status="in progress">
+      <ProjectHeader image={props.headerImage} title={props.title} status={props.status}>
         {buttonItems}
       </ProjectHeader>
       <div sx={{
