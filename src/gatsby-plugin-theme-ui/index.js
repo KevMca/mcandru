@@ -12,6 +12,7 @@ const theme = merge(tailwind, {
     title: tailwind.colors.gray[9],
     line: `#CBD5E0`,
     light: `#8E9AAA`,
+    lightDarker: tailwind.colors.gray[6],
     divide: tailwind.colors.gray[4],
     modes: {
       dark: {

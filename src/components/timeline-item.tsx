@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Link } from "theme-ui"
+import { jsx } from "theme-ui"
+import { Link } from "gatsby"
 
 const TimelineItem = (props) => {
   let color
@@ -72,11 +73,14 @@ const TimelineItem = (props) => {
         {props.posts && <p sx={{ fontWeight: `normal`, fontSize: [1, 2], color: `light`, margin: `5px 0 0 0` }}>
           Posts: 
           {props.posts.map((post, index) => (
-            <Link key={post} to={post}> 
-              {post} 
+            <span>
+              {`  `}
+              <Link key={post} to={`/${post}`} sx={{fontWeight: `normal`, fontSize: [1, 2], color: `lightDarker`}}> 
+                {post}
+              </Link>
               {index !== (props.posts.length - 1) && <span>,</span>}
-            </Link>
-          ))}
+            </span>
+          ))} 
         </p>}
         <br/>
       </div>
