@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx, Heading, Link as TLink } from "theme-ui"
 import { Flex } from "@theme-ui/components"
-import Layout from "./layout"
-import ProjectListing from "./project-listing"
-import SEO from "./seo"
+import Layout from "../components/layout"
+import ProjectListing from "../components/project-listing"
+import SEO from "../components/seo"
 import { graphql } from "gatsby"
 
 export default function Projects(projectsQuery: any) {
