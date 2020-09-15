@@ -9,6 +9,8 @@ import ProjectHeader from "../../../src/components/project-header"
 import Button from "../../../src/components/button"
 import Timeline from "../../../src/components/timeline"
 import ProjectPosts from "../../../src/components/project-posts"
+import React from "react"
+import { Link } from "gatsby"
 import PlaneImage from "./paper-plane.jpg"
 
 <ProjectHeader image={PlaneImage} title="Glider" status="in progress">
@@ -49,22 +51,45 @@ import PlaneImage from "./paper-plane.jpg"
 </div>
 
 <br />
-<Timeline title="Title" status="Completed" date="19.8.2020" type="normal">
-    Some sample description about what the shtory is like Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+<Timeline title="Glider conversion" status="Completed" date="20.3.2020" type="normal">
+    I bought a hand thrown glider for €5 in Lidl. The first thing to do was to put a motor and servos on it. Initially it would be controlled using my stock RC controller and receiver.
 </Timeline>
 
-<Timeline title="In progress at the moment" status="In progress" type="normal">
-    Some sample description about what the shtory is like 
+<Timeline title="Motor control and sensors" status="Completed" date="5.5.2020" type="normal">
+    There are two roll servos, one pitch servo, one yaw servo and a propeller BLDC. There will also be a 9DOF IMU, altitude barometer, windspeed sensor, GPS, and RC receiver.
 </Timeline>
 
-<Timeline title="Not begun" status="Not started" type="normal">
-    Some sample description about what the shtory is like Lorem ipsum dolor sit amet,
+<Timeline title="Final electronics" status="Completed" date="26.6.2020" type="normal">
+    The final board for testing will place an ESP32 inbetween the RC receiver and the motors so that PID control and more complex controllers can be implemented.
 </Timeline>
 
-<Timeline title="Not begun, but last thing" status="Not started" type="end">
-    Some sample description about what the shtory is like Lorem ipsum dolor sit amet, consectetur 
+<Timeline title="Web interface / datalogging" status="Completed" date="20.8.2020" type="normal" posts={["web-interface-working"]}>
+    PID controllers will be implemented for each of the axes for simpler intial controls and some level of automation.
 </Timeline>
 
+<Timeline title="Control system" status="In progress" type="normal">
+    One of the goals of this project is to create a robust control system that can withstand imbalance in the plane, gusts of wind, stalling and the ability to take tight turns. PID controllers are the first initial starting point, but many changes will be necessary.
+</Timeline>
+
+<Timeline title="Waypoints" status="Not started" type="normal">
+    Waypoints can be added to form a path which the plane will follow. GPS, altitude and a good control system are all necessary for this part of the project.
+</Timeline>
+
+<Timeline title="Wind sailing" status="Not started" type="normal">
+    Much like how birds glide in the wind, this stage will do the same. Wind direction needs to be determined. Then an algorithm needs to be developed to maintain this direction and glide efficiently.
+</Timeline>
+
+<Timeline title="Thermal sailing" status="Not started" type="normal">
+    Thermals provide a good source of lift on a sunny day. Thermal identification and following could help increase flight time.
+</Timeline>
+
+<Timeline title="Solar panels" status="Not started" type="normal">
+    Once wind sailing has been mastered, solar panels can potentially increase flight time. Power/weight ratio is very important.
+</Timeline>
+
+<Timeline title="Duration testing" status="Not started" type="end">
+    The goal is to maximise the flight time of the glider, using thermals, solar and wind.
+</Timeline>
 <br />
 
 <div style={{ marginLeft: `175px` }}>
@@ -74,6 +99,6 @@ import PlaneImage from "./paper-plane.jpg"
 
 ---
 
-<ProjectPosts filter="Prius"/>
+<ProjectPosts filter="Glider"/>
 
 </div>
