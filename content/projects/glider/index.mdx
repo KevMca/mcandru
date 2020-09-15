@@ -3,102 +3,93 @@ title: Glider
 slug: "/glider"
 status: "in progress"
 authors:
-    - Kevin
+  - Kevin
 ---
-import ProjectHeader from "../../../src/components/project-header"
-import Button from "../../../src/components/button"
-import Timeline from "../../../src/components/timeline"
-import ProjectPosts from "../../../src/components/project-posts"
-import React from "react"
-import { Link } from "gatsby"
+import Button from "../../../src/components/button";
+import TimelineItem from "../../../src/components/timeline-item";
+import Timeline from "../../../src/components/timeline";
+import ProjectPosts from "../../../src/components/project-posts";
 import PlaneImage from "./paper-plane.jpg"
+import Project from "../../../src/components/project";
 
-<ProjectHeader image={PlaneImage} title="Glider" status="in progress">
-    <Button color="#242424" url="https://github.com/kevmca/apus"> GitHub </Button>
-</ ProjectHeader>
-<br />
+<Project
+  headerImage={PlaneImage}
+  title="Glider"
+  status="in progress"
+  buttons={[
+  {
+    text: "GitHub",
+    url: "https://github.com/kevmca/apus",
+    color: "#242424",
+  },
+  ]}
+  postsFilter="Glider"
+>
 
-<div style={{ marginLeft: `175px` }}>
-<Text sx={{ fontWeight: `medium`, fontSize: [3, 4], color: `heading` }}>
-    About
-</Text>
-
+### About
 ---
 
-<Text sx={{ fontWeight: `normal`, fontSize: [1, 2], color: `heading` }}>
-    Nature is class. Birds are also class. If you have ever seen a bird gliding in the wind, 
-    that is exactly what this project is trying to emulate. The world record flight time for 
-    a two-seat glider is over 70 hours set in 1961 in Hawaii. This record has not been between 
-    because it is seen as being a pointless and dangerous challenge. Alpine swifts can fly 
-    for 6 months at a time without landing in fact. 
-</ Text>
-<br />
-<Text sx={{ fontWeight: `normal`, fontSize: [1, 2], color: `heading` }}>
-    So it is not too crazy to imagine building an autonomous glider that can remain airborne 
-    for large periods of time. To do this, a stable control system and suite of algorithms is 
-    required.
-</ Text>
+  Nature is class. Birds are also class. If you have ever seen a bird gliding in the wind, 
+  that is exactly what this project is trying to emulate. The world record flight time for 
+  a two-seat glider is over 70 hours set in 1961 in Hawaii. This record has not been between 
+  because it is seen as being a pointless and dangerous challenge. Alpine swifts can fly 
+  for 6 months at a time without landing in fact. 
 
-</div>
-<br />
+  So it is not too crazy to imagine building an autonomous glider that can remain airborne 
+  for large periods of time. To do this, a stable control system and suite of algorithms is 
+  required.
 
-<div style={{ marginLeft: `175px` }}>
-<Text sx={{ fontWeight: `medium`, fontSize: [3, 4], color: `heading` }}>
-    Timeline
-</Text>
+  ### Timeline
+  ---
 
----
-</div>
+  <Timeline>
+    <TimelineItem title="Glider conversion" status="Completed" date="20.3.2020" type="normal">
+      I bought a hand thrown glider for €5 in Lidl. The first thing to do was to put a motor 
+      and servos on it. Initially it would be controlled using my stock RC controller and receiver.
+    </TimelineItem>
+    <TimelineItem title="Motor control and sensors" status="Completed" date="5.5.2020" type="normal">
+      There are two roll servos, one pitch servo, one yaw servo and a propeller BLDC. There 
+      will also be a 9DOF IMU, altitude barometer, windspeed sensor, GPS, and RC receiver.
+    </TimelineItem>
+    <TimelineItem title="Final electronics" status="Completed" date="26.6.2020" type="normal">
+      The final board for testing will place an ESP32 inbetween the RC receiver and the motors so 
+      that PID control and more complex controllers can be implemented.
+    </TimelineItem>
+    <TimelineItem title="Web interface / datalogging" status="Completed" date="20.8.2020" type="normal"
+        posts={["web-interface-working"]}>
+      PID controllers will be implemented for each of the axes for simpler intial controls and 
+      some level of automation.
+    </TimelineItem>
+    <TimelineItem title="Control system" status="In progress" type="normal">
+      One of the goals of this project is to create a robust control system that can withstand 
+      imbalance in the plane, gusts of wind, stalling and the ability to take tight turns. PID 
+      controllers are the first initial starting point, but many changes will be necessary.
+    </TimelineItem>
+    <TimelineItem title="Waypoints" status="Not started" type="normal">
+      Waypoints can be added to form a path which the plane will follow. GPS, altitude and a good 
+      control system are all necessary for this part of the project.
+    </TimelineItem>
+    <TimelineItem title="Wind sailing" status="Not started" type="normal">
+      Much like how birds glide in the wind, this stage will do the same. Wind direction needs to be 
+      determined. Then an algorithm needs to be developed to maintain this direction and glide 
+      efficiently.
+    </TimelineItem>
+    <TimelineItem title="Thermal sailing" status="Not started" type="normal">
+      Thermals provide a good source of lift on a sunny day. Thermal identification and following 
+      could help increase flight time.
+    </TimelineItem>
+    <TimelineItem title="Solar panels" status="Not started" type="normal">
+      Once wind sailing has been mastered, solar panels can potentially increase flight time. 
+      Power/weight ratio is very important.
+    </TimelineItem>
+    <TimelineItem title="Duration testing" status="Not started" type="end">
+      The goal is to maximise the flight time of the glider, using thermals, solar and wind.
+    </TimelineItem>
+  </Timeline>
 
-<br />
-<Timeline title="Glider conversion" status="Completed" date="20.3.2020" type="normal">
-    I bought a hand thrown glider for €5 in Lidl. The first thing to do was to put a motor and servos on it. Initially it would be controlled using my stock RC controller and receiver.
-</Timeline>
+  ### Updates
+  ---
 
-<Timeline title="Motor control and sensors" status="Completed" date="5.5.2020" type="normal">
-    There are two roll servos, one pitch servo, one yaw servo and a propeller BLDC. There will also be a 9DOF IMU, altitude barometer, windspeed sensor, GPS, and RC receiver.
-</Timeline>
+  <ProjectPosts filter={props.postsFilter} />
 
-<Timeline title="Final electronics" status="Completed" date="26.6.2020" type="normal">
-    The final board for testing will place an ESP32 inbetween the RC receiver and the motors so that PID control and more complex controllers can be implemented.
-</Timeline>
-
-<Timeline title="Web interface / datalogging" status="Completed" date="20.8.2020" type="normal" posts={["web-interface-working"]}>
-    PID controllers will be implemented for each of the axes for simpler intial controls and some level of automation.
-</Timeline>
-
-<Timeline title="Control system" status="In progress" type="normal">
-    One of the goals of this project is to create a robust control system that can withstand imbalance in the plane, gusts of wind, stalling and the ability to take tight turns. PID controllers are the first initial starting point, but many changes will be necessary.
-</Timeline>
-
-<Timeline title="Waypoints" status="Not started" type="normal">
-    Waypoints can be added to form a path which the plane will follow. GPS, altitude and a good control system are all necessary for this part of the project.
-</Timeline>
-
-<Timeline title="Wind sailing" status="Not started" type="normal">
-    Much like how birds glide in the wind, this stage will do the same. Wind direction needs to be determined. Then an algorithm needs to be developed to maintain this direction and glide efficiently.
-</Timeline>
-
-<Timeline title="Thermal sailing" status="Not started" type="normal">
-    Thermals provide a good source of lift on a sunny day. Thermal identification and following could help increase flight time.
-</Timeline>
-
-<Timeline title="Solar panels" status="Not started" type="normal">
-    Once wind sailing has been mastered, solar panels can potentially increase flight time. Power/weight ratio is very important.
-</Timeline>
-
-<Timeline title="Duration testing" status="Not started" type="end">
-    The goal is to maximise the flight time of the glider, using thermals, solar and wind.
-</Timeline>
-<br />
-
-<div style={{ marginLeft: `175px` }}>
-<Text sx={{ fontWeight: `medium`, fontSize: [3, 4], color: `heading` }}>
-    Updates
-</Text>
-
----
-
-<ProjectPosts filter="Glider"/>
-
-</div>
+</Project>
