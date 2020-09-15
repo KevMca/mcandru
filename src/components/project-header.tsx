@@ -1,26 +1,15 @@
 /** @jsx jsx */
-import { jsx, Link } from "theme-ui"
-import ProjectPicture from "./project-picture"
+import { jsx } from "theme-ui"
 import Status from "./status"
+import ProfileHeader from "./profile-header";
 
 const ProjectHeader = (props) => {
-
   return (
-    <div style={{display: "flex", flexDirection: "row", verticalAlign: `middle`}}>
-      <ProjectPicture src={props.image} slug={`${props.title.toLowerCase().split(" ").join("-")}`} />
-      <div sx={{ display: "flex", 
-              alignItems: "center", 
-              paddingLeft: "25px", 
-              paddingRight: "25px" 
-      }}>
-          <h2 sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `title` }}>
-              {props.title}
-          </h2>
-      </div>
+    <ProfileHeader image={props.image} title={props.title}>
       <Status status={props.status} />
       {props.children}
-    </div>
-  )
-}
+    </ProfileHeader>
+  );
+};
 
-export default ProjectHeader
+export default ProjectHeader;

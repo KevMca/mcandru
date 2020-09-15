@@ -9,6 +9,7 @@ const Button = (props) => {
           paddingLeft: "10px", 
           paddingRight: "10px",
           paddingTop: "0px",
+          lineHeight: 1,
           button: {
             fontSize:"15px", 
             textAlign: "center",
@@ -21,7 +22,7 @@ const Button = (props) => {
             border: "0",
             borderRadius: "7px",
             cursor: `pointer`,
-            outline: "0"
+            outline: "0",
           }
     }}>
       <a href={props.url} target={props.target} sx={{ height: "25px", padding: 0, margin: 0 }}>
