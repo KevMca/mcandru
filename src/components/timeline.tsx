@@ -68,6 +68,16 @@ const Timeline = (props) => {
         <p sx={{ fontWeight: `normal`, fontSize: [1, 2], color: `light`, margin: `5px 0 0 0` }}> 
           {props.children}
         </p>
+        {/* Posts */}
+        {props.posts && <p sx={{ fontWeight: `normal`, fontSize: [1, 2], color: `light`, margin: `5px 0 0 0` }}>
+          Posts: 
+          {props.posts.map((post, index) => (
+            <Link key={post} to={post}> 
+              {post} 
+              {index !== (props.posts.length - 1) && <span>,</span>}
+            </Link>
+          ))}
+        </p>}
         <br/>
       </div>
     </div>
