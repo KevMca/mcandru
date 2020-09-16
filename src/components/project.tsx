@@ -19,7 +19,9 @@ const Project = (props) => {
         '@media screen and (max-width: 800px)': {
           margin: "20px 0px",
         },
-      }}>{props.children}</div>
+      }}>
+        {props.children}
+      </div>
     </div>
   );
 }

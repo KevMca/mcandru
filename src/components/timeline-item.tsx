@@ -73,9 +73,9 @@ const TimelineItem = (props) => {
         {props.posts && <p sx={{ fontWeight: `normal`, fontSize: [1, 2], color: `light`, margin: `5px 0 0 0` }}>
           Posts: 
           {props.posts.map((post, index) => (
-            <span>
+            <span key={post}>
               {`  `}
-              <Link key={post} to={`/${post}`} sx={{fontWeight: `normal`, fontSize: [1, 2], color: `lightDarker`}}> 
+              <Link to={`/${post}`} sx={{fontWeight: `normal`, fontSize: [1, 2], color: `lightDarker`}}> 
                 {post}
               </Link>
               {index !== (props.posts.length - 1) && <span>,</span>}

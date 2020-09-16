@@ -1,0 +1,44 @@
+---
+title: Electric Bike
+slug: "/electric-bike"
+status: "in progress"
+authors:
+  - Kevin
+---
+import Button from "../../../src/components/button";
+import TimelineItem from "../../../src/components/timeline-item";
+import Timeline from "../../../src/components/timeline";
+import ProjectPosts from "../../../src/components/project-posts";
+import BikeImage from "./electric-bike.png"
+import Project from "../../../src/components/project";
+
+<Project
+  headerImage={BikeImage}
+  title="Electric Bike"
+  status="in progress"
+  buttons={[]}
+>
+
+  ### About
+  ---
+
+  I've had an electric bike for a while, but sure amn't I doing an upgrade.
+
+  ### Timeline
+  ---
+
+  <Timeline>
+    <TimelineItem title="Buy all of the bits and bobs" status="Completed" date="20.8.2020" type="normal">
+      I need to buy some stuff
+    </TimelineItem>
+    <TimelineItem title="Do the rest of the conversion" status="Not started" type="end">
+      Do everything else... content to be updated obviously :D
+    </TimelineItem>
+  </Timeline>
+
+  ### Updates
+  ---
+
+  <ProjectPosts filter="Bike" />
+
+</Project>
