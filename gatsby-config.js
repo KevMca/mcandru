@@ -99,6 +99,7 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
+          `gatsby-remark-copy-linked-files`,
         ],
         plugins: [
           {
@@ -109,6 +110,7 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
+          `gatsby-remark-copy-linked-files`,
         ],
       },
     },
