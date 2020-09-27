@@ -14,18 +14,6 @@ const theme = merge(tailwind, {
     light: `#8E9AAA`,
     lightDarker: tailwind.colors.gray[6],
     divide: tailwind.colors.gray[4],
-    modes: {
-      dark: {
-        text: tailwind.colors.gray[4],
-        primary: tailwind.colors.purple[5],
-        secondary: `#7f8ea3`,
-        toggleIcon: tailwind.colors.gray[4],
-        background: `#1A202C`,
-        heading: tailwind.colors.white,
-        divide: tailwind.colors.gray[8],
-        muted: tailwind.colors.gray[8],
-      },
-    },
   },
   fonts: {
     body: `"IBM Plex Sans", -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
