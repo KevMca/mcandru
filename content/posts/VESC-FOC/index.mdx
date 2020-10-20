@@ -9,13 +9,15 @@ tags:
 I wasn't happy with the power that I was getting from the motor. Furthermore, it wasn't as smooth as I
 would have liked. Field Oriented Control (FOC) can alleviate these problems. I have gone through the
 theory of FOC control in [FOC control theory](/motor-control). There is also a good video by vedder himself
-on the topic: [vedder video](https://www.youtube.com/watch?v=bYYNbxPXNEU&t=343s).
+on the topic: [vedder video](https://www.youtube.com/watch?v=bYYNbxPXNEU&t=343s). The controller I am
+using is a Vedder Electronic Speed Controller or Vedder ESC or VESC, which is basically a standard ESC that
+is open source and developed by Benjamin Vedder.
 
 ### Hall effect sensors 🔬
 
 Hall effect sensors are used for position control. These sensors are particularly important for estimating
-position when the motor is stationary. I think the VESC that I'm using uses Back EMF sensing at high
-speeds anyways because it's more accurate. However, hall sensors work the same regardless of speed. When
+rotor position when the motor is stationary. I think the VESC that I'm using uses Back EMF sensing at high
+speeds anyways because it's more accurate. However, hall sensors work well independent of speed. When
 a pole is seen the output latches until the opposite pole is seen. I thought that these hall sensor ICs
 had a voltage output, but it actually acts more like a switch, so an external voltage must be applied to
 test them.
@@ -102,4 +104,6 @@ The problem was that the motor current was limited to 30 amps. Which means the m
 30A\*50V=1.5kW peak. This... is not enough 😈 I want more power!!! ⚡ So I increased the motor current
 limit to 60A which means the motor can now have peak power of 60A\*50V=3kW. Much better 😊 I could have 
 increased the limit even more, however the battery current limit was reached at 10A and I did not
-want to exceed 10A.
+want to exceed 10A. I believe the motor current can exceed the battery current because the controller
+has large capacitors that store energy for when there is a peak in power consumption from the motor.
+This decreases stress on the motor.
