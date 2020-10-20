@@ -35,6 +35,9 @@ const theme = merge(tailwind, {
       lineHeight: `body`,
       "--baseline-multiplier": 0.179,
       "--x-height-multiplier": 0.35,
+      img: {
+        maxWidth: `100%`,
+      },
     },
     ul: {
       li: {
