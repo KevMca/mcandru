@@ -46,7 +46,8 @@ const Status = (props) => {
       </button>
       <button style={{  
         backgroundColor: `${color}`,
-        borderRadius: "0px 7px 7px 0px"
+        borderRadius: "0px 7px 7px 0px",
+        width: 100,
       }}>
         {props.status}
       </button>

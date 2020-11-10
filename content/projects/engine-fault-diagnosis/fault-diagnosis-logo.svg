@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="906" height="315" viewBox="0 0 906 315">
+  <defs>
+    <clipPath id="clip-fault-diagnosis-logo">
+      <rect width="906" height="315"/>
+    </clipPath>
+  </defs>
+  <g id="fault-diagnosis-logo" clip-path="url(#clip-fault-diagnosis-logo)">
+    <rect width="906" height="315" fill="#fff"/>
+    <line id="Line_5" data-name="Line 5" x1="357.966" transform="translate(143.5 72.276)" fill="none" stroke="#bebebe" stroke-width="4" stroke-dasharray="10"/>
+    <line id="Line_6" data-name="Line 6" x1="357.966" transform="translate(143.5 265.276)" fill="none" stroke="#bebebe" stroke-width="4" stroke-dasharray="10"/>
+    <g id="Rectangle_6" data-name="Rectangle 6" transform="matrix(-0.259, 0.966, -0.966, -0.259, 304.913, 145.578)" fill="#fff" stroke="#707070" stroke-width="6">
+      <rect width="43" height="271" stroke="none"/>
+      <rect x="3" y="3" width="37" height="265" fill="none"/>
+    </g>
+    <g id="Rectangle_7" data-name="Rectangle 7" transform="matrix(-0.259, 0.966, -0.966, -0.259, 121.769, 28.548)" fill="#fff" stroke="#707070" stroke-width="6">
+      <rect width="175" height="66" rx="33" stroke="none"/>
+      <rect x="3" y="3" width="169" height="60" rx="30" fill="none"/>
+    </g>
+    <g id="Rectangle_5" data-name="Rectangle 5" transform="translate(392.966 75.776) rotate(90)" fill="#fff" stroke="#707070" stroke-linejoin="round" stroke-width="6">
+      <rect width="186" height="60" stroke="none"/>
+      <rect x="3" y="3" width="180" height="54" fill="none"/>
+    </g>
+    <g id="Path_1" data-name="Path 1" transform="translate(650.966 -492.224) rotate(90)" fill="#fff" stroke-linejoin="round">
+      <path d="M 757 260.6238708496094 L 564.9522094726562 260.6238708496094 L 564.9522094726562 242.2151184082031 C 569.9190063476562 241.2687683105469 582.0772094726562 239.0263061523438 596.9746704101562 236.8065948486328 C 608.4058227539062 235.1033630371094 619.1887817382812 233.7466735839844 629.0240478515625 232.7742004394531 C 641.279541015625 231.5624542236328 652.0791015625 230.9480285644531 661.1228637695312 230.9480285644531 C 670.1663208007812 230.9480285644531 680.9501953125 231.5624237060547 693.1749267578125 232.7741088867188 C 702.9855346679688 233.7465362548828 713.7341918945312 235.1031494140625 725.1223754882812 236.8062896728516 C 739.9545288085938 239.0244750976562 752.0509643554688 241.2655029296875 757 242.2128753662109 L 757 260.6238708496094 Z" stroke="none"/>
+      <path d="M 754 257.6239013671875 L 754 244.7006225585938 C 739.2159423828125 241.94140625 693.5802001953125 233.9480438232422 661.1228637695312 233.9480438232422 C 628.6486206054688 233.9480438232422 582.7855224609375 241.9488830566406 567.9522094726562 244.7049560546875 L 567.9522094726562 257.6239013671875 L 754 257.6239013671875 M 760 263.6239013671875 L 561.9522094726562 263.6239013671875 L 561.9522094726562 239.740234375 C 561.9522094726562 239.740234375 621.0238647460938 227.9480438232422 661.1228637695312 227.9480438232422 C 701.221923828125 227.9480438232422 760 239.740234375 760 239.740234375 L 760 263.6239013671875 Z" stroke="none" fill="#707070"/>
+    </g>
+    <g id="Rectangle_4" data-name="Rectangle 4" transform="translate(338.966 69.776) rotate(90)" fill="#fff" stroke="#707070" stroke-linejoin="round" stroke-width="6">
+      <rect width="198" height="68" stroke="none"/>
+      <rect x="3" y="3" width="192" height="62" fill="none"/>
+    </g>
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(325.966 147.776) rotate(90)" fill="#fff" stroke="#707070" stroke-linejoin="round" stroke-width="6">
+      <circle cx="21.5" cy="21.5" r="21.5" stroke="none"/>
+      <circle cx="21.5" cy="21.5" r="18.5" fill="none"/>
+    </g>
+    <line id="Line_1" data-name="Line 1" x1="0.034" y2="187" transform="translate(372.466 75.5)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <line id="Line_2" data-name="Line 2" y2="187" transform="translate(352.466 75.5)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(100.966 69.776) rotate(90)" fill="#fff" stroke="#707070" stroke-width="6">
+      <circle cx="32.5" cy="32.5" r="32.5" stroke="none"/>
+      <circle cx="32.5" cy="32.5" r="29.5" fill="none"/>
+    </g>
+    <path id="Path_2" data-name="Path 2" d="M1025.714,474.446c108.783,352.259,83.243-333.671,186.286,0" transform="translate(-524 -309.775)" fill="none" stroke="#bebebe" stroke-width="4" stroke-dasharray="10"/>
+    <path id="Path_3" data-name="Path 3" d="M1025.714,471.586c108.783,341.589,83.243-323.564,186.286,0" transform="translate(-339 -309.775)" fill="none" stroke="#bebebe" stroke-width="4" stroke-dasharray="10"/>
+  </g>
+</svg>

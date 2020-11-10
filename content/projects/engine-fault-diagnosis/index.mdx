@@ -1,0 +1,64 @@
+---
+title: Engine Fault Detection by Audio Analysis
+slug: "/engine-fault-detection"
+status: "in progress"
+authors:
+  - Michael
+---
+import Button from "../../../src/components/button";
+import TimelineItem from "../../../src/components/timeline-item";
+import Timeline from "../../../src/components/timeline";
+import ProjectPosts from "../../../src/components/project-posts";
+import FaultImage from "./fault-diagnosis-logo.png"
+import Project from "../../../src/components/project";
+
+<Project
+  headerImage={FaultImage}
+  title="Engine Fault Detection by Audio Analysis"
+  status="in progress"
+  buttons={[]}
+>
+
+  ### About
+  ---
+
+  I am currently completing an MCS in Computer Science. My masters dissertation is on __Engine Fault Detection__
+  using audio analysis. The goal of the project is to find out, to what degree can Internal Combustion Engine health 
+  can be determined by using a smartphone microphone.
+
+  The idea originated from a tappet sound on my infamous 2002 Audi TT. At the time, I didn't have enough knowledge or experience
+  in the field to identify the sound. However, an expert mechanic could instantly identify the tappet sound and recommend a fix.
+
+  At the most basic level, this project could prove useful to create a tool that identifies basic faults for a non-mechanic. If
+  the project is more successful, it may very well be able to identify faults from sound that even an expert mechanic is unable
+  to notice.
+
+  ### Timeline
+  ---
+
+  <Timeline>
+    <TimelineItem title="RPM Detection" status="Completed" date="12.10.2020" type="normal">
+      To acquaint myself with audio analysis techniques, my first task is to determine the RPM
+      of the engine from its sound. I opted to perform a Fast Fourier Transform on the audio
+      and find the fundamental frequency of the cylinders firing to determine the RPM.
+    </TimelineItem>
+    <TimelineItem title="Misfire Detection" status="Completed" date="27.10.2020" type="normal">
+      Misfires occur when the fuel and air mixture in a cylinder doesn't combust. This can be
+      caused by spark plug, injector or coilpack faults. To find a misfire, I used a Fast Fourier
+      Transform and used harmonics of the fundamental frequency of the cylinders and the presence
+      of intermediate frequencies between the harmonic frequencies to determine a misfire.
+    </TimelineItem>
+    <TimelineItem title="Relative Compression" status="In progress" type="normal">
+      My next challenge is to analyse the sound of the starter motor turning an engine over to
+      determine low compression in a cylinder. The idea is that if there is low compression in
+      a cylinder, less load is put on the starter motor allowing it to spin faster with a
+      noticable difference in sound.
+    </TimelineItem>
+  </Timeline>
+
+  ### Updates
+  ---
+
+  <ProjectPosts filter="fault-detection" />
+
+</Project>
