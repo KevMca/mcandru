@@ -6,7 +6,7 @@ tags:
     - fault-detection
 ---
 
-In part 1 of this review I discussed Shazam's method of creating a unique fingerprint
+In <a href="https://www.mcand.ru/how-shazam-works-part-1">part 1</a> of this review I discussed Shazam's method of creating a unique fingerprint
 for a song. In this part I am going to discuss how Shazam uses these fingerprints
 to efficiently identify a song from a partial recording.
 
@@ -23,11 +23,12 @@ a portion of a potential song and look for matching fingerprints in all other
 songs.
 
 For each song fingerprint in the database, you will have to slide the fingerprint
-of the recorded clip over the entire song for a match.
+of the recorded clip over each recording length window of the entire song and look for
+a match in the peak frequencies.
 
 Let's say we record a 10-second
-clip of a song, there are on average 3 features per 0.1 seconds for a total of 10/0.1 = 100
-features in the 10 second clip. Each segment of a song compared is (300 * 300) = 90,000
+clip of a song, there are on average 3 features per 0.1 seconds for a total of 10/0.1 x 3 = 300
+features in the 10 second clip. Each segment of a song compared is (300 x 300) = 90,000
 read operations to compare all values. Then if a song is on average 180 seconds long, 
 it would take (180/10) * 90,000 = 1.6 million operations just to search a single song.
 
@@ -39,23 +40,33 @@ that stores data in key-value pairs. Keys can be queried in near real-time unlik
 in an array where in the worst case scenario you have to search through every element
 in the array to find a matching element.
 
-Shazam make a very clever use of a hash table by creating a relatively unique hash for 
+Shazam make very clever use of a hash table by creating a relatively unique hash for 
 each point in the spectrogram that consists of:
 
 ```
 ["point frequency", "anchor point frequency", "time difference between anchor and point"]
 ```
 
-This is then encoded in a 32-bit integer with:
+<div style={{maxWidth: 500, margin: '0 auto'}}>
+
+![](./images/hash-creation.png "Fig 1: Hash details")
+
+</div>
+
+*Fig 1* above shows the hash creation for a single point in the filtered spectrogram.
+This is done for every peak in the filtered spectrogram of which there are typically
+hundreds of peaks.
+
+This hash is then encoded in a 32-bit integer with:
 - 9 bits for the frequency of the spectrogram peak
 - 9 bits for the frequency of the anchor point
 - 14 bits for the delta in time between the anchor and peak
 
-I will talk more about the anchor point and what it is later in the article but for
-now we'll just see that it is itself a peak in the spectrogram that is selected in
+I will talk more about the anchor point and what it is in the next section of the article but for
+now we'll just accept that it is itself a peak in the spectrogram that is selected in
 some way and used as a reference point for making the hash more unique to the song.
 
-Now a hash can be created for every point in the 10 second recording along with the
+Now a hash can be created for every point in the 10-second recording along with the
 chosen anchor point and time delta between the points and can be queried to find
 all other songs that contain the same feature. It is rarely only one song that
 matches but it greatly reduces the list of potential matching songs.
@@ -65,19 +76,24 @@ matches but it greatly reduces the list of potential matching songs.
 So far we've just accepted that there's some anchor point that is used to calculate
 the hash but I haven't yet mentioned how that anchor point is chosen.
 
-In order to understand how the anchor point is chosen for points, we have to understand
-the concept of __target zones__. Target zones were first referred to in the white
+In order to understand how the anchor point is chosen for each peak in the spectrogram, we have to understand
+the concept of __target zones__. Target zones were coined in the white
 paper and they are simply a method of splitting the filtered spectrogram into overlapping
-groups of points. Let's say for this example that we create target zones of 10 peaks.
+groups of peaks.
 
 Inconveniently, the whitepaper does not discuss how peaks are grouped into target zones
 so I'm just going to make up some way for the sake of understanding the concept.
+Let's also say for this example that we create target zones of 10 peaks.
 
-![](./images/target-zones.jpg "Fig 1: Target zoning example")
+<div style={{maxWidth: 500, margin: '0 auto'}}>
+
+![](./images/target-zones.jpg "Fig 2: Target zoning example")
+
+</div>
 
 1. Label each peak in the filtered spectrogram with an increasing number. Label
 from the first FFT in the spectrogram to the last, and from the lowest to the highest
-frequency in each FFT as seen in *Fig 1* above.
+frequency in each FFT as seen in *Fig 2* above.
 
 2. Split the peaks into overlapping target zones with 10 peaks in each by the labels.
 For example:
@@ -96,10 +112,15 @@ ommitted from the whitepaper. However, I don't think it really matters as long a
 can be reproducible. Let's say that it is the peak that is 5 peaks away from the first
 peak in the target zone.
 
-![](./images/anchor-point-target-zone.png "Fig 2: Target zone anchor point")
+<div style={{maxWidth: 500, margin: '0 auto'}}>
 
-*Fig 2* above shows an example of an anchor point for a target zone and how it is
-used with every point in the target zone to create a hash for each point.
+![](./images/anchor-point-target-zone.png "Fig 3: Target zone anchor point")
+
+</div>
+
+In *Fig 3* above, if you count 5 peaks from the first peak within the bounding
+box of the target zone, it should be the point marked as the anchor point in the
+diagram.
 
 So how many hashes does a 10-second audio clip create? Because the target zones
 are overlapping, we have 300-1 or 299 target zones each with 10 points. This results
