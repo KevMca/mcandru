@@ -78,11 +78,15 @@ where:
 - x[k] is the kth sample of the audio waveform
 - N is the size of the window (ie the length of the waveform)
 
+What is this function doing? Essentially, for each bin of frequencies we want 
+to calculate the magnitude of, it iterates through every sample in the waveform and forms some
+weighted sum that represents the magnitude of the frequencies.
+
 I mention __frequency bin__ here and not frequency because in reality because we're
 sampling the waveform, each frequency actually represents a range of frequencies of a
 size dependent on the number of samples.
 
-So how do we know the smallest bin size we can calculate? The frequency is
+How do we know the smallest bin size we can calculate? The frequency is
 the number of oscillations per second so we need to find out how many samples
 per second the waveform is sampled at and the total number of samples we
 have to sample the frequencies. For example, if our waveform was 4096 samples and
@@ -91,12 +95,6 @@ per frequency bin.
 
 Note that the the frequency resolution increases the longer the audio waveform is
 but the time resolution of the frequencies decreases.
-
-So what is this function doing? Essentially, for each bin of frequencies we want 
-to calculate the magnitude of, it iterates through every sample in the waveform and forms some
-weighted sum that represents the magnitude of the frequencies. For a better
-visualisation of the function in action, I recommend checking out 3Blue1Brown's
-video that I recommended at the start of the article.
 
 ### 2. Spectrogram
 
