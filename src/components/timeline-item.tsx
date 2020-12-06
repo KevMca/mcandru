@@ -66,7 +66,7 @@ const TimelineItem = (props) => {
           {props.status} {props.date && (props.date)}
         </p>
         {/* Description */}
-        <p sx={{ fontWeight: `normal`, fontSize: [1, 2], color: `light`, margin: `5px 0 0 0` }}> 
+        <p sx={{ fontWeight: `normal`, fontSize: [1, 2], color: `light`, margin: `5px 0 0 0` }}>
           {props.children}
         </p>
         {/* Posts */}

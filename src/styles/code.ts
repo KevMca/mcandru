@@ -188,6 +188,9 @@ const code = {
       left: `-2px`,
     },
   },
+  ".gatsby-resp-image-figcaption": {
+    textAlign: `center`,
+  },
 }
 
 export default code

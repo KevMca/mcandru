@@ -97,6 +97,7 @@ module.exports = {
               maxWidth: 960,
               quality: 90,
               linkImagesToOriginal: false,
+              showCaptions: true,
             },
           },
           `gatsby-remark-copy-linked-files`,
