@@ -1,7 +1,7 @@
 ---
 title: Electric Bike
 slug: "/electric-bike"
-status: "in progress"
+status: "complete"
 authors:
   - Kevin
 ---
@@ -15,7 +15,7 @@ import Project from "../../../src/components/project";
 <Project
   headerImage={BikeImage}
   title="Electric Bike"
-  status="in progress"
+  status="complete"
   buttons={[]}
 >
 
@@ -70,12 +70,14 @@ import Project from "../../../src/components/project";
       The power of the hub motor is decent, but performance could probably be improved by adding position sensors
       to the wheel and by using Field Oriented Control (FOC).
     </TimelineItem>
-    <TimelineItem title="Add BMS to the battery" status="In progress" type="normal">
+    <TimelineItem title="Add BMS to the battery" status="Completed" date="03.11.2020" type="normal">
       I bought a BMS for the battery that I have a while ago. However, the BMS was faulty. I have a new one that
-      I have been meaning to install for a while.
+      I have been meaning to install for a while. It's finally installed now 😊
     </TimelineItem>
-    <TimelineItem title="Install battery-run lights" status="Not started" type="end">
-      There are lights on the bike that have their own battery, but why not run them off the bike's battery :)
+    <TimelineItem title="Install battery-run lights" status="Completed" date="06.12.2020" type="normal" type="end"
+        posts={["bike-lights"]}>
+      There are lights on the bike that have their own battery, but why not run them off the bike's battery 😁 I got
+      a 12V motorbike headlight and LED rear light from banggood along with a 12V regulator
     </TimelineItem>
   </Timeline>
 
