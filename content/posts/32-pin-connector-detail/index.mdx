@@ -27,6 +27,17 @@ Current sensor pins.
 What voltage are they?
 How is current sensed?
 
+- G9247-47050
+- Attached to the main inverter PCB with the phase bar passing through
+the centre
+- Apparently they are hall effect sensors
+
+<div style={{ maxWidth: '600px', height: 'auto', margin: '0 auto' }}>
+
+<img src="./current-sensor.jpg" alt="current-sensors"/>
+
+</div>
+
 ---
 4. **GUU  : MG1 PWM U**
 5. **GVU  : MG1 PWM V**
@@ -148,7 +159,21 @@ Maybe swapped with pin 14 (GSDN)??? - It seems so
 ---
 21. **GIVT : MG1 inverter temperature**
 
-What type of output?
+- Min.: -50°C, Max.: 205°C
+- The lower the motor temperature, the higher the resistance of the thermistor
+- Conversely, the higher the temperature, the lower the resistance.
+- (found on page HV-189)
+- "The power voltage of 5 V is
+supplied from the MMT terminal of the HV control ECU to the No. 1 motor temperature sensor via resistor
+R. Because resistor R and the No. 1 motor temperature sensor are connected in series, the resistance
+changes with the changes in temperature of the motor, which causes the MMT terminal voltage to also
+change."
+
+<div style={{ maxWidth: '700px', height: 'auto', margin: '0 auto' }}>
+
+<img src="./mg1-temp-curve.png" alt="ct-curve"/>
+
+</div>
 
 ---
 22. **GFIV : MG1 inverter fail**
