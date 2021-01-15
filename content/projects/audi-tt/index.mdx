@@ -13,6 +13,8 @@ import ProjectPosts from "../../../src/components/project-posts";
 import AudiImage from "./audi-tt-2003.gif";
 import Project from "../../../src/components/project";
 import NewTurboImage from "./new-turbo.jpg";
+import EngineIn from "./engine-in.jpg";
+import AfterEngineIn from "./after-engine-in.jpg";
 
 
 <Project
@@ -73,17 +75,28 @@ import NewTurboImage from "./new-turbo.jpg";
       The cylinder head cover gasket was seeping and is in need of replacement. It is also a good excuse to
       have a look at the condition of the cams, cam chain and lifters.
     </TimelineItem>
-    <TimelineItem title="Engine Reinstallation" status="Not started" type="normal">
-      After the turbo, cylinder head cover gasket and front axle assembly have been reinstalled, the engine can be refitted.
+    <TimelineItem title="Engine Reinstallation" status="Completed" type="normal" date="25.12.2020">
+      The much antipicated engine reinstallation went as smoothly as one could hope and went in on its new engine
+      mounts without much coaxing.
+      <div>
+        <img src={EngineIn} style={{ maxWidth: 300, margin: 10 }} />
+        <img src={AfterEngineIn} style={{ maxWidth: 300, margin: 10 }} />
+      </div>
     </TimelineItem>
     <TimelineItem title="Exhaust Reassembly" status="Completed" type="normal" date="14.11.2020">
       I had some difficulty with the cheap chinese downpipe and midpipe as expected. The midpipe was slightly too small to
       allow the exhaust clamp to grip it so I had to fabricate a shim to slide between the pipe and the clamp. Hopefully
       it doesn't blow too loudly.
     </TimelineItem>
-    <TimelineItem title="Front Axle Reassembly" status="In progress" type="end">
-      The subframe, new steering rack and control arms can be reinstalled once the exhaust is back in
-      place. I am going to assemble the axle assembly before reinstalling the engine in the car.
+    <TimelineItem title="Front Axle Reassembly" status="Completed" type="normal" date="31.12.2020">
+      The subframe and new steering rack are reinstalled along with the exhaust adjustment. The exhaust
+      is a very tight fit and I suspect that there will be significant rubbing once the car is on the
+      ground. However, it will suffice for the first start and I may purchase a better quality exhaust
+      for better fitment.
+    </TimelineItem>
+    <TimelineItem title="Engine First Start Preparation" status="In progress" type="end">
+      The cooling system and power steering system need to be reinstalled, a once over of all fittings
+      and hoses must be done and fluids added before the first start of the engine again.
     </TimelineItem>
   </Timeline>
 
