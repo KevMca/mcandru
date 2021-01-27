@@ -10,12 +10,17 @@ import Button from "../../../src/components/button";
 import TimelineItem from "../../../src/components/timeline-item";
 import Timeline from "../../../src/components/timeline";
 import ProjectPosts from "../../../src/components/project-posts";
-import AudiImage from "./audi-tt-2003.gif";
+import AudiImage from "./audi-tt-back.png";
 import Project from "../../../src/components/project";
 import NewTurboImage from "./new-turbo.jpg";
 import EngineIn from "./engine-in.jpg";
 import AfterEngineIn from "./after-engine-in.jpg";
-
+import TTMyFace from "./my-face.jpg";
+import TTWashMe from "./car-first-start.jpg";
+import TTOldDownpipe from "./old-broken-downpipe.jpg";
+import TTNewDownpipe from "./new-downpipe.jpg";
+import TTNewSubframe from "./new-subframe.jpg";
+import TTEngineOut from "./audi-tt-engine-out.jpg";
 
 <Project
   headerImage={AudiImage}
@@ -51,25 +56,40 @@ import AfterEngineIn from "./after-engine-in.jpg";
       I decided that the subframe, control arms, steering rack and anti-roll bar would require work and were all removed.
     </TimelineItem>
     <TimelineItem title="Exhaust System Disassembly" status="Completed" date="18.04.2020" type="normal">
-      A hole in the exhaust system was causing a loud tractor-like blowing sound. I removed the exhaust
-      system and found that the flexible hose on the downpipe had rusted through.
+      <div>
+        <img src={TTOldDownpipe} style={{ maxWidth: 200, marginTop: 0, marginRight: 20, float: 'left' }} />
+        <span>
+          A hole in the exhaust system was causing a loud tractor-like blowing sound. I removed the exhaust
+          system and found that the flexible hose on the downpipe had rusted through.
+        </span>
+      </div>
     </TimelineItem>
     <TimelineItem title="Engine Removal" status="Completed" date="18.07.2020" type="normal">
-      Rust damage on the exhaust side of the engine made removing the turbo impossible without engine
-      removal. After the engine was removed, the rust damage was assessed and I determined that a new turbo
-      would be required.
+      <div>
+        <img src={TTEngineOut} style={{ maxWidth: 300, marginTop: 0, marginRight: 20, float: 'left' }} />
+        <span>
+          Rust damage on the exhaust side of the engine made removing the turbo impossible without engine
+          removal. After the engine was removed, the rust damage was assessed and I determined that a new turbo
+          would be required.
+        </span>
+      </div>
     </TimelineItem>
     <TimelineItem title="Turbo Removal" status="Completed" date="27.07.2020" type="normal">
       Rust damage made removing the turbo difficult but it did come undone. The turbo had significant shaft
       play and worn oil seals which resulted in oil leaking to the intake. It definitely needed replacing.
     </TimelineItem>
     <TimelineItem title="Subframe and Control Arm Restoration" status="Completed" date="09.09.2020" type="normal">
-      Surface rust was removed and the surfaces were lightly sanded. Several coats of "Hammered Black" hammerite
-      were applied to provide a tough protective layer.
+      <div>
+        <img src={TTNewSubframe} style={{ maxWidth: 250, marginTop: 0, marginRight: 20, float: 'left' }} />
+        <span>
+          Surface rust was removed and the surfaces were lightly sanded. Several coats of "Hammered Black" hammerite
+          were applied to provide a tough protective layer.
+        </span>
+      </div>
     </TimelineItem>
     <TimelineItem title="Turbo Replacement" status="Completed" type="normal" date="14.11.2020">
       <div>A shiny new Turbo fitted! Had a slight difficulty with the EGT sensor threads but nothing too major to report.</div>
-      <img src={NewTurboImage} style={{ maxWidth: 400, marginTop: 10 }} />
+      <img src={NewTurboImage} style={{ maxWidth: 250, marginTop: 10 }} />
     </TimelineItem>
     <TimelineItem title="Cylinder Head Cover Gasket" status="Completed" type="normal" date="30.09.2020">
       The cylinder head cover gasket was seeping and is in need of replacement. It is also a good excuse to
@@ -84,9 +104,14 @@ import AfterEngineIn from "./after-engine-in.jpg";
       </div>
     </TimelineItem>
     <TimelineItem title="Exhaust Reassembly" status="Completed" type="normal" date="14.11.2020">
-      I had some difficulty with the cheap chinese downpipe and midpipe as expected. The midpipe was slightly too small to
-      allow the exhaust clamp to grip it so I had to fabricate a shim to slide between the pipe and the clamp. Hopefully
-      it doesn't blow too loudly.
+      <div>
+        <span><img src={TTNewDownpipe} style={{ maxWidth: 140, marginTop: 0, marginRight: 20, float: 'left' }} /></span>
+        <span>
+          I had some difficulty with the cheap downpipe and midpipe as expected. The midpipe was slightly too small to
+          allow the exhaust clamp to grip it so I had to fabricate a shim to slide between the pipe and the clamp. Hopefully
+          it doesn't blow too loudly.
+        </span>
+      </div>
     </TimelineItem>
     <TimelineItem title="Front Axle Reassembly" status="Completed" type="normal" date="31.12.2020">
       The subframe and new steering rack are reinstalled along with the exhaust adjustment. The exhaust
@@ -94,9 +119,28 @@ import AfterEngineIn from "./after-engine-in.jpg";
       ground. However, it will suffice for the first start and I may purchase a better quality exhaust
       for better fitment.
     </TimelineItem>
-    <TimelineItem title="Engine First Start Preparation" status="In progress" type="end">
-      The cooling system and power steering system need to be reinstalled, a once over of all fittings
-      and hoses must be done and fluids added before the first start of the engine again.
+    <TimelineItem title="Engine First Start Preparation" status="Completed" type="normal" date="23.01.2021">
+      The cooling system and power steering system were reinstalled, a once over of all fittings
+      and hoses were completed and fluids added before the first start of the engine again.
+    </TimelineItem>
+    <TimelineItem title="First Start" status="Completed" type="normal" date="23.01.2021" posts={["tt-first-start", "tt-fluid-bleeding"]}>
+      Couldn't have had a better first start! Started up without any hesitation. No need to buy another exhaust either
+      as there doesn't seem to be any rubbing.
+      <div>
+        <img src={TTWashMe} style={{ maxWidth: 300, margin: 10 }} />
+        <img src={TTMyFace} style={{ maxWidth: 250, margin: 10 }} />
+      </div>
+    </TimelineItem>
+    <TimelineItem title="First Start" status="Completed" type="normal" date="24.01.2021">
+      After reassembling the rest of the front suspension, we took it out for a quick test on the driveway and it
+      was perfect. Unfortunately, we can't take it any further until it passes NCT inspection.
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/EKBmwcf8mbI" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </TimelineItem>
+    <TimelineItem title="NCT Technical Inspection" status="In progress" type="end">
+      Ireland's technical inspection is definitely not the most difficult to pass. They should pass the car with
+      the decat exhaust fitted, especially considering that it's an older car with less stringent emmissions
+      thresholds applied to it.
     </TimelineItem>
   </Timeline>
 
