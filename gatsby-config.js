@@ -87,6 +87,15 @@ module.exports = {
       }
     },
     {
+      resolve: `@rafaelquintanilha/gatsby-transformer-ipynb`,
+      options: {
+        notebookProps: {
+          displayOrder: ["image/png", "text/html", "text/plain"],
+          showPrompt: false,
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
