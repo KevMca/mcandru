@@ -47,6 +47,8 @@ Any extra pages. At the moment this just includes author pages:
 
 ### Posts
 
+#### MDX
+
 All small incremental updates regarding a specific project. Tags are filtered to
 automatically place posts on the correct pages of projects.
 
@@ -63,6 +65,32 @@ automatically place posts on the correct pages of projects.
 
   ... body of post
 ```
+
+#### Jupyter Notebook
+
+If you want to share a Jupyter notebook as a post rather than by using MDX, simply add the `.ipynb` file to a new post folder.
+
+You will need to tell Gatsby the same frontmatter information as in an MDX post. A Jupyter notebook is just a JSON object so
+you can open the raw `.ipynb` file JSON and add the frontmatter to the metadata object:
+
+```
+{
+  "metadata": {
+    "title": "Jupyter Test",
+    "date": "2021.02.21",
+    "slug": "/jupyter-test",
+    "tags": ["fault-detection"],
+    ...
+  },
+  ...
+}
+```
+
+If you have the VS Code Jupyter extension installed, you will either have to use a different editor to access the raw JSON or
+disable the extension temporarily. I will have a look again to see if there's a more streamlined way of doing this in future
+but it will do for now.
+
+Check out the example in: `content/jupyter-test` too if you want to see how it works.
 
 ### Projects
 
