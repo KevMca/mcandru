@@ -117,7 +117,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       date: node.metadata.date,
       tags: modifiedTags,
       description: node.metadata.description,
-      excerpt: "Jupyter notebook",
+      excerpt: node.metadata.excerpt ? node.metadata.excerpt : "Jupyter notebook",
       body: node.html,
       html: node.html,
       banner: node.metadata.banner,
@@ -166,11 +166,9 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
           slug
         }
       }
-      allJupyterNotebook {
+      allNotebookPost {
         nodes {
-          metadata {
-            slug
-          }
+          slug
         }
       }
     }
@@ -192,15 +190,15 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
 
   const { postsPrefix, formatString } = withDefaults(themeOptions);
 
-  const notebookPosts = result.data.allJupyterNotebook.nodes;
+  const notebookPosts = result.data.allNotebookPost ? result.data.allNotebookPost.nodes : null;
 
-  if (notebookPosts.length > 0) {
+  if (notebookPosts && notebookPosts.length > 0) {
     notebookPosts.forEach((post) => {
       createPage({
-        path: `/${postsPrefix}${post.metadata.slug}`.replace(/\/\/+/g, `/`),
+        path: `/${postsPrefix}${post.slug}`.replace(/\/\/+/g, `/`),
         component: notebookPostTemplate,
         context: {
-          slug: post.metadata.slug,
+          slug: post.slug,
           formatString,
         },
       });
