@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "^2.4.0",
+    "@rafaelquintanilha/gatsby-transformer-ipynb": "^0.1.21",
     "babel-preset-es2015": "^6.24.1",
     "d3": "^6.2.0",
     "gatsby": "^2.27.0",

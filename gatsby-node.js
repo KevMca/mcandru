@@ -1,5 +1,7 @@
 const kebabCase = require(`lodash.kebabcase`)
+const withDefaults = require(`./utils/default-options`);
 const projectsPath = `content/projects`;
+const postsPath = `content/posts`;
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
@@ -27,15 +29,28 @@ exports.createSchemaCustomization = ({ actions }) => {
       body: String! @mdxpassthrough(fieldName: "body")
       authors: [ProjectAuthor]
     }
+
+    type NotebookPost implements Node & Post {
+      slug: String!
+      title: String!
+      date: Date! @dateformat
+      excerpt(pruneLength: Int = 140): String!
+      body: String!
+      html: String!
+      tags: [PostTag]
+      description: String
+      timeToRead: Int
+      banner: File @fileByRelativePath
+    }
   `);
 };
 
 exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }) => {
   const { createNode, createParentChildLink } = actions;
 
-  // Make sure that it's an MDX node
-  if (node.internal.type !== `Mdx`) {
-    return
+  // Make sure that it's an MDX or Jupyter notebook node
+  if (node.internal.type !== `Mdx` && node.internal.type !== `JupyterNotebook`) {
+    return;
   }
 
   // Create a source field
@@ -46,7 +61,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 
   // Check for "projects" and create the "Project" type
   if (node.internal.type === `Mdx` && source === projectsPath) {
-    let modifiedAuthors
+    let modifiedAuthors;
 
     if (node.frontmatter.authors) {
       modifiedAuthors = node.frontmatter.authors.map((author) => ({
@@ -61,7 +76,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       title: node.frontmatter.title,
       slug: node.frontmatter.slug,
       status: node.frontmatter.status,
-      authors: modifiedAuthors
+      authors: modifiedAuthors,
     };
 
     const mdxProjectId = createNodeId(`${node.id} >>> MdxProject`);
@@ -82,12 +97,59 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 
     createParentChildLink({ parent: node, child: getNode(mdxProjectId) });
   }
+
+  // Check for "projects" and create the "Project" type
+  if (node.internal.type === `JupyterNotebook` && source === postsPath) {
+    let modifiedTags;
+
+    if (node.json.metadata.tags) {
+      modifiedTags = node.json.metadata.tags.map((tag) => ({
+        name: tag,
+        slug: kebabCase(tag),
+      }));
+    } else {
+      modifiedTags = null;
+    }
+
+    const fieldData = {
+      slug: node.metadata.slug ? node.json.metadata.slug : undefined,
+      title: node.metadata.title,
+      date: node.metadata.date,
+      tags: modifiedTags,
+      description: node.metadata.description,
+      excerpt: node.metadata.excerpt ? node.metadata.excerpt : "Jupyter notebook",
+      body: node.html,
+      html: node.html,
+      banner: node.metadata.banner,
+      timeToRead: 0,
+    };
+
+    const notebookPostId = createNodeId(`${node.id} >>> NotebookPost`);
+
+    createNode({
+      ...fieldData,
+      // Required fields
+      id: notebookPostId,
+      parent: node.id,
+      children: [],
+      internal: {
+        type: `NotebookPost`,
+        contentDigest: createContentDigest(fieldData),
+        content: JSON.stringify(fieldData),
+        description: `Jupyter Notebook implementation of Post interface`,
+      },
+    });
+
+    createParentChildLink({ parent: node, child: getNode(notebookPostId) });
+  }
 };
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
+const projectTemplate = require.resolve(`./src/templates/projectTemplate.tsx`);
+const projectsTemplate = require.resolve(`./src/templates/projectsTemplate.tsx`);
+const notebookPostTemplate = require.resolve(`./src/templates/notebook-post-query.tsx`);
+
+exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions;
-  const projectTemplate = require.resolve(`./src/templates/projectTemplate.tsx`);
-  const projectsTemplate = require.resolve(`./src/templates/projectsTemplate.tsx`);
 
   createPage({
     path: `/projects`.replace(/\/\/+/g, `/`),
@@ -104,10 +166,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           slug
         }
       }
+      allNotebookPost {
+        nodes {
+          slug
+        }
+      }
     }
   `);
 
-  const projects = result.data.allProject.nodes
+  const projects = result.data.allProject.nodes;
 
   if (projects.length > 0) {
     projects.forEach((project) => {
@@ -116,6 +183,23 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         component: projectTemplate,
         context: {
           slug: project.slug,
+        },
+      });
+    });
+  }
+
+  const { postsPrefix, formatString } = withDefaults(themeOptions);
+
+  const notebookPosts = result.data.allNotebookPost ? result.data.allNotebookPost.nodes : null;
+
+  if (notebookPosts && notebookPosts.length > 0) {
+    notebookPosts.forEach((post) => {
+      createPage({
+        path: `/${postsPrefix}${post.slug}`.replace(/\/\/+/g, `/`),
+        component: notebookPostTemplate,
+        context: {
+          slug: post.slug,
+          formatString,
         },
       });
     });
