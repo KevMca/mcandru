@@ -64,6 +64,10 @@ typings/
 **/.cache
 public
 
+# vscode
 .idea
 .vscode
 .DS_Store
+
+# jupyter notebooks
+.ipynb_checkpoints
