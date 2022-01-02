@@ -1,0 +1,26 @@
+baseURL = 'https://mcand.ru/'
+languageCode = 'en-us'
+title = 'mcand.ru'
+theme = "mcandruTheme"
+summaryLength = 20
+
+[menu]
+  [[menu.main]]
+    name = "Michael"
+    pre = "Michael"
+    url = "/authors/michael"
+    weight = 1
+  [[menu.main]]
+    name = "Kevin"
+    pre = "Kevin"
+    url = "/authors/kevin"
+    weight = 2
+  [[menu.main]]
+    name = "Posts"
+    pre = "pen-tool"
+    url = "/posts/"
+    weight = 3
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects"
+    weight = 4

@@ -1,0 +1,133 @@
+---
+title: "Battery-Run Lights"
+date: 2020-12-06
+slug: "/bike-lights"
+author: "Kevin McAndrew"
+tags:
+    - Bike
+---
+
+The old lights on my bike were just plain Jane bike lights from halfords. They are liable
+to be easily stolen, run out of internal battery and they aren't very bright. I decided to
+replace these lights with more substantial lights that run from the 50V battery.
+
+<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
+
+<img src="./old_lights.jpg" alt="old_light"/>
+
+</div>
+
+<div style={{ textAlign: 'center' }}>
+
+*__Fig 0.1__ The old clip-on light *
+
+</div>
+
+### 1. Headlight 🤯 💡
+
+I bought a headlight from banggood for €20 which is designed for a motorbike. It is a 35W bulb
+which I measured to be 2.8A@12V = 33.6W. Furthermore, there are heads and dipped options.
+
+<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
+
+<img src="./headlight.jpg" alt="headlight"/>
+
+</div>
+
+<div style={{ textAlign: 'center' }}>
+
+*__Fig 1.1__ The new headlight *
+
+</div>
+
+<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
+
+<img src="./heads.jpg" alt="heads"/>
+
+</div>
+
+<div style={{ textAlign: 'center' }}>
+
+*__Fig 1.2__ Heads mode*
+
+</div>
+
+<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
+
+<img src="./dips.jpg" alt="dips"/>
+
+</div>
+
+<div style={{ textAlign: 'center' }}>
+
+*__Fig 1.3__ Dips mode*
+
+</div>
+
+I also had to make a few modifications to the headlight. 1) I added a switch to be able
+to switch between heads, dips and off. The switch has an o-ring that seals against the
+light. 2) The bracket that came with the light was designed for a motorbike which has
+two downpipes on the front. I had to modify this to work with the single downpipe on my
+bike.
+
+<div style={{ maxWidth: '700px', height: 'auto', margin: '0 auto' }}>
+
+<img src="./switch.jpg" alt="switch"/>
+
+</div>
+
+<div style={{ textAlign: 'center' }}>
+
+*__Fig 1.4__ The added switch*
+
+</div>
+
+### 2. Rear light 🍑 💡
+
+The new back light is a 12V LED red light. I just zip-tied it underneath the seat
+so that it's protected from water and impacts.
+
+<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
+
+<img src="./back.jpg" alt="back"/>
+
+</div>
+
+<div style={{ textAlign: 'center' }}>
+
+*__Fig 2.1__ The new rear light*
+
+</div>
+
+### 3. 12V Regulator ⚡
+
+I added a 12V 3A regulator that can regulate the ~50V battery. The device is an automotive
+spec regulator. The reason I chose this regulator is because it was the cheapest one I
+could find (€7.50). Car parts are some of the most affordable parts available because they have and
+wide range of uses and they're made in large quantities.
+
+<div style={{ maxWidth: '600px', height: 'auto', margin: '0 auto' }}>
+
+<img src="./buck.jpg" alt="buck converter"/>
+
+</div>
+
+<div style={{ textAlign: 'center' }}>
+
+*__Fig 3.1__ The 12V buck converter that regulates all 12V devices*
+
+</div>
+
+### 4. Final Product 😍
+
+<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
+
+<img src="./out_back.jpg" alt="back of bike"/>
+
+</div>
+
+<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
+
+<img src="./out_front.jpg" alt="front of bike"/>
+
+</div>

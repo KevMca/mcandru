@@ -1,0 +1,45 @@
+{{ define "main" }}
+{{ $authorName := .Params.fullname }}
+{{ $author := index $.Site.Data.authors .Params.fullname }}
+<br />
+<div class="author-head-container">
+  <img src="{{ $author.image }}" class="profile-image" />
+  <div style="display: inline-block; margin: 0 20px; vertical-align: middle;">
+    <h1>{{ .Params.name }}</h1>
+    <div>
+      {{ if isset $author.social "github" }}
+        <span><a class="status-tag" style="background-color: #333;" href="{{ $author.social.github }}">GitHub</a></span>
+      {{ end }}
+      {{ if isset $author.social "site" }}
+        <span><a class="status-tag" style="background-color: #f73131;" href="{{ $author.social.site }}">Personal Site</a></span>
+      {{ end }}
+      {{ if isset $author.social "linkedin" }}
+        <span><a class="status-tag" style="background-color: #132bb5;" href="{{ $author.social.linkedin }}">LinkedIn</a></span>
+      {{ end }}
+    </div>
+  </div>
+</div>
+<br />
+<h3>{{ $author.title }}</h3>
+<br /><br />
+<p>{{ $author.description }}</p>
+<h2>My Projects</h2>
+<ul class="post-list">
+  {{ range .Site.Pages }}
+  {{ if and (isset .Params "owners") (in .Params.owners $authorName) }}
+  <li class="post-preview">
+    <div class="post-title-container">
+      <div class="post-title" style="padding-top: 0;"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+      {{ if eq .Params.status "not-started" }}
+      <div class="status-tag project-tag" style="background-color: #c12114;">Not started</div>
+      {{ else if eq .Params.status "is" "in-progress" }}
+      <div class="status-tag project-tag" style="background-color: #ccad00;">In Progress</div>
+      {{ else }}
+      <div class="status-tag project-tag" style="background-color: #3cc100;">Completed</div>
+      {{ end }}
+    </div>
+  </li>
+  {{ end }}
+  {{ end }}
+</div>
+{{ end }}
