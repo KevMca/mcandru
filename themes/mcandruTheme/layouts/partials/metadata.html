@@ -1,0 +1,11 @@
+<div style="display: block; overflow: auto;">
+  <ul class="author-list">
+    {{ with .Params.author }}
+      <li>
+      {{ $author := index $.Site.Data.authors . }}
+      <span><img src="{{ $author.image }}" style="width: 30px; height: 30px; border-radius: 50%;" /></span>
+      <span class="author">{{ . }}</span>
+      </li>
+    {{ end }}
+  </ul>
+</div>

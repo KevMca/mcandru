@@ -1,0 +1,17 @@
+<header id="nav-border" class="container">
+  <nav id="nav" class="nav">
+      <div class="logo"><a href="/">{{ .Site.Title }}</a></div>
+      <ul id="menu">
+      {{ range .Site.Menus.main }}
+      <li>
+        <div>
+        <a href="{{ .URL }}">
+          {{ $text := print .Name | safeHTML }}
+          <span>{{ $text }}</span>
+        </a>
+        </div>
+      </li>
+      {{ end }}
+      </ul>
+  </nav>
+</header>

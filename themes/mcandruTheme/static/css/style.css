@@ -1,0 +1,64 @@
+ul {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ------- Variables -------- */
+
+:root {
+  --header-height: 60px;
+  --footer-height: 60px;
+  --nav-width: 1024px;
+  --main-width: 720px;
+  --gap: 24px;
+  --content-gap: 20px;
+}
+
+
+/* ------- 1. Header -------- */
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: calc(var(--nav-width) + var(--gap) * 2);
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  line-height: var(--header-height);
+}
+
+#menu {
+  list-style: none;
+  word-break: keep-all;
+}
+
+.logo, #menu {
+  display: flex;
+  margin: auto var(--gap);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#menu a {
+  font-size: 16px;
+}
+
+.nav a {
+  display: block;
+}
+
+/* ------- 2. Main -------- */
+
+.main {
+  position: relative;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  max-width: calc(var(--main-width) + var(--gap) * 2);
+  margin: auto;
+  padding: var(--gap);
+}

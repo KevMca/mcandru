@@ -1,0 +1,21 @@
+{
+  "Michael McAndrew": {
+    "image": "/images/authors/michael.jpg",
+    "title": "Detector Engineer, Inscribe AI",
+    "description": "Most recently a Detector Engineer at Inscribe. A big fan of detecting things with computers. Previously interned at Salesforce and worked on Trinity Live, a new API for students and staff in Trinity College Dublin.",
+    "social": {
+      "github": "https://github.com/mmcatcd",
+      "site": "https://www.mcandrew.dev/",
+      "linkedin": "https://www.linkedin.com/in/michael-mcandrew-280a0476/"
+    }
+  },
+  "Kevin McAndrew": {
+    "image": "/images/authors/kevin.jpg",
+    "title": "Electronic and Computer Engineering Student, University of Limerick",
+    "description": "Algorithm engineering co-op student with Analog Devices. BT Young Scientist technology award winner. Side projects are great craic all together.",
+    "social": {
+      "github": "https://github.com/kevmca",
+      "linkedin": "https://www.linkedin.com/in/kevin-mcandrew-298472177/"
+    }
+  }
+}

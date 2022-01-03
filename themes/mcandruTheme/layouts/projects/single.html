@@ -1,0 +1,88 @@
+{{ define "main" }}
+<br />
+<h1>{{ .Title }}</h1>
+<ul class="author-list">
+{{ range .Params.owners }}
+  <li>
+    {{ $owner := index $.Site.Data.authors . }}
+    <span><img src="{{ $owner.image }}" style="width: 30px; height: 30px; border-radius: 50%;" /></span>
+    <span class="author">{{ . }}</span>
+  </li>
+{{ end }}
+</ul>
+<br />
+{{ if eq .Params.status "not-started" }}
+    <div class="status-tag" style="float: left; background-color: #c12114;">Not started</div>
+    {{ else if eq .Params.status "is" "in-progress" }}
+    <div class="status-tag" style="float: left; background-color: #ccad00;">In Progress</div>
+    {{ else }}
+    <div class="status-tag" style="float: left; background-color: #3cc100;">Completed</div>
+    {{ end }}
+<br />
+
+<h2>About</h2>
+{{ .Content }}
+
+<h2>Timeline</h2>
+<ul class="timeline-list">
+{{ range .Params.Timeline }}
+  <li>
+    {{ if eq .status "done" }}
+    <div class="timeline-item-container completed">
+    {{ else if eq .status "in-progress" }}
+    <div class="timeline-item-container in-progress">
+    {{ else }}
+    <div class="timeline-item-container not-started">
+    {{ end }}
+      <div style="margin-left: 20px; padding-bottom: 30px;">
+        <h3>{{ .name }}</h3>
+        {{ if ne .date nil }}
+          {{ $dateTime := dateFormat "2006-01-02" .date }}
+          {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+          <time datetime="{{ $dateTime }}">{{ dateFormat $dateFormat .date }}</time>
+        {{ end }}
+        <p>{{ .description }}</p>
+        <div>
+          {{ range .images }}
+          <img src="/images/{{ . }}" style="max-width: 300px;" />
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </li>
+{{ end }}
+</ul>
+
+<h2>Updates</h2>
+
+<ul class="post-list">
+  {{ $projectTags :=  apply .Params.tags "lower" "." }}
+  {{ range ( where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" ) }}
+    {{ $postTags := apply .Params.tags "lower" "." }}
+    {{ if intersect $postTags $projectTags }}
+      <li>
+        <div class="post-preview">
+          <div class="post-title-container">
+            <h3 class="post-title" style="padding-top: 0;"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+            {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+            <time class="post-time" datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+          </div>
+          <div class="post-description">
+            {{ if isset .Params "description" }}
+            {{ .Description }}
+            {{ else }}
+            {{ .Summary }}&hellip;
+            {{ end }}
+          </div>
+          {{ with .Params.tags }}
+            {{ range . }}
+            {{ $href := print (absURL "tags/") (urlize .) }}
+            {{ end }}
+          {{ end }}
+        </div>
+      </li>
+    {{ end }}
+  {{ end }}
+</ul>
+{{ end }}

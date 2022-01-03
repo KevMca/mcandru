@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="post-view">
+<br />
+<div style="overflow: auto;">
+  <div style="float:left;">
+  {{ partial "metadata.html" . }}
+  </div>
+  {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+  {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+  <time class="post-time" datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+</div>
+<br />
+{{ with .Params.tags }}
+  {{ range . }}
+  {{ $href := print (absURL "tags/") (urlize .) }}
+  <a class="tag" href="{{ $href }}">{{ . }}</a>
+  {{ end }}
+{{ end }}
+<br /><br />
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+</div>
+{{ end }}

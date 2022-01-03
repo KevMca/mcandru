@@ -1,0 +1,27 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<br />
+{{ range .Pages }}
+<div class="post-preview">
+  <div class="post-title-container">
+    <h3 class="post-title" style="padding-top: 0;"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ if eq .Params.status "not-started" }}
+    <div class="status-tag project-tag" style="background-color: #c12114;">Not started</div>
+    {{ else if eq .Params.status "is" "in-progress" }}
+    <div class="status-tag project-tag" style="background-color: #ccad00;">In Progress</div>
+    {{ else }}
+    <div class="status-tag project-tag" style="background-color: #3cc100;">Completed</div>
+    {{ end }}
+  </div>
+  <ul class="author-list">
+  {{ range .Params.owners }}
+    <li>
+      {{ $owner := index $.Site.Data.authors . }}
+      <span><img src="{{ $owner.image }}" style="width: 30px; height: 30px; border-radius: 50%;" /></span>
+      <span class="author">{{ . }}</span>
+    </li>
+  {{ end }}
+  </ul>
+</div>
+{{ end }}
+{{ end }}
