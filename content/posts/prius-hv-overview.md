@@ -11,17 +11,10 @@ tags:
 
 Battery ECU teardown by pEEf: https://priuschat.com/threads/battery-ecu-secrets-and-teardown-warning-geek-content.85987/
 
-<div style={{ maxWidth: '550px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./battery_system_simple.png" alt="simple_battery_system"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 1.1__ A simplified block diagram of the battery system *
-
-</div>
+<figure>
+  <img src="/images/posts/prius-hv-overview/battery_system_simple.png" style="max-width: 500px;" alt="simple_battery_system"/>
+  <figcaption>A simplified block diagram of the battery system</figcaption>
+</figure>
 
 - **Battery ECU** : Effectively a Battery Management System (BMS) that monitors the 
     cell voltages and controls the battery blower
@@ -32,17 +25,10 @@ Battery ECU teardown by pEEf: https://priuschat.com/threads/battery-ecu-secrets-
     from the traction battery and charging the traction battery from the motors
 - **Hybrid vehicle control ECU** : The main controller that coordinates the inverter/converter, ICE and battery
 
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./prius_batt_system.png" alt="detailed_battery_system"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 1.2__ A detailed block diagram of the battery system *
-
-</div>
+<figure>
+  <img src="/images/posts/prius-hv-overview/prius_batt_system.png" alt="detailed_battery_system"/>
+  <figcaption>A detailed block diagram of the battery system</figcaption>
+</figure>
 
 ### Battery 🔋
 
@@ -62,17 +48,10 @@ energy storage capacity of 1.310kWh (201.6-volts × 6.5 Ah).
     Cell voltage:            1.2V
     Cell energy:             7.8Wh
 
-<div style={{ maxWidth: '600px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./traction.jpg" alt="gen2_prius_battery"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 2.1__ The Gen 2 prius battery without it's outer casing *
-
-</div>
+<figure>
+  <img src="/images/posts/prius-hv-overview/traction.jpg" style="max-width: 600px;" alt="gen2_prius_battery"/>
+  <figcaption>The Gen 2 prius battery without it's outer casing</figcaption>
+</figure>
 
 - Cooling System
 
@@ -81,17 +60,10 @@ assembly pack, while a forced air cooling system with a blower motor and ducting
 enables active cooling of the HV battery. The blower motor is driven by a blower motor
 controller which is controlled by the battery ECU.
 
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./blower.jpeg" alt="blower_motor"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 2.2__ A view of the blower motor on a Gen 3 HV battery *
-
-</div>
+<figure>
+  <img src="/images/posts/prius-hv-overview/blower.jpeg" alt="blower_motor"/>
+  <figcaption>A view of the blower motor on a Gen 3 HV battery</figcaption>
+</figure>
 
 - Low Voltage Battery
 
@@ -107,17 +79,10 @@ Functions:
 - 12V dc-dc converter
 - Climate control AC inverter
 
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./inverter.jpg" alt="inverter"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 3.1__ The inverter / converter unit for the Prius Gen 2 *
-
-</div>
+<figure>
+  <img src="/images/posts/prius-hv-overview/inverter.jpg" alt="inverter"/>
+  <figcaption>The inverter / converter unit for the Prius Gen 2</figcaption>
+</figure>
 
 The MG1 and MG2 inverter units can be used either to drive the MG1 and MG2 motors
 or to use the motors to power a load (usually charging the battery). MG1 and MG2 
@@ -182,17 +147,10 @@ SOC hovers around 60 percent, allowing about 400 Wh of useful energy storage to 
 The shallow cycling enables the hybrid battery to last tens of thousands of cycles, which 
 translates into decades of use and in many cases more than 200,000 miles (320,000 km) of operation.
 
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./BMS.jpg" alt="BMS"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.1__ The Battery ECU (BMS) *
-
-</div>
+<figure>
+  <img src="/images/posts/prius-hv-overview/BMS.jpg" alt="BMS"/>
+  <figcaption>The Battery ECU (BMS)</figcaption>
+</figure>
 
 The shallow cycling means that the batteries cells do not need to be balanced. High precision
 matched cells are used so that they charge and discharge at the same rate and therefore maintain

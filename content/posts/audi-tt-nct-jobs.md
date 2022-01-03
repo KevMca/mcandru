@@ -19,30 +19,18 @@ It turned out I had to do that anyway.
 
 __Catalytic Converter Prep__
 
-<div style={{ maxWidth: 400, height: 'auto', margin: '0 auto' }} >
-
-<img src="./cat-rust.jpg" />
-
-</div>
+<img src="/images/posts/audi-tt-nct-jobs/cat-rust.jpg" style="max-width: 400px;" />
 
 The studs on the cat were completely rusted. To remove them I grinded the ends off and hammered them through with a 
 sledge hammer while standing on it. Some of the more stubborn studs had to be drilled out. I then replaced them with
 standard M8 bolts cut to size. I spot welded them into place.
 
-<div style={{ maxWidth: 400, height: 'auto', margin: '0 auto' }} >
-
-<img src="./cat-studs-removed.jpg" />
-
-</div>
+<img src="/images/posts/audi-tt-nct-jobs/cat-studs-removed.jpg" style="max-width: 400px;" />
 
 I then placed the cat top and bottom heat shields back on with new self-tapping slips and M6 flat-head bolts. They were
 all I had at the time but also really do look the part. The cat was now ready for the new downpipe.
 
-<div style={{ maxWidth: 400, height: 'auto', margin: '0 auto' }} >
-
-<img src="./cat-heat-shield.jpg" />
-
-</div>
+<img src="/images/posts/audi-tt-nct-jobs/cat-heat-shield.jpg" style="max-width: 400px;" />
 
 __The downpipe__
 
@@ -65,11 +53,7 @@ Introducing...the inspection pit. I'm fortunate enough that my garage has a base
 length and width to act as a pit. For this job we drove the car over it and put it on axle stands. The days of crawling
 on the floor to do jobs is over and I can tell you it made this job 10 times easier.
 
-<div style={{ maxWidth: 400, height: 'auto', margin: '0 auto' }} >
-
-<img src="./pit.jpg" />
-
-</div>
+<img src="/images/posts/audi-tt-nct-jobs/pit.jpg" style="max-width: 400px;" />
 
 Fitted the new downpipe to the turbo first and connected the cat to it in situe after. To remove the old downpipe, I had
 to drop both the subframe and the steering rack as the steering rack is in the way of the downpipe on right hand drive cars.
@@ -133,8 +117,4 @@ I bought an engine dress-up bolt kit over a year ago now and I'm only getting to
 I still actually had all of the engine plastics for the car. The engine bay looks much nicer with all of the
 vacuum line mess covered over.
 
-<div style={{ maxWidth: 400, height: 'auto', margin: '0 auto' }} >
-
-<img src="./engine-dress-up.jpg" />
-
-</div>
+<img src="/images/posts/audi-tt-nct-jobs/engine-dress-up.jpg" style="max-width: 400px;" />

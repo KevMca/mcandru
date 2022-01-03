@@ -22,34 +22,20 @@ It is constructed of usually a multiple of 3 coils where each multiple correspon
 phase wire. As seen in Fig 1.1 the three phases are 120 degrees out of phase with each other. Fig 1.1
 is a simplified version of a BLDC motor because the coils can only be on or off.
 
-<div style={{ maxWidth: '400px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./simple_BLDC_Motor.gif" alt="simple-BLDC-motor"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 1.1__ A simple binary version of a BLDC motor*
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/simple_BLDC_Motor.gif" style="max-width: 400px;" alt="simple-BLDC-motor"/>
+  <figcaption>A simple binary version of a BLDC motor</figcaption>
+</figure>
 
 A more realistic model of the BLDC motor has three sinusoidal waveforms (seen in Fig 1.2) for each phase 
 instead of square waveforms as seen in Fig 1.1. Once these 3 phases are applied to the motor, it should
 rotate at a frequency equal to the frequency of the sine waves divided by the number of multiples of phases.
 So the example in Fig 1.1 would rotate at the same frequency because it has one multiple of coils.
 
-<div style={{ maxWidth: '500px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./phase.png" alt="phases"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 1.2__ The ideal phase voltages of a BLDC *
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/phase.png" style="max-width: 500px;" alt="phases"/>
+  <figcaption>The ideal phase voltages of a BLDC</figcaption>
+</figure>
 
 ### Sensored vs sensorless 🔬
 
@@ -63,35 +49,21 @@ Usually hall effect sensors are used to monitor how the permanent magnets of the
 regards to the stator. This gives very accurate phase information even when the rotor is stationary. Hall effect
 sensors measure magnetic fields through the hall effect and convert this measurment to some kind of signal. The
 sensors used in BLDC motors are usually latching sensors, which means that they have a HIGH impedance output when 
-it detects a North/South pole and a LOW impedance output when the opposite pole is sensed. 
+it detects a North/South pole and a LOW impedance output when the opposite pole is sensed.
 
-<div style={{ maxWidth: '500px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./hall.jpg" alt="hall-sensors"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 2.1__ The hall sensors that are in my hub motor *
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/hall.jpg" style="max-width: 500px;" alt="hall-sensors"/>
+  <figcaption>The hall sensors that are in my hub motor</figcaption>
+</figure>
 
 The three sensors are each placed at one of the phase wires. Therefore, three square waves are produced as the motor
 rotates, which are 120 degrees out of phase with each other (as seen in Fig 2.2). These signals are used to
 determine the rough position of the motor.
 
-<div style={{ maxWidth: '500px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./hall_out.jpg" alt="hall-sensor-output"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 2.2__ The hall sensor outputs as the motor rotates *
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/hall_out.jpg" style="max-width: 500px;" alt="hall-sensor-output"/>
+  <figcaption>The hall sensor outputs as the motor rotates</figcaption>
+</figure>
 
 ##### 2. Sensorless
 
@@ -102,17 +74,10 @@ driven, while the other phase is not driven but instead used to measure this bac
 2.3. The BEMF is at zero when the magnetic field is aligned with the coil. Therefore, a simple zero
 crossing detector can be used to detect the alignment of the motor.
 
-<div style={{ maxWidth: '500px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./bemf.gif" alt="back-emf-sensorless"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 2.3__ Sensorless operation of a BLDC motor *
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/bemf.gif" style="max-width: 500px;" alt="back-emf-sensorless"/>
+  <figcaption>Sensorless operation of a BLDC motor</figcaption>
+</figure>
 
 This method of position sensing has some drawbacks however. Firstly, it requires a control method
 similar to trapezoidal control, which is not a very efficient control method. One of the phases cannot
@@ -126,19 +91,12 @@ the motor aligns to that coil's position.
 Trapezoidal control is one of the simplest control methods for BLDC motors. This control method has 6
 discrete voltage steps as seen in Fig 3.1. There are three voltage levels 1) battery negative 2) battery
 positive and 3) floating. It is at the floating voltage level that BEMF can be measured for position
-estimation if sensorless commutation is being used. 
+estimation if sensorless commutation is being used.
 
-<div style={{ maxWidth: '500px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./trapezoidal.jpg" alt="trapezoidal-control"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 3.1__ The output of each of the 6 phases of trapezoidal control *
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/trapezoidal.jpg" style="max-width: 500px;" alt="trapezoidal-control"/>
+  <figcaption>The output of each of the 6 phases of trapezoidal control</figcaption>
+</figure>
 
 This control method is not ideal however because the torque is not always perpendicular to the magnetic 
 field and the signal should ideally be sinusoidal. FOC is needed for this type of control, but that is 
@@ -147,17 +105,10 @@ character, as seen in Fig 3.2. When the character reaches the carrot, another ca
 of them. This leads to a choppy motion if the speed of the character is proportional to its distance
 from the carrot.
 
-<div style={{ maxWidth: '400px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./carrot.gif" alt="carrot"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 3.2__ Carrot method has variable speed*
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/carrot.gif" style="max-width: 400px;" alt="carrot"/>
+  <figcaption>Carrot method has variable speed</figcaption>
+</figure>
 
 ### FOC control 🌊
 
@@ -166,17 +117,10 @@ example of carrots being placed in front of a character is improved by placing t
 distance at all time, as seen in Fig 4.1. The distance from the character is constant and optimally
 far away so that it moves smoothly and most efficiently 😄 
 
-<div style={{ maxWidth: '400px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./carrot_stick.gif" alt="carrot"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.1__ Carrot on stick method has constant speed*
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/carrot_stick.gif" style="max-width: 400px;" alt="carrot"/>
+  <figcaption>Carrot on stick method has constant speed</figcaption>
+</figure>
 
 ##### Direct and quadrature axes
 
@@ -189,32 +133,18 @@ position of the rotor. The stator magnetic field is created by the controller, i
 showing trapezoidal control. When using a 6 step trapezoidal control algorithm, the torque and
 speed are not constant.
 
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./trap_problem.gif" alt="trapezoidal-torque-problem"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.2__ A motor with 6 step control produces uneven torque and speed*
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/trap_problem.gif" style="max-width: 800px;" alt="trapezoidal-torque-problem"/>
+  <figcaption>A motor with 6 step control produces uneven torque and speed</figcaption>
+</figure>
 
 Maximum torque occurs when the two magnetic fields are orthogonal to each other, which is what FOC
 tries to achieve. This can be seen in Fig 4.3.
 
-<div style={{ maxWidth: '600px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./foc_mag.gif" alt="foc-magnetic-fields"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.3__ The same motor using FOC which gives maximum torque*
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/foc_mag.gif" style="max-width: 600px;" alt="foc-magnetic-fields"/>
+  <figcaption>The same motor using FOC which gives maximum torque</figcaption>
+</figure>
 
 It is also important to introduce two other vectors at this stage. 1) The direct vector and 2) the
 quadrature vector. The direct vector (denoted by d) is the component of the stator magnetic field 
@@ -223,17 +153,10 @@ of the stator magnetic field that is orthogonal to the rotor magnetic field. The
 be seen in Fig 4.4. The goal is to maximise the length of the quadrature vector and minimise the
 length of the direct vector.
 
-<div style={{ maxWidth: '400px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./vectors.png" alt="direct-quadrature-vectors"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.4__ The direct and quadrature vectors*
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/vectors.png" style="max-width: 400px;" alt="direct-quadrature-vectors"/>
+  <figcaption>The direct and quadrature vectors</figcaption>
+</figure>
 
 *These figures have been taken from a YouTube series by Matlab with an episode on FOC at:
 https://www.youtube.com/watch?v=YPD1_rcXBIE*
@@ -246,17 +169,10 @@ works with a 3 phase output. It can be difficult to control these three signals 
 PID methods however. Therefore, a transform is used to determine the 3 phase outputs for particular
 values of the direct and quadrature components.
 
-<div style={{ maxWidth: '1500px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./transform.png" alt="park-and-clarke-transform"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.5__ The purpose of the Park and Clarke transforms*
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/transform.png" alt="park-and-clarke-transform"/>
+  <figcaption>The purpose of the Park and Clarke transforms</figcaption>
+</figure>
 
 ##### Clarke transform
 
@@ -267,41 +183,20 @@ To start, it is important to understand how the ABC bases are represented. The t
 representation is composed of a 2D image with the ABC bases rotated 120 degrees apart. This is really
 a projection of the ABC bases from a 3D model.
 
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
+<figure>
+  <img src="/images/posts/FOC-motor-control/ABC_basis.png" alt="ABC-bases"/>
+  <figcaption>A 3D representation and the traditional 2D representation of ABC</figcaption>
+</figure>
 
-<img src="./ABC_basis.png" alt="ABC-bases"/>
+<figure>
+  <img src="/images/posts/FOC-motor-control/clarke_basis.gif" alt="ABC-bases-animation"/>
+  <figcaption>An animation of the projection from 3D to 2D</figcaption>
+</figure>
 
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.6__ A 3D representation and the traditional 2D representation of ABC*
-
-</div>
-
-<div style={{ maxWidth: '600px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./clarke_basis.gif" alt="ABC-bases-animation"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.7__ An animation of the projection from 3D to 2D*
-
-</div>
-
-<div style={{ maxWidth: '600px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./vectors.gif" alt="ABC-vectors-animation"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.8__ An animation of the 2D projection*
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/vectors.gif" style="max-width: 600px;" alt="ABC-vectors-animation"/>
+  <figcaption>An animation of the 2D projection</figcaption>
+</figure>
 
 Now that the ABC bases are represented, we can transform these bases into a set of bases that contain
 a vector that is orthogonal to the projection. This collapses the 3D problem to a 2D problem. The Z axis
@@ -309,45 +204,24 @@ in the new XYZ basis is the common mode portion, which can be discarded. There a
 transformations that take place. 1) ABC is rotated around the A vector by 45 degrees. 2) The new bases
 are rotated around the new Y axis. This creates the new XYZ bases.
 
-<div style={{ maxWidth: '1100px', height: 'auto', margin: '0 auto' }}>
+<figure>
+  <img src="/images/posts/FOC-motor-control/DQZ_1.png" alt="XYZ-clarke-transformation"/>
+  <figcaption>The steps of the Clarke transform</figcaption>
+</figure>
 
-<img src="./DQZ_1.png" alt="XYZ-clarke-transformation"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.9__ The steps of the Clarke transform*
-
-</div>
-
-<div style={{ maxWidth: '600px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./clarke_final.gif" alt="XYZ-clarke-animation"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.10__ An animation of the XYZ bases and original ABC bases*
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/clarke_final.gif" style="max-width: 600px;" alt="XYZ-clarke-animation"/>
+  <figcaption>An animation of the XYZ bases and original ABC bases</figcaption>
+</figure>
 
 And this is what the matrix form of the transformation looks like. The two matrix transformations that
 were described before can be combined into one single matrix. That's the Clarke transform in a nutshell
 and it is more difficult and important than the Park transform.
 
-<div style={{ maxWidth: '1000px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./clarke_eq.png" alt="the-clarke-transform-matrix"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.11__ The Clarke transformation matrix*
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/clarke_eq.png" alt="the-clarke-transform-matrix"/>
+  <figcaption>The Clarke transformation matrix</figcaption>
+</figure>
 
 ##### Park transform
 
@@ -356,46 +230,25 @@ contrast to the Clarke transform is a piece of cake 🍰 In a sentence, "The Par
 clockwise rotation around the Z axis". The rotation angle ( θ ) is the estimated angle of the rotor
 relative to the magnetic field being created.
 
-<div style={{ maxWidth: '500px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./DQZ_park.png" alt="the-park-trasnformation"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.12__ The Park transformation*
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/DQZ_park.png" style="max-width: 500px;" alt="the-park-trasnformation"/>
+  <figcaption>The Park transformation</figcaption>
+</figure>
 
 And again, here is the matrix for said transformation. This transformation matrix can be combined
 with the Clarke transformation in order to create the DQZ transform matrix.
 
-<div style={{ maxWidth: '600px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./park-eq.png" alt="the-park-matrix"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.13__ The Park transformation matrix*
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/park-eq.png" alt="the-park-matrix"/>
+  <figcaption>The Park transformation matrix</figcaption>
+</figure>
 
 ##### Basic FOC block diagram
 
-<div style={{ maxWidth: '900px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./block.png" alt="FOC-block-diagram"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.14__ The FOC block diagram*
-
-</div>
+<figure>
+  <img src="/images/posts/FOC-motor-control/block.png" alt="FOC-block-diagram"/>
+  <figcaption>The FOC block diagram</figcaption>
+</figure>
 
 Now that we have an idea of the transforms and reasoning behind FOC,
 let's start by looking at the right of the diagram in Fig 4.14, where the 3 phase inverter and

@@ -13,11 +13,7 @@ Every engine has a head that contains the camshafts, valves and ignition system.
 covers the top end of the engine. Oil circulates the head when the engine is running so a gasket is used to seal the cover and the head to prevent
 oil from escaping.
 
-<div>
-
-![](./engine-diagram.gif "Volkswagen 1.8T engine diagram")
-
-</div>
+![](/images/posts/tt-rocker-cover-change/engine-diagram.gif "Volkswagen 1.8T engine diagram")
 
 __Why would you need to replace it?__
 
@@ -80,11 +76,7 @@ Refitting:
 
 1. Fit the OEM sealant to the sealant gun and place a small amount of sealant only on the points where the gasket bends. See the photo attached.
 
-<div style={{ maxWidth: 300 }}>
-
-![](./sealant-rocker-cover.png "Rocker cover sealant locations")
-
-</div>
+<img src="/images/posts/tt-rocker-cover-change/sealant-rocker-cover.png" style="max-width: 300px;" title="Rocker cover sealant locations" />
 
 2. Leave the sealant for 5-10 minutes for it to begin to harden before placing the new gasket in. There is no sealant needed in the spark plug hole areas.
 3. Ensure that the gasket is seated correctly in its trench around the head.

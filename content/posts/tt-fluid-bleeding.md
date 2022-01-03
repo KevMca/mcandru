@@ -106,8 +106,4 @@ anymore.
 I did not have a brake bleeding kit so I cut a piece of rubber in a circle the same size as the brake reservoir cap, took an old bicycle tube valve and cut a hole
 in the rubber to push the bicycle valve through it. I then tightened it on the rubber and used a bicycle pump to pump air into the brake reservoir.
 
-<div style={{ maxWidth: 400, margin: '0 auto'}}>
-
-![](./images/brake-bleeder.jpg "DIY brake fluid reservoir pressuriser")
-
-</div>
+<img src="/images/posts/tt-fluid-bleeding/brake-bleeder.jpg" style="max-width: 400px;" title="DIY brake fluid reservoir pressuriser" />

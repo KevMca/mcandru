@@ -28,17 +28,11 @@ The local mechanic also recommended to replace the worn bushings and tyres.
 - Right overhead light switch is dodgy
 - Fix lever at the right of the driver seat
 
-<div style={{ maxWidth: '550px', height: 'auto', margin: '0 auto' }}>
 
-<img src="./seat.jpg" alt="prius"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 2.1__ The holes in the seat that were covered by teddies that were glued on *
-
-</div>
+<figure>
+  <img src="/images/posts/prius-repairs/seat.jpg" style="max-width: 500px;" alt="prius"/>
+  <figcaption>The holes in the seat that were covered by teddies that were glued on</figcaption>
+</figure>
 
 ### Other modifications 🔩
 

@@ -50,7 +50,7 @@ each point in the spectrogram that consists of:
 
 <div style={{maxWidth: 500, margin: '0 auto'}}>
 
-![](./images/hash-creation.png "Fig 1: Hash details")
+![](/images/posts/how-shazam-works-2/hash-creation.png "Fig 1: Hash details")
 
 </div>
 
@@ -88,7 +88,7 @@ Let's also say for this example that we create target zones of 10 peaks.
 
 <div style={{maxWidth: 500, margin: '0 auto'}}>
 
-![](./images/target-zones.jpg "Fig 2: Target zoning example")
+![](/images/posts/how-shazam-works-2/target-zones.jpg "Fig 2: Target zoning example")
 
 </div>
 
@@ -115,7 +115,7 @@ peak in the target zone.
 
 <div style={{maxWidth: 500, margin: '0 auto'}}>
 
-![](./images/anchor-point-target-zone.png "Fig 3: Target zone anchor point")
+![](/images/posts/how-shazam-works-2/anchor-point-target-zone.png "Fig 3: Target zone anchor point")
 
 </div>
 
@@ -156,6 +156,10 @@ improve the technique.
 
 ## References
 
+<code>
+
 [1] Shazam's Whitepaper: https://www.ee.columbia.edu/~dpwe/pubs/OgleE07-pershash.pdf
 
 [2] http://coding-geek.com/how-shazam-works/
+
+</code>

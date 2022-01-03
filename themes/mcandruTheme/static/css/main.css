@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   color: #333;
   line-height: 2rem;
@@ -24,6 +24,11 @@ h3 {
   padding-top: 20px;
 }
 
+h4 {
+  font-size: 21px;
+  font-weight: 700;
+}
+
 time {
   font-family: 'Roboto Mono', monospace;
   opacity: 0.5;
@@ -32,6 +37,10 @@ time {
 
 pre code {
   font-family: 'Roboto Mono', monospace;
+  font-size: 17px;
+}
+
+code p {
   font-size: 17px;
 }
 
@@ -74,6 +83,23 @@ a:hover {
 #menu li a:hover {
   background: none;
   color: #333;
+}
+
+figure {
+  margin: 20px 0;
+}
+
+.post-view img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+figcaption {
+  text-align: center;
+  padding-top: 10px;
+  font-style: italic;
+  font-size: 19px;
 }
 
 .footer {
@@ -190,6 +216,11 @@ a:hover {
 .author-list li {
   margin-bottom: 10px;
   margin-right: 20px;
+  display: inline;
+}
+
+.author-list img {
+  margin: 0;
   display: inline;
 }
 

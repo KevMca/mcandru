@@ -33,11 +33,7 @@ How is current sensed?
 the centre
 - Apparently they are hall effect sensors
 
-<div style={{ maxWidth: '600px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./current-sensor.jpg" alt="current-sensors"/>
-
-</div>
+<img src="/images/posts/32-pin-connector-detail/current-sensor.jpg" style="max-width: 600px;" alt="current-sensors"/>
 
 ---
 4. **GUU  : MG1 PWM U**
@@ -71,11 +67,7 @@ What frequency can be used?
 - Referenced against GCNV
 - (similar to VL pin 15)
 
-<div style={{ maxWidth: '500px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./VH-curve.png" alt="vh-curve"/>
-
-</div>
+<img src="/images/posts/32-pin-connector-detail/VH-curve.png" style="max-width: 500px;" alt="vh-curve"/>
 
 ---
 13. **CPWM : Boost converter switch signal** ✅
@@ -87,11 +79,7 @@ What frequency can be used?
 - Connected to Boost Controller (Blue wire)
 - CSDN can turn off the half-bridge completely
 
-<div style={{ maxWidth: '1000px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./CPWM-signal.png" alt="cpwm-signal"/>
-
-</div>
+<img src="/images/posts/32-pin-connector-detail/CPWM-signal.png" style="max-width: 1000px;" alt="cpwm-signal"/>
 
 ---
 14. **GSDN : MG1 shutdown**
@@ -116,11 +104,7 @@ operation of the MG2 by turning OFF the power transistors that are actuating the
 - Connected to Boost Controller (Purple/White)
 - (similar to VH pin 12)
 
-<div style={{ maxWidth: '500px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./VL-curve.png" alt="vl-curve"/>
-
-</div>
+<img src="/images/posts/32-pin-connector-detail/VL-curve.png" style="max-width: 500px;" alt="vl-curve"/>
 
 ---
 16. **GINV : Inverter ground** ✅
@@ -151,11 +135,7 @@ Maybe swapped with pin 14 (GSDN)??? - It seems so
 - Referenced against GCNV
 - (found on page HV-397)
 
-<div style={{ maxWidth: '500px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./CT-curve.png" alt="ct-curve"/>
-
-</div>
+<img src="/images/posts/32-pin-connector-detail/CT-curve.png" style="max-width: 500px;" alt="ct-curve"/>
 
 ---
 21. **GIVT : MG1 inverter temperature**
@@ -170,11 +150,7 @@ R. Because resistor R and the No. 1 motor temperature sensor are connected in se
 changes with the changes in temperature of the motor, which causes the MMT terminal voltage to also
 change."
 
-<div style={{ maxWidth: '700px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./mg1-temp-curve.png" alt="ct-curve"/>
-
-</div>
+<img src="/images/posts/32-pin-connector-detail/mg1-temp-curve.png" style="max-width: 500px;" alt="ct-curve"/>
 
 ---
 22. **GFIV : MG1 inverter fail**
@@ -374,11 +350,7 @@ Test the rectified waveform using the scaled VH pin
 - IGCT 12V supply is applied
 - VH is shown in the figure below. The scaled voltage VH = 0.5 + 1/100(the rectified voltage)
 
-<div style={{ maxWidth: '700px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./rectified.jpg" alt="rectified mains"/>
-
-</div>
+<img src="/images/posts/32-pin-connector-detail/rectified.jpg" style="max-width: 700px;" alt="rectified mains"/>
 
 ### Main Board IPM 
 

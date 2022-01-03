@@ -12,17 +12,10 @@ keep them secure. The old compartment had a middle section made of black PVC gut
 was heated and formed. Each side panel was made from thin polypropylene sheets wrapped
 in matte black car wrap and PVC brackets rivetted together.
 
-<div style={{ maxWidth: '700px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./old_panel.jpg" alt="old-panel"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 1.__ The old panel from the compartment*
-
-</div>
+<figure>
+  <img src="/images/posts/new-compartment/old_panel.jpg" alt="old-panel"/>
+  <figcaption>The old panel from the compartment</figcaption>
+</figure>
 
 The seal on the old compartment was OK once I had sealed it with white caulk. However,
 the seal was far from perfect, it looked tacky and it was very flimsy 😬 With that, a new
@@ -41,62 +34,35 @@ Otherwise, they'll follow the shape of the middle piece.
 
 ### 2. Build 🏗️
 
-<div style={{ maxWidth: '700px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./wood.jpg" alt="wood"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 2.__ Original wood*
-
-</div>
+<figure>
+  <img src="/images/posts/new-compartment/wood.jpg" alt="wood"/>
+  <figcaption>Original wood</figcaption>
+</figure>
 
 The first step was to take a piece of would and cut out the lip that would fit inside the 
 compartment using a router.
 
-<div style={{ maxWidth: '700px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./cut_wood.jpg" alt="cut-wood"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 3.__ The first lip cut out that slides inside the compartment*
-
-</div>
+<figure>
+  <img src="/images/posts/new-compartment/cut_wood.jpg" alt="cut-wood"/>
+  <figcaption>The first lip cut out that slides inside the compartment</figcaption>
+</figure>
 
 Now the lip can be trimmed and test fit into the compartment.
 
-<div style={{ maxWidth: '700px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./trimmed_wood.jpg" alt="trimmed-wood"/>
-<img src="./installed_wood.jpg" alt="test-wood"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.__ The lip is trimmed and tested in the compartment*
-
-</div>
+<figure>
+  <img src="/images/posts/new-compartment/trimmed_wood.jpg" alt="trimmed-wood"/>
+  <br />
+  <img src="/images/posts/new-compartment/installed_wood.jpg" alt="test-wood"/>
+  <figcaption>The lip is trimmed and tested in the compartment</figcaption>
+</figure>
 
 The inside is then hollowed out to save on weight and create enough space for the
 battery.
 
-<div style={{ maxWidth: '500px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./routed.jpg" alt="routed-panels"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 5.__ Hollowed out panels*
-
-</div>
+<figure>
+  <img src="/images/posts/new-compartment/routed.jpg" style="max-width: 500px;" alt="routed-panels"/>
+  <figcaption>Hollowed out panels</figcaption>
+</figure>
 
 ### 3. Install 🔩
 
@@ -106,29 +72,15 @@ The panel on the right side of the bike is fixed in place using short self-tappi
 screws are pre-drilled and then screwed into the lip to keep the form of the centre piece and to
 maintain a sturdy panel.
 
-<div style={{ maxWidth: '700px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./varnish_screw.jpg" alt="final-panels"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 6.__ A lick of varnish and some screws to finish it off*
-
-</div>
+<figure>
+  <img src="/images/posts/new-compartment/varnish_screw.jpg" alt="final-panels"/>
+  <figcaption>A lick of varnish and some screws to finish it off</figcaption>
+</figure>
 
 The electronics are also fitted inside behind the battery. This part of the project was not very
 complicated, just time consuming. I am very happy with the end result however 👌
 
-<div style={{ maxWidth: '500px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./inside.jpg" alt="inside"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 7.__ The electronics inside*
-
-</div>
+<figure>
+  <img src="/images/posts/new-compartment/inside.jpg" style="max-width: 500px;" alt="inside"/>
+  <figcaption>The electronics inside</figcaption>
+</figure>

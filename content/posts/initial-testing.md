@@ -11,16 +11,10 @@ I now have the battery, controller, motor, throttle and new compartment successf
 installed. Initially, I performed a 5km test which contained a few hills and flat 
 sections. The pedals are currently disconnected because I still need to get a casette.
 
-<div style={{ maxWidth: '700px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./test_map.png" alt="map"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 1.__ The initial 5km test*
-
+<figure>
+  <img src="/images/posts/initial-testing/test_map.png" alt="map"/>
+  <figcaption>The initial 5km test</figcaption>
+</figure>
 </div>
 
 #### Positives ✅

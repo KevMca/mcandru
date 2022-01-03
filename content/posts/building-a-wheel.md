@@ -19,17 +19,10 @@ I have two old rear wheels that I can scrap for parts that are currently sitting
 entangled itself in the spokes. 2) The second is a wheel that I bent and decided to replace
 instead of truing because I didn't have the tools.
 
-<div style={{ maxWidth: '400px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./mouldy_wheel.jpg" alt="old-wheel"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Wheel 1__ - You can see the spokes have been ripped out of the rim, which makes the rim unusable*
-
-</div>
+<figure>
+  <img src="/images/posts/building-a-wheel/mouldy_wheel.jpg" style="max-width: 400px;" alt="old-wheel"/>
+  <figcaption><strong>Wheel 1</strong> - You can see the spokes have been ripped out of the rim, which makes the rim unusable</figcaption>
+</figure>
 
 From these two wheels I could scavenge the tyre, tube and some spokes from the first wheel and
 spokes and rim from the second wheel.
@@ -43,13 +36,11 @@ to the correct length and then lacing them into the rim and hub.
 
 I was in a bit of a predicament with regards to spokes because the spokes I had were for a much smaller
 hub. This means that the spokes I started with were too long. As an Eastern European man on a video on
-YouTube once said, "There is no such thing as too long spoke. Any person that says this is idiot." 
+YouTube once said, "There is no such thing as too long spoke. Any person that says this is idiot."
 
-<div style={{ maxWidth: '400px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./spoke.png" alt="spoke-anatomy"/>
-
-</div>
+<figure>
+  <img src="/images/posts/building-a-wheel/spoke.png" alt="spoke-anatomy"/>
+</figure>
 
 A spoke has a butt end that is captured in the hub and a thread end that threads into the nipple through the
 rim. I could shorten the spoke from the thread end or the butt end.
@@ -62,17 +53,10 @@ thread and the thread can also be larger than the diameter of the spoke. So I wo
 google has some spoke rolling machines from €20 to €100! Yikes! I'll probably only use it once, so I'll need
 a different way.
 
-<div style={{ maxWidth: '400px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./spoke_roller.jpg" alt="spoke-roller"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Spoke roller__*
-
-</div>
+<figure>
+  <img src="/images/posts/building-a-wheel/spoke_roller.jpg" style="max-width: 400px;" alt="spoke-anatomy"/>
+  <figcaption>Spoke roller</figcaption>
+</figure>
 
 ##### Butt end it is
 
@@ -82,11 +66,9 @@ the size of the spoke hole and then bent the spokes inside this hole. This creat
 keeps the spoke captured in the hub hole. Bon appetite. I was inspired by this guy:
 https://www.youtube.com/watch?v=EYpGvp_7LoU
 
-<div style={{ maxWidth: '700px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./bent_spoke.jpg" alt="spoke-bender"/>
-
-</div>
+<figure>
+  <img src="/images/posts/building-a-wheel/bent_spoke.jpg" style="max-width: 700px;" alt="spoke-anatomy"/>
+</figure>
 
 #### Lacing pattern
 
@@ -95,36 +77,25 @@ and some other measurements from the hub and rim. The ERD is measured using two 
 The spokes are screwed into the rim and the distance between them is measured. The spoke length is
 known and is used to calculate ERD. Everything else was measured with a calipers.
 
-<div style={{ maxWidth: '700px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./erd.jpg" alt="effective-rim-diameter"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*ERD measurement*
-
-</div>
+<figure>
+  <img src="/images/posts/building-a-wheel/erd.jpg" style="max-width: 700px;" alt="spoke-anatomy"/>
+  <figcaption>ERD measurement</figcaption>
+</figure>
 
 Now that we have all the measurements, a spoke calculator can be used. I didn't want to cut my spokes
 with the incorrect length, so I calculated the length myself and with two seperate spoke calculators.
 I used https://www.ebikes.ca/tools/spoke-calc.html and https://www.prowheelbuilder.com/spokelengthcalculator.
 
-<div style={{ maxWidth: '700px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./spoke_calculator.png" alt="spoke-calculator"/>
-
-</div>
+<figure>
+  <img src="/images/posts/building-a-wheel/spoke_calculator.png" alt="spoke-calculator"/>
+</figure>
 
 The end spoke length was 162mm which I rounded up to 165mm. So I cut the spokes, bent them and then
 laced them into the wheel.
 
-<div style={{ maxWidth: '1000px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./lacing.jpg" alt="lacing-the-wheel"/>
-
-</div>
+<figure>
+  <img src="/images/posts/building-a-wheel/lacing.jpg" alt="lacing-the-wheel"/>
+</figure>
 
 ### 3. Balancing / truing the wheel ⚖️
 
@@ -133,11 +104,9 @@ because it went out of balance once I added the rest of the wheel 🤦🏻 What 
 true by tightening the nipples around the wheel so that it pulls the rim to the centre. I used the brakes
 as a guide of where the centre was.
 
-<div style={{ maxWidth: '400px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./truing.png" alt="truing-the-wheel"/>
-
-</div>
+<figure>
+  <img src="/images/posts/building-a-wheel/truing.png" style="max-width: 400px;" alt="lacing-the-wheel"/>
+</figure>
 
 The rim is out of balance if it vibrates when brought up to speed. It isn't necessary to balance a wheel, but
 I wanted to so that it wouldn't shake the bike when the throttle was applied in mid air. Balancing can be 

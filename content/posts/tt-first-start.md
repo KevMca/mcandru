@@ -37,11 +37,7 @@ into the ignition wires for diagnosis. This resulted in a lot of splits in the w
 to insulate the exposed wires. Half of the coilpack connector tabs had also broken due to some hamfisted attempts at
 removing them in the past. I replaced each of the connectors.
 
-<div style={{ maxWidth: 400, height: 'auto', margin: '0 auto' }} >
-
-<img src="./ignition-wiring.jpg"  />
-
-</div>
+<img src="/images/posts/tt-first-start/ignition-wiring.jpg" style="max-width: 400px;" />
 
 I also replaced the spark plugs with new OEM Bosch plugs pre-gapped to the recommended 0.7mm.
 

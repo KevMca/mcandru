@@ -46,13 +46,13 @@ Don't worry if you don't understand any of these steps, I'm going to explain the
 If you want an intuitive visualisation of the Fourier Transform, you really can't compete with
 __3Blue1Brown's__ video: https://www.youtube.com/watch?v=spUNpyF58BY.
 
-![](./images/audio-signal.png "Fig 1: Audio signal in the time domain")
+![](/images/posts/how-shazam-works/audio-signal.png "Fig 1: Audio signal in the time domain")
 
 *Fig 1* above shows an audio waveform plotted in the time domain. Any audio waveform captured
 from a microphone consists of many different audio signals interacting with each other.
 The audio waveform that is captured is in effect a sum of all of the different signal sources.
 
-![](./images/audio-signal-components.png "Fig 2: Audio signal frequency components")
+![](/images/posts/how-shazam-works/audio-signal-components.png "Fig 2: Audio signal frequency components")
 
 In the case of the waveform in *Fig 1*, I created the waveform from three different sine waves.
 
@@ -60,7 +60,7 @@ The Fourier Transform breaks the audio waveform into its constituent frequency c
 tells us what frequencies are present in the waveform and to what degree they contribute to
 the waveform.
 
-![](./images/audio-signal-fourier-transform.png "Fig 3: Fourier Transform of Audio signal")
+![](/images/posts/how-shazam-works/audio-signal-fourier-transform.png "Fig 3: Fourier Transform of Audio signal")
 
 In the Fourier Transform shown in *Fig 3* above, we can see that the waveform consists
 of a large 1Hz component as well as smaller 2Hz and 3Hz components.
@@ -71,7 +71,7 @@ So what does the fourier transform actually calculate on a waveform?
 
 The actual discrete Fourier Transform function looks like:
 
-![](./images/dft-formula.png)
+![](/images/posts/how-shazam-works/dft-formula.png)
 
 where:
 
@@ -110,7 +110,7 @@ This technique is known as windowing. The problem
 now becomes how do we visualise the results. We now have reintroduced time as a
 dimension.
 
-![](./images/spectrogram.png "Fig 4: Example of a Spectrogram")
+![](/images/posts/how-shazam-works/spectrogram.png "Fig 4: Example of a Spectrogram")
 
 The answer is a spectrogram. It basically flips the fourier transform on its side
 and displays frequency magnitudes as colour intensities. It's a pretty interesting
@@ -162,9 +162,9 @@ would be split into:
 bands that are actually of high magnitude are kept and discards any bands that only
 contain noise.
 
-![](./images/spectrogram-for-fingerprint.png "Fig 5: Spectrogram to be fingerprinted")
+![](/images/posts/how-shazam-works/spectrogram-for-fingerprint.png "Fig 5: Spectrogram to be fingerprinted")
 
-![](./images/spectrogram-fingerprint.png "Fig 6: Applying the filtering algorithm to the spectrogram")
+![](/images/posts/how-shazam-works/spectrogram-fingerprint.png "Fig 6: Applying the filtering algorithm to the spectrogram")
 
 #### Variables
 
@@ -182,6 +182,10 @@ search for the correct matching song efficiently.
 
 ## References
 
+<code>
+
 [1] Shazam's Whitepaper: https://www.ee.columbia.edu/~dpwe/pubs/OgleE07-pershash.pdf
 
 [2] http://coding-geek.com/how-shazam-works/
+
+</code>

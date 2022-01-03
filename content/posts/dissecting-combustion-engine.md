@@ -19,11 +19,9 @@ I'm currently working on in my [__2002 Audi TT__](https://www.mcand.ru/audi).
 
 ### 1. Engine Theory Basics
 
-<div style={{ maxWidth: 500, margin: '0 auto' }}>
-
-<img src="./engine-exploded.jpg" alt="engine-exploded-view" />
-
-</div>
+<figure>
+  <img src="/images/posts/dissecting-combustion-engine/engine-exploded.jpg" style="max-width: 500px;" alt="engine-exploded-view" />
+</figure>
 
 The basics of engine theory are out of the scope of this article. However, I would recommend
 checking out [this video](https://www.youtube.com/watch?v=DKF5dKo_r_Y) for a really nice
@@ -47,13 +45,10 @@ camshaft determines when the valves open.
 
 ##### 2.1.1 Pushrods
 
-<div style={{ textAlign: 'center' }}>
-
-![sohc-engine](./pushrod_engine.gif)
-
-*__Fig 2.1__ Example of a Pushrod engine configuration*
-
-</div>
+<figure>
+  <img src="/images/posts/dissecting-combustion-engine/pushrod_engine.gif" style="max-width: 500px;" alt="engine-exploded-view" />
+  <figcaption>Example of a Pushrod engine configuration<figcaption>
+</figure>
 
 Older engines, such as the family MGB, also with a 1.8 litre inline four cylinder engine, use pushrods 
 rather than tappets to control the opening of the valves. Rather than the cam lobe pushing down on a
@@ -70,28 +65,22 @@ The camshafts in pushrod engines are typically beside the crankshaft rather than
 This is why the term __Overhead Cam__ came to be. Rather than a pushrod pushing a rocker at the top of
 the engine, the need for a pushrod was removed by placing the camshaft at the top of the engine head instead.
 
-<div style={{ textAlign: 'center' }}>
+<figure>
+  <img src="/images/posts/dissecting-combustion-engine/sohc_engine.gif" style="max-width: 500px;" alt="engine-exploded-view" />
+  <figcaption>Example of a Single Overhead Cam engine<figcaption>
+</figure>
 
-![sohc-engine](./sohc_engine.gif)
-
-*__Fig 2.2__ Example of a Single Overhead Cam engine*
-
-Originally, cars had a single camshaft for both intake and exhaust valves. However, as it became apparent
-that adding more valves per cylinder was beneficial, 
-
-</div>
+*Originally, cars had a single camshaft for both intake and exhaust valves. However, as it became apparent
+that adding more valves per cylinder was beneficial.*
 
 The 1.8t engine has three intake valves and two exhaust valves per cylinder. The advantage of having
 multiple valves per cylinder is that it increases the surface area for air to flow through, increasing
 the intake capacity.
 
-<div style={{ textAlign: 'center' }}>
-
-![dohc-engine](./dohc_engine.gif)
-
-*__Fig 2.3__ Example of a Dual Overhead Cam engine*
-
-</div>
+<figure>
+  <img src="/images/posts/dissecting-combustion-engine/dohc_engine.gif" style="max-width: 500px;" alt="engine-exploded-view" />
+  <figcaption>Example of a Dual Overhead Cam engine<figcaption>
+</figure>
 
 The position of each camshaft must be in time with each other at all times so that combustion occurs
 in the most efficient way possible. Any change in the timing of the engine can cause poor combustion
@@ -103,17 +92,10 @@ Spark plugs provide the spark needed to ignite the fuel in the cylinder. The spa
 at the exact correct time when the air and fuel are mixed and compressed and in order for it to burn as clean
 as possible. On older cars, a __distributor__ was mechanically connected to the intake cam shaft.
 
-<div style={{ maxWidth: 300, margin: '0 auto' }}>
-
-![distributor](./distributor.jpg)
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 2.4__ Diagram of distributor that connects directly to camshaft*
-
-</div>
+<figure>
+  <img src="/images/posts/dissecting-combustion-engine/distributor.jpg" style="max-width: 300px;" alt="engine-exploded-view" />
+  <figcaption>Diagram of distributor that connects directly to camshaft<figcaption>
+</figure>
 
 Inside the distributor there is a rotor arm that spins with the cam shaft. As it rotates, it
 directs high-tension current required to create a spark, through the high-tension lead connected to
@@ -131,13 +113,10 @@ The __camshafts__ keep valves and sparks in time and the __crankshaft__ keeps th
 or chain keeps the crankshaft and camshafts in time with each other. Typically, on a DOHC engine, the chain
 or belt is connected to gears on the end of the camshafts and to the gear at the end of the crankshaft.
 
-<div style={{ textAlign: 'center' }}>
-
-![timing-belt](./timing-belt.gif)
-
-*__Fig 3.1__ Example of a typical inline DOHC timing chain configuration*
-
-</div>
+<figure>
+  <img src="/images/posts/dissecting-combustion-engine/timing-belt.gif" style="max-width: 300px;" alt="engine-exploded-view" />
+  <figcaption>Example of a typical inline DOHC timing chain configuration<figcaption>
+</figure>
 
 In classic Volkswagen fashion, 1.8t engine does something different. Each of the camshafts are kept in
 time with each other with a timing chain on the far side of the engine and the camshafts are kept in
@@ -145,14 +124,11 @@ time with the crankshaft with a timing belt. Because the camshafts are in time w
 cam chain, only one of the camshafts is connected to the crankshaft (the exhaust one). To be honest
 I have absolutely no idea why Volkswagen decided to do this.
 
-<div style={{ textAlign: 'center' }}>
-
-![vw-camshaft](./volkswagen-camshaft.png)
-
-*__Fig 3.2__ VW 1.8T engine cam chain and timing belt configuration. Note the chain connecting the camshafts
-on the right side of the engine and the timing belt connected to the exhaust camshaft on the left side.*
-
-</div>
+<figure>
+  <img src="/images/posts/dissecting-combustion-engine/volkswagen-camshaft.png" style="max-width: 300px;" alt="engine-exploded-view" />
+  <figcaption>VW 1.8T engine cam chain and timing belt configuration. Note the chain connecting the camshafts
+on the right side of the engine and the timing belt connected to the exhaust camshaft on the left side.<figcaption>
+</figure>
 
 ### 4. Manifolds
 
@@ -165,17 +141,10 @@ each of the 4 cylinders and collects the gasses out to the exhaust.
 The exhaust manifold consists of a runner for each cylinder that collect together. The manifold is then connected
 to the downpipe of the exhaust.
 
-<div style={{ maxWidth: 300, margin: '0 auto' }}>
-
-![exhaust-manifold](./exhaust-manifold.jpg)
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.1__ Exhaust manifold*
-
-</div>
+<figure>
+  <img src="/images/posts/dissecting-combustion-engine/exhaust-manifold.jpg" style="max-width: 300px;" alt="engine-exploded-view" />
+  <figcaption>Exhaust manifold<figcaption>
+</figure>
 
 Each runner must be of equal length. This is because, as the engine runs, it sends out exhaust pulses as combustion
 occurs in each cylinder. This creates a force that helps to draw out the exhaust gasses for the next pulse, resulting
@@ -187,17 +156,10 @@ resulting in poor performance.
 The intake manifold supplies the combustion mixture of fuel and air to each of the cylinders. It is important
 that each cylinder gets and even distribution of the mixture for optimal engine performance.
 
-<div style={{ maxWidth: 500, margin: '0 auto' }}>
-
-![intake-manifold](./intake-manifold.jpg)
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 4.2__ Exhaust manifold*
-
-</div>
+<figure>
+  <img src="/images/posts/dissecting-combustion-engine/intake-manifold.jpg" style="max-width: 500px;" alt="engine-exploded-view" />
+  <figcaption>Intake manifold<figcaption>
+</figure>
 
 Due to the downward movement of the pistons, a vacuum is created in the manifold that creates a significant 
 air flow. In order for an even mix of the combustion mixture to enter each cylinder, the pressure in each
@@ -220,17 +182,10 @@ Carburetors also have a __choke__ that helps the engine to combust when it is co
 the air intake so that the pressure within the carburetor is higher, which in turn draws out more fuel
 from the reservoir.
 
-<div style={{ maxWidth: 600, margin: '0 auto' }}>
-
-![carburetor](./carburetor.jpg)
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 5.1__ Carburetor*
-
-</div>
+<figure>
+  <img src="/images/posts/dissecting-combustion-engine/carburetor.jpg" style="max-width: 600px;" alt="engine-exploded-view" />
+  <figcaption>Carburetor<figcaption>
+</figure>
 
 Pressurised air enters the
 carburetor and is stopped by the throttle at the end of the carburetor. As the throttle
@@ -263,17 +218,10 @@ used once the engine has come to temperature.
 The pistons are connected to the crankshaft. As the pistons move, the crankshaft rotates.
 The crankshaft is connected to the gearbox and provides propulsion for the car.
 
-<div style={{ maxWidth: 600, margin: '0 auto' }}>
-
-![crankshaft](./crankshaft.jpg)
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 6.1__ Crankshaft*
-
-</div>
+<figure>
+  <img src="/images/posts/dissecting-combustion-engine/crankshaft.jpg" style="max-width: 600px;" alt="engine-exploded-view" />
+  <figcaption>Crankshaft<figcaption>
+</figure>
 
 Each piston is connected to a journal via a connecting rod attached to the piston.
 When the cylinders fire, they create pulses that initially spin the crankshaft quicker

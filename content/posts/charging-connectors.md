@@ -2,7 +2,7 @@
 title: "Charging Connector"
 date: 2021-01-10
 slug: "/charging-connectors"
-author: "Michael McAndrew"
+author: "Kevin McAndrew"
 tags:
     - Prius
 ---
@@ -26,17 +26,10 @@ The ESB in Ireland support three different types of connectors:
 
 - Some also support Type 2 connectors
 
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./esb-connectors.png" alt="esb-connectors"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 1.1__ The three connectors supported by the ESB *
-
-</div>
+<figure>
+  <img src="/images/posts/charging-connectors/esb-connectors.png" alt="esb-connectors"/>
+  <figcaption>The three connectors supported by the ESB</figcaption>
+</figure>
 
 #### CHAdeMO
 

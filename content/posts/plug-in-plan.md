@@ -31,17 +31,10 @@ therefore the current going to the battery.
 A proof of concept of this design has been done by Damien Maguire:
 [Damien's Prius Charger](https://www.youtube.com/watch?v=hkCRddO3Clc&ab_channel=DamienMaguire)
 
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./converter.png" alt="converter"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 1.1__ A simple version of what the charging circuit might look like*
-
-</div>
+<figure>
+  <img src="/images/posts/plug-in-plan/converter.png" alt="converter"/>
+  <figcaption>A simple version of what the charging circuit might look like</figcaption>
+</figure>
 
 Custom board:
 - Must control the Boost converter PWM signal
@@ -57,17 +50,10 @@ Custom board:
 The purpose of the battery management system is to monitor and balance each cell in the battery,
 monitor the temperature, State of Charge (SOC) and current flowing to and from the battery.
 
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./BMS_peef.jpg" alt="BMS"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 2.1__ The current Battery ECU (BMS)*
-
-</div>
+<figure>
+  <img src="/images/posts/plug-in-plan/BMS_peef.jpg" alt="BMS"/>
+  <figcaption>The current Battery ECU (BMS)</figcaption>
+</figure>
 
 The old battery ECU does not have any room for expansion. It also does not support any form
 of balancing, which would be useful for a Lithium Ion battery and when using a higher percentage
@@ -96,14 +82,7 @@ The new battery should be of some Lithium persuasion. Old electric car modules o
 cheap source. A second hand Nissan Leaf battery would be nice, but this will be entirely based on
 what we can find, since the battery will probably be the most expensive part of this project 😬
 
-<div style={{ maxWidth: '1000px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./leaf.jpg" alt="leaf_battery"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 3.1__ A first generation Nissan Leaf battery ❤️*
-
-</div>
+<figure>
+  <img src="/images/posts/plug-in-plan/leaf.jpg" alt="leaf_battery"/>
+  <figcaption>A first generation Nissan Leaf battery ❤️</figcaption>
+</figure>

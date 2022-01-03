@@ -16,17 +16,10 @@ inverter.
 The male 32-pin connector that is attached to the hybrid ECU is number: 1318747-1
 The female 32-pin connector that is attached to the inverter is number: 1318745-2
 
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./32-pin.jpg" alt="32-pin"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 1.1__ The 32-pin connector to the main board*
-
-</div>
+<figure>
+    <img src="/images/posts/plug-in-converter-board/32-pin.jpg" alt="32-pin"/>
+    <figcaption>The 32-pin connector to the main board</figcaption>
+</figure>
 
 - Pass = connect directly to Hybrid ECU
 - *Monitor* = pass the signal to the Hybrid ECU, and to the converter board
@@ -114,20 +107,13 @@ seen in Fig 2.1. These three contactors are controlled by the Hybrid Vehicle
 Control ECU at pins CON1, CON2 and CON3. This must also be intercepted by
 converter board.
 
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./battery-contactor.png" alt="battery-contactor"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 2.1__ The High Voltage Battery contactor arrangement. The orange wires
+<figure>
+    <img src="/images/posts/plug-in-converter-board/battery-contactor.png" alt="battery-contactor"/>
+    <figcaption>The High Voltage Battery contactor arrangement. The orange wires
 are the positive and negative terminals from the battery. You may notice that
 the positive wire has 2 contactors, 1 for precharge through a resistor and 1
-without the precharge resistor. *
-
-</div>
+without the precharge resistor.</figcaption>
+</figure>
 
 Two contactors will also need to be added in order to connect and disconnect a
 motor and to connect the mains to the inverter also.

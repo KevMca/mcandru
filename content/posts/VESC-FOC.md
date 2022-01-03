@@ -23,34 +23,20 @@ a pole is seen the output latches until the opposite pole is seen. I thought tha
 had a voltage output, but it actually acts more like a switch, so an external voltage must be applied to
 test them.
 
-<div style={{ maxWidth: '500px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./hall.jpg" alt="hall-sensors"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 1.1__ The hall sensors that are in my hub motor *
-
-</div>
+<figure>
+  <img src="/images/posts/VESC-FOC/hall.jpg" style="max-width: 500px;" alt="hall-sensors"/>
+  <figcaption>The hall sensors that are in my hub motor</figcaption>
+</figure>
 
 Long story short, just connect power ground and the three hall sensor wires to the VESC and you're good to
 go 😅
 
 ### BLDC tool setup ⚙️
 
-<div style={{ maxWidth: '1000px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./foc_screen.png" alt="FOC-setup-screen"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 2.1__ The setup window used in the BLDC tool software to setup a VESC for FOC *
-
-</div>
+<figure>
+  <img src="/images/posts/VESC-FOC/foc_screen.png" alt="FOC-setup-screen"/>
+  <figcaption>The setup window used in the BLDC tool software to setup a VESC for FOC</figcaption>
+</figure>
 
 The steps for using the BLDC tool are as follows:
 
@@ -89,17 +75,10 @@ The steps for using the BLDC tool are as follows:
 The power was still limited after setting up FOC. I did a bit of testing. The BLDC tool has some nice
 graphing and data acquisition tools with it. So I tested the maximum power output in a stall.
 
-<div style={{ maxWidth: '1000px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./power.png" alt="current-and-power-graph"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 3.1__ A graph showing voltage, current and power for the motor*
-
-</div>
+<figure>
+  <img src="/images/posts/VESC-FOC/power.png" alt="current-and-power-graph"/>
+  <figcaption>A graph showing voltage, current and power for the motor</figcaption>
+</figure>
 
 The problem was that the motor current was limited to 30 amps. Which means the maximum power was 
 30A\*50V=1.5kW peak. This... is not enough 😈 I want more power!!! ⚡ So I increased the motor current

@@ -76,6 +76,6 @@ The ability to change the timing of the opening and closing of the intake or
 exhaust valves. This is typically done by shifting the camshaft back slightly.
 This is done using a solenoid to slide the camshaft backwards and forwards.
 
-![variable-valve-timing](./vvt.gif)
+![variable-valve-timing](/images/posts/buying-the-wrong-turbo/vvt.gif)
 
 The Audi TT BAM engine in my TT has VVT on the intake camshaft.

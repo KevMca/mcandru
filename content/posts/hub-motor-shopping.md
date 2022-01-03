@@ -12,11 +12,7 @@ motor, two pulleys and a timing belt. The BLDC motor is electronically commutate
 controller to create the the correct signals. The strange thing about BLDC motors is that they
 are actually AC motors not DC motors 😆 
 
-<div style={{ maxWidth: 500, margin: '0 auto' }}>
-
-<img src="./old_setup.jpg" alt="old-setup" />
-
-</div>
+<img src="/images/posts/hub-motor-shopping/old_setup.jpg" style="max-width: 400px;" alt="old-drivetrain" />
 
 ### Problems with the old system
 
@@ -32,11 +28,7 @@ to its demise)
 To sum up, the pulley system's downfall was that everything could become loose and it's power was
 limited by this. There is always usually around 5% loss in power if not more from these drivetrains.
 
-<div style={{ maxWidth: 400, margin: '0 auto' }}>
-
-<img src="./old_drivetrain.png" alt="old-drivetrain" />
-
-</div>
+<img src="/images/posts/hub-motor-shopping/old_drivetrain.png" style="max-width: 400px;" alt="old-drivetrain" />
 
 ### Other options
 
@@ -55,11 +47,7 @@ usually subjected to. Some hub motors have built in gearboxes, but that comes at
 are very heavy and since the entire motor is turning, it adds a lot of momentum to the wheel when accelerating
 and decelerating.
 
-<div style={{ maxWidth: 400, margin: '0 auto' }}>
-
-<img src="./hub_motor.jpg" alt="hub-motor" />
-
-</div>
+<img src="/images/posts/hub-motor-shopping/hub_motor.jpg" style="max-width: 400px;" alt="hub-motor" />
 
 #### 2. Mid drive
 
@@ -68,11 +56,7 @@ momentum to the system and can monitor the pedals much more easily. They also mi
 
 Mid drive motors contain extra drivetrain elements and are more difficult to fit than hub motors however.
 
-<div style={{ maxWidth: 400, margin: '0 auto' }}>
-
-<img src="./mid_drive.jpg" alt="mid-drive" />
-
-</div>
+<img src="/images/posts/hub-motor-shopping/mid_drive.jpg" style="max-width: 400px;" alt="mid-drive" />
 
 ### Final decision
 
@@ -93,11 +77,7 @@ wheels I had and get a cheaper motor overall.
 motors I saw were much cheaper, but could have easily been lower power. This motor that I got had advertised 
 very clearly what it was and reviews backed this up.
 
-<div style={{ maxWidth: 400, margin: '0 auto' }}>
-
-<img src="./motor.png" alt="my-motor" />
-
-</div>
+<img src="/images/posts/hub-motor-shopping/motor.png" style="max-width: 400px;" alt="my-motor" />
 
 And here she is in all her glory. I literally hooked it up as soon as I got it and it worked right off the 
 bat. Now I just have to build the wheel and do the rest of the upgrade 😬😅

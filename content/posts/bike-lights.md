@@ -11,58 +11,30 @@ The old lights on my bike were just plain Jane bike lights from halfords. They a
 to be easily stolen, run out of internal battery and they aren't very bright. I decided to
 replace these lights with more substantial lights that run from the 50V battery.
 
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./old_lights.jpg" alt="old_light"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 0.1__ The old clip-on light *
-
-</div>
+<figure>
+  <img src="/images/posts/bike-lights/old_lights.jpg" style="max-width: 800px;" alt="old_light"/>
+  <figcaption>The old clip-on light</figcaption>
+</figure>
 
 ### 1. Headlight 🤯 💡
 
 I bought a headlight from banggood for €20 which is designed for a motorbike. It is a 35W bulb
 which I measured to be 2.8A@12V = 33.6W. Furthermore, there are heads and dipped options.
 
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
+<figure>
+  <img src="/images/posts/bike-lights/headlight.jpg" style="max-width: 600px;" alt="headlight"/>
+  <figcaption>The new headlight</figcaption>
+</figure>
 
-<img src="./headlight.jpg" alt="headlight"/>
+<figure>
+  <img src="/images/posts/bike-lights/heads.jpg" style="max-width: 600px;" alt="headlight"/>
+  <figcaption>Heads mode</figcaption>
+</figure>
 
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 1.1__ The new headlight *
-
-</div>
-
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./heads.jpg" alt="heads"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 1.2__ Heads mode*
-
-</div>
-
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./dips.jpg" alt="dips"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 1.3__ Dips mode*
-
-</div>
+<figure>
+  <img src="/images/posts/bike-lights/dips.jpg" style="max-width: 600px;" alt="headlight"/>
+  <figcaption>Dips mode</figcaption>
+</figure>
 
 I also had to make a few modifications to the headlight. 1) I added a switch to be able
 to switch between heads, dips and off. The switch has an o-ring that seals against the
@@ -70,34 +42,20 @@ light. 2) The bracket that came with the light was designed for a motorbike whic
 two downpipes on the front. I had to modify this to work with the single downpipe on my
 bike.
 
-<div style={{ maxWidth: '700px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./switch.jpg" alt="switch"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 1.4__ The added switch*
-
-</div>
+<figure>
+  <img src="/images/posts/bike-lights/switch.jpg" style="max-width: 600px;" alt="headlight"/>
+  <figcaption>The added switch</figcaption>
+</figure>
 
 ### 2. Rear light 🍑 💡
 
 The new back light is a 12V LED red light. I just zip-tied it underneath the seat
 so that it's protected from water and impacts.
 
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./back.jpg" alt="back"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 2.1__ The new rear light*
-
-</div>
+<figure>
+  <img src="/images/posts/bike-lights/back.jpg" style="max-width: 600px;" alt="headlight"/>
+  <figcaption>The new rear light</figcaption>
+</figure>
 
 ### 3. 12V Regulator ⚡
 
@@ -106,28 +64,17 @@ spec regulator. The reason I chose this regulator is because it was the cheapest
 could find (€7.50). Car parts are some of the most affordable parts available because they have and
 wide range of uses and they're made in large quantities.
 
-<div style={{ maxWidth: '600px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./buck.jpg" alt="buck converter"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 3.1__ The 12V buck converter that regulates all 12V devices*
-
-</div>
+<figure>
+  <img src="/images/posts/bike-lights/buck.jpg" style="max-width: 600px;" alt="headlight"/>
+  <figcaption>The 12V buck converter that regulates all 12V devices</figcaption>
+</figure>
 
 ### 4. Final Product 😍
 
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
+<figure>
+  <img src="/images/posts/bike-lights/out_back.jpg" style="max-width: 600px;" alt="headlight"/>
+</figure>
 
-<img src="./out_back.jpg" alt="back of bike"/>
-
-</div>
-
-<div style={{ maxWidth: '800px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./out_front.jpg" alt="front of bike"/>
-
-</div>
+<figure>
+  <img src="/images/posts/bike-lights/out_front.jpg" style="max-width: 600px;" alt="headlight"/>
+</figure>

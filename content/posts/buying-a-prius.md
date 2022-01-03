@@ -16,14 +16,7 @@ The idea is that we should be able to regain a significant portion of the inital
 selling the engine, hybrid battery and other unneeded parts. Even if we can't, it's still a
 cool project 😁 We are still awaiting a good name 🤔
 
-<div style={{ maxWidth: '700px', height: 'auto', margin: '0 auto' }}>
-
-<img src="./prius.jpg" alt="prius"/>
-
-</div>
-
-<div style={{ textAlign: 'center' }}>
-
-*__Fig 1.1__ The Prius in all her glory *
-
-</div>
+<figure>
+  <img src="/images/posts/buying-a-prius/prius.jpg" alt="prius"/>
+  <figcaption>The Prius in all her glory</figcaption>
+</figure>
