@@ -5,8 +5,7 @@ status: done
 owners:
   - Kevin McAndrew
 tags: 
-  - audi
-  - tt
+  - bike
 timeline:
   - name: Buy a new hub motor
     date: 2020-08-11
