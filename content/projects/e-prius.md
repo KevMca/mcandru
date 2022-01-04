@@ -14,6 +14,8 @@ timeline:
     status: done
     description: |
       First of all, we need a Prius! We managed to find a fantastic deal on DoneDeal.
+    images:
+      - posts/buying-a-prius/prius.jpg
     posts:
       - buying-a-prius
   - name: Make into a roadworthy Hybrid Vehicle 🔧
@@ -30,7 +32,7 @@ timeline:
       is too small, so this must be modified. A charger is needed to charge said battery also. All this must be done
       while keeping the rest of the car happy :D
     posts:
-      -  prius-battery-overview
+      - prius-battery-overview
       - plug-in-plan
       - 32-pin-connector-detail
       - charging-connectors
