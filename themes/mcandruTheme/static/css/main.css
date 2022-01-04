@@ -98,7 +98,7 @@ figure {
   display: block;
   margin: 0 auto;
   height: auto;
-  aspect-ratio: 16/9
+  /*aspect-ratio: 16/9*/
 }
 
 figcaption {
