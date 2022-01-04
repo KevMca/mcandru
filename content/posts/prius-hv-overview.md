@@ -9,15 +9,13 @@ tags:
 
 ### Battery System Overview 🔋🔋🔋🔋🔌
 
-Battery ECU teardown by pEEf: https://priuschat.com/threads/battery-ecu-secrets-and-teardown-warning-geek-content.85987/
-
 <figure>
   <img src="/images/posts/prius-hv-overview/battery_system_simple.png" style="max-width: 500px;" alt="simple_battery_system"/>
   <figcaption>A simplified block diagram of the battery system</figcaption>
 </figure>
 
-- **Battery ECU** : Effectively a Battery Management System (BMS) that monitors the 
-    cell voltages and controls the battery blower
+- **Battery ECU** : Effectively a Battery Monitoring System (BMS) that monitors the 
+    cell voltages and controls the battery blower (Battery ECU teardown by pEEf: https://priuschat.com/threads/battery-ecu-secrets-and-teardown-warning-geek-content.85987/)
 - **Battery Blower** : Used to cool the battery
 - **Battery Blower Controller** : Drives the battery blower motor
 - **Traction Battery** : The high voltage battery that drives the car
@@ -139,7 +137,7 @@ An extra AC inverter is included to drive the pump for the climate control syste
 31. OVL  : Boost converter over voltage signal
 32. GCNV : Boost converter ground
 
-### Battery Management System ⚖️🔋
+### Battery Monitoring System ⚖️🔋
 
 The Battery ECU is the main control board for the battery. This controller keeps the state 
 of charge (SOC) between approximately 40 and 80 percent (shallow cycling), where the average 
