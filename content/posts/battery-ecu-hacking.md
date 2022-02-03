@@ -169,7 +169,7 @@ We discovered 5 unique identifiers:
 5. 0x3CD : (5 bytes) Occurs every 100ms
 6. 0x4D1 : (8 bytes) Occurs every 1.06s
 
-I found a pdf with a bunch decoded CAN identifiers for the Prius Gen 3: https://www.selidori.com/tech/00000-04999/40-lLwI4.pdf
+I found a pdf with a bunch of decoded CAN identifiers for the Prius Gen 3: https://www.selidori.com/tech/00000-04999/40-lLwI4.pdf
 
 [//]: <>                                                                     (.)
 Using this PDF I could guess what some of these messages were:

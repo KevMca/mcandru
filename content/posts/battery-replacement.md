@@ -1,6 +1,6 @@
 ---
 title: "Battery Replacement"
-date: 2022-01-04
+date: 2022-02-03
 slug: "/battery-replacement"
 author: "Kevin McAndrew"
 tags:
