@@ -9,11 +9,11 @@ tags:
 
 [//]: <>                                                                     (.)
 The Prius Gen 2 battery ECU has a few design flaws, one of which we have already
-encountered with our Prius. Battery fires caused by the high voltage connector
-shorting out are a common fault.
+encountered with our Prius: Battery fires caused by the high voltage connector
+shorting out 🔥
 
 The question is, is it possible to make our own battery ECU that fixes these
-problems and is designed to be easily upgraded.
+problems and is designed to be easily upgraded?
 
 ### Battery ECU connectors
 [//]: <>                                                                     (.)
@@ -41,7 +41,7 @@ The high voltage sensing connector:
 - 22: **GBB0** (Ground)
 
 <figure>
-  <img src="/images/posts/battery-ecu-hacking/b12-connector.png" alt="battery-ecu-connector"/>
+  <img src="/images/posts/battery-ecu-hacking/b12-connector.PNG" alt="battery-ecu-connector"/>
   <figcaption>The high voltage sensing connector</figcaption>
 </figure>
 
@@ -60,7 +60,7 @@ The current and temperature sensing connector:
 - 16: **IB** (Current sensor output voltage)
 
 <figure>
-  <img src="/images/posts/battery-ecu-hacking/b13-connector.png" alt="battery-ecu-connector"/>
+  <img src="/images/posts/battery-ecu-hacking/b13-connector.PNG" alt="battery-ecu-connector"/>
   <figcaption>The current and temperature sensing connector</figcaption>
 </figure>
 
@@ -77,7 +77,7 @@ The main battery ECU connector has the following connections:
 - 24: **S1** (Fan PWM control)
 
 <figure>
-  <img src="/images/posts/battery-ecu-hacking/b11-connector.png" alt="battery-ecu-connector"/>
+  <img src="/images/posts/battery-ecu-hacking/b11-connector.PNG" alt="battery-ecu-connector"/>
   <figcaption>The main communication and fan control connector for the battery ECU</figcaption>
 </figure>
 
