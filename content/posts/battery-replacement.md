@@ -15,7 +15,11 @@ density and cost of replacing the old battery make a lithium ion solution more
 desireable. It would also be nice to replace the battery ECU with a custom
 solution that can be scaled for larger capacity batteries.
 
-### Original battery
+Initially we will repair the current battery with new modules and replace the
+battery ECU with our own custom one. Then we can use electric vehicle cells to
+replace the NiMH with Li-ion.
+
+### Original battery 🔋
 [//]: <>                                                                     (.)
 The high voltage battery (also known as the traction battery) is a 201.6V NiMH 
 battery composed of 28 modules (7.2V each), where each module is made of six 
@@ -23,8 +27,14 @@ individual 1.2-volt, 6.5 Ah Panasonic Prismatic NiMH cells. The 28 modules are
 connected in series to produce a total energy storage capacity of 1.310kWh 
 (201.6-volts × 6.5 Ah).
 
+<figure>
+  <img src="/images/posts/traction-battery-repairs/battery-open.jpg" alt="battery-open"/>
+  <figcaption>Removed traction battery all opened up.</figcaption>
+</figure>
+
     Total voltage:           201.6V
     Total energy storage:    1.31kWh
+    Current output:          186A
     Number modules:          28
     Module voltage:          7.2V
     Module energy:           46.8Wh
@@ -34,11 +44,32 @@ connected in series to produce a total energy storage capacity of 1.310kWh
     Cell voltage:            1.2V
     Cell energy:             7.8Wh
 
-1.3kW/kg
-186A output
+Battery modules: https://www.peve.jp/en/product/np2/
+Breakdown of prius system: https://ur.booksc.eu/book/72082550/3d5351
 
-https://www.peve.jp/en/product/np2/
-https://ur.booksc.eu/book/72082550/3d5351
+### Results of analysis 🧪
+
+[//]: <>                                                                     (.)
+I looked into building a custom battery using three different types of cells *1)*
+18650s, *2)* 21700s and *3)* Nissan leaf pouch cells. Before I did this analysis, I
+wanted to build a custom battery from cylindrical cells, but we decided to
+repair the current battery and wait for when we transfer a second hand EV into
+the car. The main reasons for this are cost and manufacturing:
+
+- **Cost:** The larger each subunit is, the better bang for your buck you get. 
+    For example, the nissan leaf cost per kWh is 37% cheaper than 18650s per 
+    kilowatt hour. 
+- **Manufacturing:** The nissan leaf cells can be bolted together and each cell 
+    contains more energy, so it much easier to build a large battery.
+
+<figure>
+  <img src="/images/posts/battery-replacement/comparison-table.PNG" alt="comparison table"/>
+  <figcaption>Comparison of a equivalent battery built from 18650 cells, 21700 cells and leaf pouch cells</figcaption>
+</figure>
+
+- Link for the 18650 cells used: (US18650VTC5A 2600mAh - 35A) https://eu.nkon.nl/sony-us18650vtc5a-flat-top-reclaimed.html
+- Link for the 21700 cells used: (Samsung INR21700-40T 4000mAh - 35A) https://eu.nkon.nl/rechargeable/li-ion/21700-20700-size/samsung-inr21700-40t-4000mah-35a-clear-wrap-reclaimed.html
+- Link for the Nissan Leaf cells used: (A123 pouch cells) https://www.greentecauto.com/hybrid-battery/repurposed-batteries/nissan-leaf/nissan-leaf-battery-module
 
 ### Lithium Ion replacement
 
@@ -49,7 +80,9 @@ Specification:
 - Power output of at least 20kW
 - 20kW @ 201.6V = 100A of current continuous
 
-Procedure:
+# Warning: Detailed nerd stuff and rough work below ⚠️
+
+### Design Procedure:
 
 1. Calculate number of series cells from nominal voltage (this will always be the same)
 2. Calculate range of parallel cells from capacity
@@ -58,7 +91,7 @@ Procedure:
 5. Battery energy density
 6. Battery cell cost
 
-Good brands:
+Good cell brands:
 
 - LG
 - Panasonic
@@ -66,13 +99,6 @@ Good brands:
 - Sanyo
 - Sony
 - Murata
-
-Tesla (https://www.quora.com/What-is-the-C-rating-of-Teslas-18650-batteries - Karl Young's answer):
-
-- NCA (LiNiCoAlO2) has specific=energy of 250Wh/kg
-- 3.1Ah @ 3.6V
-- 1C for max life
-- roughly 5C on ludicrous mode
 
 #### 18650
 
@@ -127,10 +153,6 @@ The final battery would be 56s 201.6V 3p (4Ah cells with 35A max current).
 
 Samsung INR21700-40T 4000mAh - 35A : https://eu.nkon.nl/rechargeable/li-ion/21700-20700-size/samsung-inr21700-40t-4000mah-35a-clear-wrap-reclaimed.html
 
-#### Pouch
-
-#### LiFePo
-
 #### Nissan leaf cells
 
 [//]: <>                                                                     (.)
@@ -158,7 +180,7 @@ removing heat and a new cooling system would have to be designed.
     Motor power:            80kW
     Battery max current:    222A
 
-Module price: €100
+Module price: €90
 
     1.  number series cells = 201.6V / 7.5V = 28
     2.  total capacity/(cell capacity × cell voltage × number series cells)
@@ -174,25 +196,35 @@ The final battery would be 28s 210V 1p (60Ah cells with 222A max current).
        energy density  = 12.6kWh / 106.4kg = 118.4Wh/kg
     6. cost = 28 × €90 = €2520
 
-#### Chevy volt
+A123 pouch cells: https://www.greentecauto.com/hybrid-battery/repurposed-batteries/nissan-leaf/nissan-leaf-battery-module
 
-Pouch cells
+### Other EV battery technologies
 
-#### BMW i3
+#### Shape
 
-Prismatic cells
+**Cylindrical:** Tesla are by themselves here
+
+**Pouch:** Nissan Leaf and Chevy Volt
+
+**Prismatic:** German companies like BMW i3 and Porsche Taycan
+
+#### Cooling
+
+[//]: <>                                                                     (.)
+There are only really two cooling options: Air cooling and liquid cooling. Most
+EVs use liquid cooling like Tesla, BMW, Porsche and Chevy. Tesla uses a metal
+pipe that is wound around the cells. The Chevy volt uses coolant plates in
+between each cell. Most other manufacturers put their batteries on a cold plate.
+
+Of course there is a third option which the Nissan leaf has taken; No cooling! 🙄
+Stay well clear of those cars!!!
 
 #### Tesla Model S
 
+Tesla (https://www.quora.com/What-is-the-C-rating-of-Teslas-18650-batteries - Karl Young's answer):
 
+- NCA (LiNiCoAlO2) has specific=energy of 250Wh/kg
+- 3.1Ah @ 3.6V
+- 1C for max life
+- roughly 5C on ludicrous mode
 
-#### Super capcitors
-
-Reduces strain on battery and increases battery life
-
-### Battery Management System
-
-### Cooling
-
-Original : Air
-New : Liquid (Like a Tesla)
