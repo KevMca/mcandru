@@ -1,7 +1,9 @@
 ---
 title: "Audi TT Restoration"
 draft: false
+description: The never-ending task of keeping a complex sports car from the early naughties on the road.
 status: done
+image: projects/audi-tt-back.png
 owners:
   - Michael McAndrew
 tags: 

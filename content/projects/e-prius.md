@@ -1,7 +1,10 @@
 ---
 title: "Fully Electric Toyota Prius"
 draft: false
+start: 2020-11-08
 status: in-progress
+image: projects/prius-car-icons-vector.png
+description: Conversion from hybrid to electric.
 owners:
   - Kevin McAndrew
   - Michael McAndrew

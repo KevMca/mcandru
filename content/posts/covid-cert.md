@@ -100,3 +100,28 @@ wouldn't cause any security or privacy issues. The problem arises with how
 we verify certs in Ireland. All you need is a valid cert. The information
 on the cert nearly never matters because they never check the information
 with an ID.
+
+## Usage
+
+A great metric of the success of any engineering project is adoption of the
+solution and how the solution is being used. Adoption of the Green Pass has
+of course varied from country to country, but in Ireland's case, it is required
+to show as proof for restaurants, cinemas, bars and more.
+
+One interesting obsersation that I made is that while verification is required,
+the enforcement varies widely. The strictest of venues use a verifier app on a
+smartphone or tablet and then verify your identity by asking for a valid form of
+ID or at least a credit/debit card.
+
+On the flip side, some places don't bother to verify the certificate with an
+app, or don't ask for a valid form of ID to cross-check. 
+
+There are definitely political and socialogical reasons for this but, are there
+any user experience related issues that could have caused this?
+
+One possibility is the reliabilty of QR code scanning. I had several occassions
+where the verifier app failed to read the QR code. This could be caused by
+a confusing user interface or it struggling to read codes in low-light
+situations. In these cases, no feedback is provided to the user of the verifier
+app, leaving them and potential customer frustrated. More often than not,
+the easy solution is just to let them in.

@@ -1,22 +1,32 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-<br />
-{{ range .Pages.ByPublishDate.Reverse }}
-<div class="post-preview">
-  <div class="post-title-container">
-    <h3 class="post-title" style="padding-top: 0;"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    {{ $dateTime := .PublishDate.Format "2006-01-02" }}
-    {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
-    <time class="post-time" datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
-  </div>
-  {{ partial "metadata.html" . }}
-  <div class="post-description">{{ .Summary }}</div>
-  {{ with .Params.tags }}
-    {{ range . }}
-    {{ $href := print "/tags/" (urlize .) "/" }}
-    <a class="tag" href="{{ $href }}">{{ . }}</a>
-    {{ end }}
+  <h1>{{ .Title }}</h1>
+  <br />
+  {{ range .Pages.ByPublishDate.Reverse }}
+    <div class="post-preview">
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <ul class="post-preview-metadata">
+        <li style="opacity: 0.5;">
+          {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+          {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+          <time class="post-time" datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+        </li>
+        <li class="author">
+          {{ with .Params.author }}
+            {{ $author := index $.Site.Data.authors . }}
+            <img src="{{ $author.image }}" />
+            <span>{{ . }}</span>
+          {{ end }}
+        </li>
+        <li>
+          {{ with .Params.tags }}
+            {{ range . }}
+            {{ $href := print "/tags/" (urlize .) "/" }}
+            <a class="tag" href="{{ $href }}">{{ . }}</a>
+            {{ end }}
+          {{ end }}
+        </li>
+      </ul>
+      </div>
+    </div>
   {{ end }}
-</div>
-{{ end }}
 {{ end }}

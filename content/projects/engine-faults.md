@@ -1,6 +1,9 @@
 ---
 title: Engine Fault Diagnosis by Audio Analysis
 draft: false
+start: 2020-10-12
+description: Hobby turned masters project.
+image: projects/fault-diagnosis-logo.png
 status: done
 owners:
   - Michael McAndrew

@@ -1,7 +1,10 @@
 ---
 title: Glider
 draft: false
+start: 2020-03-20
 status: in-progress
+description: An autonomous, perpetually flying aircraft.
+image: projects/paper-plane.jpg
 owners:
   - Kevin McAndrew
 tags: 
@@ -64,6 +67,6 @@ timeline:
       The goal is to maximise the flight time of the glider, using thermals, solar and wind.
 ---
 
-Nature is class. Birds are also class. If you have ever seen a bird gliding in the wind, that is exactly what this project is trying to emulate. The world record flight time for a two-seat glider is over 70 hours set in 1961 in Hawaii. This record has not been between because it is seen as being a pointless and dangerous challenge. Alpine swifts can fly for 6 months at a time without landing in fact.
+Nature is class. Birds are also class. If you have ever seen a bird gliding in the wind, that is exactly what this project is trying to emulate. The world record flight time for a two-seat glider is over 70 hours set in 1961 in Hawaii. This record has not been beaten because it is seen as being a pointless and dangerous challenge. Alpine swifts can fly for 6 months at a time without landing in fact.
 
 So it is not too crazy to imagine building an autonomous glider that can remain airborne for large periods of time. To do this, a stable control system and suite of algorithms is required.

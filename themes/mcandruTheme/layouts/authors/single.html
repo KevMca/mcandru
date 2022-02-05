@@ -1,10 +1,9 @@
 {{ define "main" }}
 {{ $authorName := .Params.fullname }}
 {{ $author := index $.Site.Data.authors .Params.fullname }}
-<br />
+<img src="{{ $author.image }}" class="profile-image" />
 <div class="author-head-container">
-  <img src="{{ $author.image }}" class="profile-image" />
-  <div style="display: inline-block; margin: 0 20px; vertical-align: middle;">
+  <div style="display: inline-block; vertical-align: middle;">
     <h1>{{ .Params.name }}</h1>
     <div>
       {{ if isset $author.social "github" }}
@@ -18,25 +17,40 @@
       {{ end }}
     </div>
   </div>
+  <h2>{{ $author.title }}</h2>
 </div>
-<br />
-<h3>{{ $author.title }}</h3>
-<br /><br />
 <p>{{ $author.description }}</p>
-<h2>My Projects</h2>
+<h1>My Projects</h1>
 <ul class="post-list">
   {{ range .Site.Pages }}
   {{ if and (isset .Params "owners") (in .Params.owners $authorName) }}
   <li class="post-preview">
     <div class="post-title-container">
-      <div class="post-title" style="padding-top: 0;"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></div>
-      {{ if eq .Params.status "not-started" }}
-      <div class="status-tag project-tag" style="background-color: #c12114;">Not started</div>
-      {{ else if eq .Params.status "is" "in-progress" }}
-      <div class="status-tag project-tag" style="background-color: #ccad00;">In Progress</div>
-      {{ else }}
-      <div class="status-tag project-tag" style="background-color: #3cc100;">Completed</div>
-      {{ end }}
+      <h3 style="padding-top: 0;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <ul class="post-preview-metadata">
+        <li>
+          {{ if eq .Params.status "not-started" }}
+            <span class="tag" style="color: #fff; background-color: #c12114;">Not started</span>
+          {{ else if eq .Params.status "is" "in-progress" }}
+            <span class="tag" style="color: #fff; background-color: #ccad00;">In Progress</span>
+          {{ else }}
+            <span class="tag" style="color: #fff; background-color: #3cc100;">Completed</span>
+          {{ end }}
+        </li>
+        <li>
+          {{ if ne .Params.Timeline nil }}
+          {{ $dateTime := time (index .Params.Timeline 0).date }}
+          {{ $dateFormat := .Site.Params.dateFormat | default "January 2006" }}
+          <time datetime="{{ $dateTime }}">{{ $dateTime.Format $dateFormat }}</time> -
+          {{ if eq .Params.status "done"}}
+            {{ $dateTime = time (index (last 1 .Params.timeline) 0).date }}
+            <time>{{ $dateTime.Format $dateFormat }}</time>
+          {{ else }}
+            <time datetime="now">now</time>
+          {{ end }}
+        {{ end }}
+        </li>
+      </ul>
     </div>
   </li>
   {{ end }}

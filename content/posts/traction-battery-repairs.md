@@ -14,7 +14,7 @@ accumulate inside the car. When we attempted to start the car, the battery
 seemed to be dead. We got the dreaded **P0A80** code with a red triangle of
 death 🔺
 
-### Diagnosis 🩺
+## Diagnosis 🩺
 [//]: <>                                                                     (.)
 Upon searching the P0A80 code online, the first results returned *"Replace
 Hybrid Battery Pack"* warnings, which is pretty worrying! So out came the
@@ -62,7 +62,7 @@ connector would need to be replaced, but the only damage was some heating of the
 traces. Since the short occured through the connector, none of the current ran
 throught the board itself.
 
-### Repair 🔨
+## Repair 🔨
 [//]: <>                                                                     (.)
 I bought replacements for the severely damaged cells and a new connector for the
 battery ECU. The cells came from a lad in Cork that dismantles hybrid batteries
@@ -139,8 +139,10 @@ We replaced the precharge resistor with another power 20 ohm resistor from a
 microwave and as soon as the battery was reinstalled, she started up. Thus she 
 awoke from her slumber of almost a year 💖
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/k_YzvTz234s" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figure>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/k_YzvTz234s" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 
 [//]: <>                                                                     (.)
 The first point of duty is to replace the battery ECU with a custom one. We

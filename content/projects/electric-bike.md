@@ -1,7 +1,10 @@
 ---
 title: "Electric Bike"
 draft: false
+start: 2020-08-11
 status: done
+description: Get around cities faster and with less effort.
+image: projects/electric-bike.jpg
 owners:
   - Kevin McAndrew
 tags: 

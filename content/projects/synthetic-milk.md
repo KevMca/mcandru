@@ -4,6 +4,7 @@ draft: false
 owners:
   - Kevin McAndrew
 status: not-started
+image: projects/milk.jpg
 tags: 
   - synthetic milk
 timeline:

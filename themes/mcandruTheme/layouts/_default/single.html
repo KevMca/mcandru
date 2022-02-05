@@ -1,23 +1,31 @@
 {{ define "main" }}
 <div class="post-view">
-<br />
-<div style="overflow: auto;">
-  <div style="float:left;">
-  {{ partial "metadata.html" . }}
+  <h1 class="title">{{ .Title }}</h1>
+  <div class="table post-metadata">
+    <div>Author</div>
+    <div class="author">
+      {{ with .Params.author }}
+        {{ $author := index $.Site.Data.authors . }}
+        <img src="{{ $author.image }}" />
+        <span>{{ . }}</span>
+      {{ end }}
+    </div>
+    <div>Date</div>
+    <div>
+      {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+      {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+      <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+    </div>
+    <div>Tags</div>
+    <div>
+      {{ with .Params.tags }}
+        {{ range . }}
+        {{ $href := print "/tags/" (urlize .) "/" }}
+        <a class="tag" href="{{ $href }}">{{ . }}</a>
+        {{ end }}
+      {{ end }}
+    </div>
   </div>
-  {{ $dateTime := .PublishDate.Format "2006-01-02" }}
-  {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
-  <time class="post-time" datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
-</div>
-<br />
-{{ with .Params.tags }}
-  {{ range . }}
-  {{ $href := print "/tags/" (urlize .) "/" }}
-  <a class="tag" href="{{ $href }}">{{ . }}</a>
-  {{ end }}
-{{ end }}
-<br /><br />
-<h1>{{ .Title }}</h1>
-{{ .Content }}
+  {{ .Content }}
 </div>
 {{ end }}

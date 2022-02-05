@@ -2,11 +2,12 @@
   "Michael McAndrew": {
     "image": "/images/authors/michael.jpg",
     "title": "Detector Engineer, Inscribe AI",
-    "description": "Most recently a Detector Engineer at Inscribe. A big fan of detecting things with computers. Previously interned at Salesforce and worked on Trinity Live, a new API for students and staff in Trinity College Dublin.",
+    "description": "I'm a Software engineer helping to catch document fraud at Inscribe. On the side, I enjoy automation, automotive mechanics, music and design.",
     "social": {
       "github": "https://github.com/mmcatcd",
       "site": "https://www.mcandrew.dev/",
-      "linkedin": "https://www.linkedin.com/in/michael-mcandrew-280a0476/"
+      "linkedin": "https://www.linkedin.com/in/michael-mcandrew-280a0476/",
+      "twitter": "@oldmcandrew"
     }
   },
   "Kevin McAndrew": {

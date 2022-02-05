@@ -1,29 +1,50 @@
 {{ define "main" }}
-<br />
-<h1>{{ .Title }}</h1>
-<ul class="author-list">
-{{ range .Params.owners }}
-  <li>
-    {{ $owner := index $.Site.Data.authors . }}
-    <span><img src="{{ $owner.image }}" style="width: 30px; height: 30px; border-radius: 50%;" /></span>
-    <span class="author">{{ . }}</span>
-  </li>
-{{ end }}
-</ul>
-<br />
-{{ if eq .Params.status "not-started" }}
-    <div class="status-tag" style="float: left; background-color: #c12114;">Not started</div>
-    {{ else if eq .Params.status "is" "in-progress" }}
-    <div class="status-tag" style="float: left; background-color: #ccad00;">In Progress</div>
-    {{ else }}
-    <div class="status-tag" style="float: left; background-color: #3cc100;">Completed</div>
+<img class="profile-image" src="/images/{{ .Params.Image }}" />
+<h1 class="title">{{ .Title }}</h1>
+<div class="table post-metadata">
+  <div>Owners</div>
+  <div class="author">
+    <ul class="author-list">
+    {{ range .Params.owners }}
+      <li class="author">
+        {{ $author := index $.Site.Data.authors . }}
+        <img src="{{ $author.image }}" />
+        <span>{{ . }}</span>
+      </li>
     {{ end }}
-<br />
+    </ul>
+  </div>
+  <div>Period</div>
+  <div>
+    <div></div>
+    {{ if ne .Params.Timeline nil }}
+      {{ $dateTime := time (index .Params.Timeline 0).date }}
+      {{ $dateFormat := .Site.Params.dateFormat | default "January 2006" }}
+      <time datetime="{{ $dateTime }}">{{ $dateTime.Format $dateFormat }}</time> -
+      {{ if eq .Params.status "done"}}
+        {{ $dateTime = time (index (last 1 .Params.timeline) 0).date }}
+        <time>{{ $dateTime.Format $dateFormat }}</time>
+      {{ else }}
+        <time datetime="now">now</time>
+      {{ end }}
+    {{ end }}
+  </div>
+  <div>Status</div>
+  <div>
+    {{ if eq .Params.status "not-started" }}
+      <span class="tag" style="color: #fff; background-color: #c12114;">Not started</span>
+    {{ else if eq .Params.status "is" "in-progress" }}
+      <span class="tag" style="color: #fff; background-color: #ccad00;">In Progress</span>
+    {{ else }}
+      <span class="tag" style="color: #fff; background-color: #3cc100;">Completed</span>
+    {{ end }}
+  </div>
+</div>
 
-<h2>About</h2>
+<h1>About</h1>
 {{ .Content }}
 
-<h2>Timeline</h2>
+<h1>Timeline</h1>
 <ul class="timeline-list">
 {{ range .Params.Timeline }}
   <li>
@@ -42,9 +63,19 @@
           <time datetime="{{ $dateTime }}">{{ dateFormat $dateFormat .date }}</time>
         {{ end }}
         <p>{{ .description }}</p>
-        <div>
+        {{ if ne .posts nil }}
+        <div style="padding-bottom: 20px;">
+          <span><strong>Related Posts:</strong></span>
+          <ul class="related-posts">
+            {{ range .posts }}
+            <li style="padding-right: 5px;"><a href="/posts/{{ . }}">{{ . }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+        <div class="timeline-image-container">
           {{ range .images }}
-          <img src="/images/{{ . }}" style="max-width: 300px;" />
+            <img src="/images/{{ . }}" />
           {{ end }}
         </div>
       </div>

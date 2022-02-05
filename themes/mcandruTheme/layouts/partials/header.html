@@ -1,16 +1,20 @@
-<header id="nav-border" class="container">
+<header id="nav-border">
   <nav id="nav" class="nav">
-      <div class="logo"><a href="/">{{ .Site.Title }}</a></div>
+      <div class="logo"><a class="no-link-highlight" href="/">{{ .Site.Title }}</a></div>
       <ul id="menu">
+      {{ $currentSection := .CurrentSection }}
+      {{ $current := . }}
+      {{ $currentNames := split $current.RelPermalink "/" }}
       {{ range .Site.Menus.main }}
-      <li>
-        <div>
-        <a href="{{ .URL }}">
-          {{ $text := print .Name | safeHTML }}
-          <span>{{ $text }}</span>
-        </a>
-        </div>
-      </li>
+        {{ $active := or ($currentSection.IsMenuCurrent "main" .) ($currentSection.HasMenuCurrent "main" .) }}
+        {{ $active = or $active (eq .Name $currentSection.Title) }}
+        {{ $active = or $active (in $currentNames (lower .Name)) }}
+        <li>
+          <a class="{{ if $active }}active{{ end }}" href="{{ .URL }}">
+            {{ $text := print .Name | safeHTML }}
+            <span>{{ $text }}</span>
+          </a>
+        </li>
       {{ end }}
       </ul>
   </nav>

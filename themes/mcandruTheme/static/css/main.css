@@ -1,117 +1,192 @@
 body {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
   color: #333;
-  line-height: 2rem;
-  font-size: 21px;
+  font: 18px/28px 'IBM Plex Sans', sans-serif;
+  margin: 50px auto;
+}
+
+.main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 0 0 2px;
+}
+
+#nav-border {
+  max-width: 544px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 2.5em;
+  font-weight: bold;
+  line-height: 50px;
+  margin: 1.5em 0 0.75em 0;
 }
 
 h1 {
-  font-weight: 700;
-  font-size: 52px;
+  font-size: 1.7em;
+}
+
+h1, h2 {
+  margin: 2.5em 0 0.5em;
+  font-weight: bold;
 }
 
 h2 {
-  font-weight: 700;
-  font-size: 38px;
-  padding-top: 50px;
-  padding-bottom: 20px;
+  font-size: 1.4em;
 }
 
 h3 {
-  font-weight: 700;
-  font-size: 28px;
-  padding-top: 20px;
-}
-
-h4 {
-  font-size: 21px;
-  font-weight: 700;
-}
-
-time {
-  font-family: 'Roboto Mono', monospace;
-  opacity: 0.5;
-  font-size: 19px;
+  font-weight: bold;
 }
 
 pre code {
   font-family: 'Roboto Mono', monospace;
   font-size: 17px;
+  white-space: initial;
+  background-color: #fafafa;
 }
 
 code p {
   font-size: 17px;
 }
 
-p {
-  font-size: 21px;
-  line-height: 1.8em;
-  margin: 0px;
-  padding-bottom: 16px;
+p, blockquote {
+  margin: 15px 0;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
 }
 
 a {
   color: #333;
-  transition: background-color 0.05s, color 0.05s;
+  transition: color 0.1s, border 0.1s;
+  overflow-wrap: break-word;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+}
+
+.no-link-highlight {
+  border-bottom: none;
+}
+
+.no-link-highlight:hover {
+  border-bottom: none;
 }
 
 a:hover {
-  color: #fff;
-  background-color: #DD1E04;
-}
-
-::selection {
-  color: #fff;
-  background: #DD1E04;
-}
-
-#menu li a {
-  font-weight: 700;
-  font-size: 19px;
+  border-color: rgba(0,0,0);
 }
 
 #menu li {
-  margin: 0 10px;
+  margin: 0 0 0 1em;
 }
 
-#menu li a span:hover {
-  background: #DD1E04;
-  color: #fff;
+#menu li a {
+  color: rgba(0,0,0,0.3);
+  border-bottom: 2px solid rgba(0,0,0,0);
 }
 
 #menu li a:hover {
-  background: none;
-  color: #333;
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+#menu li .active {
+  color: #000;
+  border-bottom: 2px solid #000;
 }
 
 figure {
-  margin: 20px 0;
+  width: 600px;
+  margin-left: -28px;
+  margin-right: -28px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  font-style: italic;
+}
+
+.related-posts {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  display: inline;
+  padding-left: 0;
+}
+
+.timeline-list li .related-posts li {
+  display: inline;
+}
+
+.timeline-list li .related-posts li::before {
+  border: none;
+  width: inherit;
+}
+
+.timeline-list li .related-posts li {
+  margin-bottom: 0;
 }
 
 .post-view {
-  overflow: hidden;
+  max-width: 544px;
+  margin: 15px auto;
 }
 
-.post-view img {
-  max-width: 100%;
+.post-metadata {
+  padding: 0 0 2.5em;
+}
+
+img {
+  margin: 0 auto 1em;
   display: block;
-  margin: 0 auto;
-  height: auto;
-  /*aspect-ratio: 16/9*/
+  max-width: 100%;
 }
 
 figcaption {
   text-align: center;
   padding-top: 10px;
   font-style: italic;
-  font-size: 19px;
+  font-size: 14px;
+}
+
+.table {
+  font-size: 15px;
+  line-height: 25px;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 5px 25px;
+  margin: 20px 0;
+}
+
+.table .tag {
+  font-size: 13px;
+}
+
+.author-head-container {
+  margin-top: 65px;
+  margin-bottom: 2em;
+}
+
+.author-head-container h1 {
+  margin-top: 0;
+  font-size: 2.5em;
+}
+
+.author-head-container h2 {
+  margin-top: 1em;
 }
 
 .footer {
   font-family: 'Roboto Mono', monospace;
   font-size: 16px;
   opacity: 0.5;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .logo a {
@@ -127,12 +202,20 @@ figcaption {
   margin-bottom: 8rem;
 }
 
+.post-list {
+  padding: 0;
+}
+
 .post-list li {
   list-style: none;
 }
 
 .post-preview {
-  margin-bottom: 40px;
+  margin: 30px 0;
+}
+
+.post-preview h3 {
+  margin: 0;
 }
 
 .post-description {
@@ -143,32 +226,52 @@ figcaption {
   overflow: auto;
 }
 
-.post-title {
-  float:left;
-  max-width: 70%;
+.post-preview-metadata {
+  font-size: 15px;
+  padding: 0;
 }
 
-.post-time {
-  float: right;
+.post-preview-metadata li {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.timeline-list {
+  padding-left: 1rem;
 }
 
 .timeline-list li {
   list-style: none;
+  margin-bottom: -40px;
 }
 
 .timeline-list h3 {
   padding-top: 0px;
   position: relative;
-  left: -34px;
+  margin: 0;
+  padding-top: 10px;
 }
 
-.timeline-list h3::before {
+.timeline-list li::before {
   content: '';
   display: inline-block;
+  position: relative;
   border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  margin-right: 12px;
+  width: 1rem;
+  height: 1rem;
+  left: -10px;
+  bottom: -40px;
+  border: 3px solid #3cc100;
+  background-color: #fff;
+}
+
+.timeline-list img {
+  width: 100%;
+  margin: 0;
+}
+
+.timeline-image-container {
+  padding-right: 2rem;
 }
 
 .completed {
@@ -200,23 +303,33 @@ figcaption {
 
 .tag {
   font-family: 'Roboto Mono', monospace;
-  font-size: 14px;
   background-color: #d0d0d0;
-  padding: 5px;
+  padding: 0px 5px;
   border-radius: 5px;
 }
 
 .author {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 19px;
-  opacity: 0.5;
-  margin-left: 5px;
+  vertical-align: top;
+}
+
+.author img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0;
+  margin-right: 5px;
+}
+
+.author span {
+  vertical-align: middle;
 }
 
 .author-list {
   list-style: none;
-  margin-top: 10px;
-  margin-bottom: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .author-list li {
@@ -228,10 +341,6 @@ figcaption {
 .author-list img {
   margin: 0;
   display: inline;
-}
-
-.author-head-container {
-  overflow: auto;
 }
 
 .status-tag {
@@ -247,28 +356,50 @@ figcaption {
 }
 
 .profile-image {
-  display: inline-block;
+  float: left;
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  margin-right: 20px;
+  object-fit: contain;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   body {
     font-size: 1.1rem;
     overflow-x: hidden;
+    margin-top: 20px;
   }
 
-  h1 {
+  .main {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .title {
     font-size: 2rem;
   }
 
-  h2 {
+  .logo {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #menu {
+    padding-left: 0px;
+    margin-right: 1rem;
+  }
+
+  h1 {
     font-size: 1.8rem;
   }
 
-  h3 {
+  h2 {
     font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
   }
 
   h4 {
@@ -276,45 +407,21 @@ figcaption {
     font-weight: 700;
   }
 
-  time {
-    font-size: 1rem;
-  }
-
   p {
     font-size: 1.1rem;
   }
 
-  .author {
-    font-size: 1rem;
-  }
-
-  .tag {
-    font-size: .8rem;
-  }
-
-  #menu li a {
-    font-size: 1rem;
-  }
-
-  .logo {
-    margin: 0 auto;
-  }
-
-  .logo, #menu {
-    margin: 0;
+  figure {
+    display: relative;
+    left: 0%;
+    width: 100vw;
+    margin-left: -16px;
+    margin-right: -16px;
   }
 
   .home-title {
     margin-top: 3rem;
     margin-bottom: 0;
-  }
-
-  .post-time {
-    float: left;
-  }
-
-  .post-title {
-    float: none;
   }
 
   .project-tag {
@@ -324,5 +431,14 @@ figcaption {
 
   .author-head-container {
     text-align: center;
+    margin-top: 20px;
+  }
+
+  .profile-image {
+    float: none;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
   }
 }
