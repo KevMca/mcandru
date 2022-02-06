@@ -4,3 +4,12 @@
 
 [build.environment]
   HUGO_VERSION = "0.89.2"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+  cache-control = '''
+  max-age=0,
+  no-cache,
+  no-store,
+  must-revalidate'''
