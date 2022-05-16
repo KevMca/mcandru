@@ -12,7 +12,7 @@ to be easily stolen, run out of internal battery and they aren't very bright. I 
 replace these lights with more substantial lights that run from the 50V battery.
 
 <figure>
-  <img src="/images/posts/bike-lights/old_lights.jpg" style="max-width: 800px;" alt="old_light"/>
+  <img src="/images/posts/bike-lights/old_lights.jpg" alt="old_light"/>
   <figcaption>The old clip-on light</figcaption>
 </figure>
 
@@ -22,17 +22,17 @@ I bought a headlight from banggood for €20 which is designed for a motorbike. 
 which I measured to be 2.8A@12V = 33.6W. Furthermore, there are heads and dipped options.
 
 <figure>
-  <img src="/images/posts/bike-lights/headlight.jpg" style="max-width: 600px;" alt="headlight"/>
+  <img src="/images/posts/bike-lights/headlight.jpg" alt="headlight"/>
   <figcaption>The new headlight</figcaption>
 </figure>
 
 <figure>
-  <img src="/images/posts/bike-lights/heads.jpg" style="max-width: 600px;" alt="headlight"/>
+  <img src="/images/posts/bike-lights/heads.jpg" alt="headlight"/>
   <figcaption>Heads mode</figcaption>
 </figure>
 
 <figure>
-  <img src="/images/posts/bike-lights/dips.jpg" style="max-width: 600px;" alt="headlight"/>
+  <img src="/images/posts/bike-lights/dips.jpg" alt="headlight"/>
   <figcaption>Dips mode</figcaption>
 </figure>
 
@@ -43,7 +43,7 @@ two downpipes on the front. I had to modify this to work with the single downpip
 bike.
 
 <figure>
-  <img src="/images/posts/bike-lights/switch.jpg" style="max-width: 600px;" alt="headlight"/>
+  <img src="/images/posts/bike-lights/switch.jpg" alt="headlight"/>
   <figcaption>The added switch</figcaption>
 </figure>
 
@@ -53,7 +53,7 @@ The new back light is a 12V LED red light. I just zip-tied it underneath the sea
 so that it's protected from water and impacts.
 
 <figure>
-  <img src="/images/posts/bike-lights/back.jpg" style="max-width: 600px;" alt="headlight"/>
+  <img src="/images/posts/bike-lights/back.jpg" alt="headlight"/>
   <figcaption>The new rear light</figcaption>
 </figure>
 
@@ -65,16 +65,16 @@ could find (€7.50). Car parts are some of the most affordable parts available 
 wide range of uses and they're made in large quantities.
 
 <figure>
-  <img src="/images/posts/bike-lights/buck.jpg" style="max-width: 600px;" alt="headlight"/>
+  <img src="/images/posts/bike-lights/buck.jpg" alt="headlight"/>
   <figcaption>The 12V buck converter that regulates all 12V devices</figcaption>
 </figure>
 
 ### 4. Final Product 😍
 
 <figure>
-  <img src="/images/posts/bike-lights/out_back.jpg" style="max-width: 600px;" alt="headlight"/>
+  <img src="/images/posts/bike-lights/out_back.jpg" alt="headlight"/>
 </figure>
 
 <figure>
-  <img src="/images/posts/bike-lights/out_front.jpg" style="max-width: 600px;" alt="headlight"/>
+  <img src="/images/posts/bike-lights/out_front.jpg" alt="headlight"/>
 </figure>
