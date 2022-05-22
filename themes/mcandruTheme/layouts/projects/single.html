@@ -94,10 +94,12 @@
       <li>
         <div class="post-preview">
           <div class="post-title-container">
-            <h3 class="post-title" style="padding-top: 0;"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            {{ $dateTime := .PublishDate.Format "2006-01-02" }}
-            {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
-            <time class="post-time" datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+            <h3 class="post-title" style="padding-top: 0;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <div class="post-preview-metadata">
+              {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+              {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+              <time class="post-time" style="opacity: 0.5" datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+            </div>
           </div>
           <div class="post-description">
             {{ if isset .Params "description" }}
