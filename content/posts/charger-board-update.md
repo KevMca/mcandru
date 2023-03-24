@@ -45,6 +45,11 @@ signals.
   <figcaption>ADS1115 breakout board</figcaption>
 </figure>
 
+[//]: <>                                                                     (.)
+Since there are 4 inputs to the ADS1115 board, 4 of the analog values can be
+read and 2 can be monitored in a different way. VH, VL, GIWA and GIVA are sent
+to the ADS1115 and CT and GIVT are monitored using a comparator and an interrupt.
+
 ### Charging Procedure
 
 1. Turn on HIGH side switch (0% converter PWM)
@@ -87,6 +92,11 @@ contactors and a 2n3904 can be used for the precharge relay.
 These relays can be controlled from the H16 Hybrid ECU connector, which is why
 the charging controller board should be placed in between the hybrid ECU and
 inverter, instead of being connected directly at the inverter.
+
+<figure>
+  <img src="/images/posts/charger-board-update/relay-connections.png" alt="relay-connections"/>
+  <figcaption>Relay connections to the hybrid ECU</figcaption>
+</figure>
 
 ### Hybrid ECU connections
 
@@ -235,10 +245,3 @@ control ECU, power source control ECU, MG1 and MG2.
   <img src="/images/posts/charger-board-update/H17.PNG" alt="H17"/>
   <figcaption>H17 Connector</figcaption>
 </figure>
-
-<figure>
-  <img src="/images/posts/charger-board-update/relay-connections.png" alt="relay-connections"/>
-  <figcaption>Relay connections to the hybrid ECU</figcaption>
-</figure>
-
-
