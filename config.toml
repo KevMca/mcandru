@@ -1,4 +1,4 @@
-baseURL = 'https://mcand.ru/'
+baseURL = 'https://www.mcand.ru/'
 languageCode = 'en-us'
 title = 'mcand.ru'
 theme = "mcandruTheme"
