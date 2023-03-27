@@ -47,14 +47,17 @@
 <h1>Timeline</h1>
 <ul class="timeline-list">
 {{ range .Params.Timeline }}
-  <li>
-    {{ if eq .status "done" }}
+  
+  {{ if eq .status "done" }}
+  <li class="completed">
     <div class="timeline-item-container completed">
-    {{ else if eq .status "in-progress" }}
+  {{ else if eq .status "in-progress" }}
+  <li class="in-progress">
     <div class="timeline-item-container in-progress">
-    {{ else }}
+  {{ else }}
+  <li class="not-started">
     <div class="timeline-item-container not-started">
-    {{ end }}
+  {{ end }}
       <div style="margin-left: 20px; padding-bottom: 30px;">
         <h3>{{ .name }}</h3>
         {{ if ne .date nil }}
