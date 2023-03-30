@@ -1,7 +1,8 @@
 {{ define "main" }}
 <h1 class="title">{{ .Title }}</h1>
 <br />
-{{ range .Pages }}
+{{ $pagesByDate := (where .Pages ".Params.status" "!=" nil).ByPublishDate.Reverse}}
+{{ range (sort $pagesByDate ".Params.status").Reverse }}
 <div class="post-preview">
   <img src="/images/{{ .Params.Image }}" style="margin: 0; max-height: 300px;" />
   <h2 style="margin-top: 20px;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>

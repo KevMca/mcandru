@@ -22,7 +22,8 @@
 <p>{{ $author.description }}</p>
 <h1>My Projects</h1>
 <ul class="post-list">
-  {{ range .Site.Pages }}
+  {{ $pagesByDate := (where .Site.Pages ".Params.status" "!=" nil).ByPublishDate.Reverse}}
+  {{ range (sort $pagesByDate ".Params.status").Reverse }}
   {{ if and (isset .Params "owners") (in .Params.owners $authorName) }}
   <li class="post-preview">
     <div class="post-title-container">
