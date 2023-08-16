@@ -1,0 +1,29 @@
+<html lang="en">
+  <body>
+    <div class="wrapper">
+      <ul>
+        <li><span>x: </span><span class="x"></span></li> <!--Beta-->
+        <li><span>y: </span><span class="y"></span></li> <!--Gamma-->
+        <li><span>z: </span><span class="z"></span></li> <!--Alpha-->
+      </ul>
+    </div>
+    <script>
+      addEventListener("deviceorientation", (event) => {
+        const x = event.beta;
+        const y = event.gamma;
+        const z = event.alpha;
+
+        console.log(`(x:${x}), (y${y}), (z:${z})`);
+
+        updateDOM(x, y, z);
+      });
+
+      const updateDOM = (x, y, z) => {
+        document.getElementsByClassName("x").innerHTML = x;
+        document.getElementsByClassName("y").innerHTML = y;
+        document.getElementsByClassName("z").innerHTML = z;
+      };
+
+    </script>
+  </body>
+</html>
