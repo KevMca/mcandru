@@ -1,10 +1,100 @@
+<!--
+  How to create an accurate real-world ruler in CSS.
+
+  CSS has "absolute units" like cm, mm, in, pt and pc. However, these will map to completely
+  different physical sizes, depending on the pixel density. For example, on my computer monitor 10mm appears
+  as ~9mm, whereas on my phone it appears as ~5mm. This is a very large discrepency.
+
+  One solution is to build a device-specific calibration step, that can cache the results once set up, to
+  give you accurate measurements whenever loaded on your device in future.
+
+  Calibration
+
+  ZEISS have an interesting calibration test that uses a standard size card e.g. a credit card or ID (54mm) to figure out the size:
+  https://www.zeiss.com/vision-care/en/eye-health-and-care/zeiss-online-vision-screening-check.html. However, it probably
+  wouldn't be accurate enough for a ruler.
+
+  The trick is to find a conversion constant (c), which can be found by: c = physical_size / virtual_size.
+
+  We could still use the credit card trick, but use a more stringent series of steps to make the calibration process more accurate:
+
+  1. Detect if the device is portrait or landscape. If the device is portrait, display the calibration box with the long side facing up.
+    If the device is landscape, then do the opposite.
+  
+  2. Display a calibration box that's solid in colour, and provide a slider and fine-tuning buttons that will increase by very fine measurements
+    e.g. 0.5mm. This will allow for better accuracy. The guide should say something like:
+    
+    "Increase the box size until the box colour can be seen over the edge of the card. Then reduce it by a point, and this is the correct distance".
+
+  3. Optionally, include further calibration steps that use rules to match specific measurements. e.g. keep increasing the size until ruler reads 20mm.
+    You can then compare the calculated values for c, and calculate an error rate in the calculations. If the error rate is above a threshold, ask them
+    to recalibrate to get better precision.
+
+-->
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recipe Generator</title>
+    <title>Ruler</title>
   </head>
   <body>
-    <div style="background-color: black; width: 10mm; height: 1cm;"></div>
+    <div class="card"></div>
+    <div style="margin-top: 20px;">
+      <button class="m">-</button>
+      <button class="p">+</button>
+    </div>
+    <style>
+      .card {
+        height: 53.98mm;
+        width: 85.6mm;
+        background-color: black;
+        border-radius: 1pc;
+      }
+    </style>
+    <script>
+      const card = document.querySelector(".card");
+      const p = document.querySelector(".p");
+      const m = document.querySelector(".m");
+      const a = 1.586;
+      let h = 53.98, w = 85.6;
+
+      const orientation = screen.height > screen.width ? "portrait" : "landscape";
+
+      if (orientation == "landscape") {
+        card.style.height = h.toString() + 'mm';
+        card.style.width = w.toString() + 'mm';
+      } else {
+        card.style.height = w.toString() + 'mm';
+        card.style.width = h.toString() + 'mm';
+      }
+
+      p.addEventListener("click", () => {
+        h += 0.5;
+        w = h * a;
+
+        if (orientation == "landscape") {
+          card.style.height = h.toString() + 'mm';
+          card.style.width = w.toString() + 'mm';
+        } else {
+          card.style.height = w.toString() + 'mm';
+          card.style.width = h.toString() + 'mm';
+        }
+      });
+
+      m.addEventListener("click", () => {
+        h -= 0.5;
+        w = h * a;
+
+        if (orientation == "landscape") {
+          card.style.height = h.toString() + 'mm';
+          card.style.width = w.toString() + 'mm';
+        } else {
+          card.style.height = w.toString() + 'mm';
+          card.style.width = h.toString() + 'mm';
+        }
+        
+      });
+    </script>
   </body>
 </html>
