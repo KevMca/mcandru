@@ -5,7 +5,8 @@
     <title>Recipe Generator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
     <style>
       body {
         font-family: 'Inter', sans-serif;
@@ -84,6 +85,9 @@
         display: inline-block;
         text-align: center;
         padding: 4px;
+      }
+      .material-symbols-outlined {
+        font-size: 16px;
       }
     </style>
   </head>
@@ -751,6 +755,12 @@
 
         const html = `
           <h2>${recipe.name}</h2>
+
+          <div style="margin-bottom: 10px;">
+            <a href="${recipe.websiteUrl}" target="_blank">
+              Open on site <span class="material-symbols-outlined">open_in_new</span>
+            </a>
+          </div>
 
           <div class="title-img-wrapper">
             <img class="title-img" src="https://img.hellofresh.com/c_fit,f_auto,fl_lossy,h_1100,q_30,w_2600/hellofresh_s3/${recipe.imagePath}"></img>
